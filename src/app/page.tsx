@@ -11,6 +11,9 @@ import {
   Star,
   ArrowUpRight,
   Compass,
+  Moon,
+  Fish,
+  Utensils,
 } from 'lucide-react'
 import JsonLd from '@/components/JsonLd'
 import { HeroAnimated } from '@/components/HeroAnimated'
@@ -50,6 +53,11 @@ export const metadata: Metadata = {
 // Data
 // ---------------------------------------------------------------------------
 
+interface Activity {
+  icon: React.ReactNode
+  label: string
+}
+
 interface Program {
   num: string
   slug: string
@@ -58,6 +66,9 @@ interface Program {
   description: string
   highlights: string[]
   price: string
+  image: string
+  imageAlt: string
+  activities: Activity[]
 }
 
 const programs: Program[] = [
@@ -70,6 +81,13 @@ const programs: Program[] = [
       'Cabalgata en dos etapas con picoteo en el estero; asado acampado opcional.',
     highlights: ['Mañana o tarde', 'Asado opcional', 'Desde 5 años'],
     price: '$80.000',
+    image: '/images/cabalgata-bosque.jpg',
+    imageAlt: 'Caballos en el bosque nativo del Fundo Los Huapes',
+    activities: [
+      { icon: <Compass size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Cabalgata' },
+      { icon: <Utensils size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Picoteo' },
+      { icon: <Flame size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Asado' },
+    ],
   },
   {
     num: '02',
@@ -80,6 +98,13 @@ const programs: Program[] = [
       'Cabalgata por la mañana y bajada en balsa por la tarde hasta Antilhue.',
     highlights: ['Cabalgata mañana', 'Balsa 15 km', 'Desde 10 años'],
     price: '$180.000',
+    image: '/images/cabalgata-verano.jpg',
+    imageAlt: 'Caballos en potreros verdes con flores silvestres del Fundo Los Huapes',
+    activities: [
+      { icon: <Compass size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Cabalgata' },
+      { icon: <Waves size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Balsa 15 km' },
+      { icon: <Utensils size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Picoteo' },
+    ],
   },
   {
     num: '03',
@@ -90,6 +115,13 @@ const programs: Program[] = [
       'Bajada en balsa por la mañana, picoteo en el río y cabalgata por la tarde.',
     highlights: ['Balsa 20 km', 'Cabalgata tarde', 'Desde 5 años'],
     price: '$180.000',
+    image: '/images/balsa-personas.jpg',
+    imageAlt: 'Guía y turista en balsa por el Río San Pedro, Los Ríos',
+    activities: [
+      { icon: <Waves size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Balsa 20 km' },
+      { icon: <Utensils size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Picoteo' },
+      { icon: <Compass size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Cabalgata' },
+    ],
   },
   {
     num: '04',
@@ -100,6 +132,13 @@ const programs: Program[] = [
       'Primer día completo en el río con pesca. Segundo día de cabalgata y labores de campo.',
     highlights: ['Noche en el campo', 'Pesca con mosca', 'Todo incluido'],
     price: '$280.000',
+    image: '/images/balsa-grupo.jpg',
+    imageAlt: 'Grupo de pescadores junto al fogón a orillas del Río San Pedro',
+    activities: [
+      { icon: <Moon size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Noche campo' },
+      { icon: <Fish size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Pesca mosca' },
+      { icon: <Waves size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Río' },
+    ],
   },
 ]
 
@@ -141,33 +180,39 @@ interface GalleryItem {
 
 const galleryItems: GalleryItem[] = [
   {
-    alt: 'Potreros y bosque nativo en el Fundo Los Huapes',
-    caption: 'Potreros',
-    image: '/images/entorno-potrero.jpg',
+    alt: 'Sendero entre el bosque nativo valdiviano del Fundo Los Huapes con vista al río',
+    caption: 'Bosque nativo',
+    image: '/images/entorno-bosque.jpg',
     gridClass: 'md:row-span-2',
   },
   {
-    alt: 'Caballos en los potreros del Fundo Los Huapes',
-    caption: 'Caballos',
-    image: '/images/cabalgata-potrero.jpg',
+    alt: 'Ciervos pastando en los campos del Fundo Los Huapes, Región de Los Ríos',
+    caption: 'Ciervos',
+    image: '/images/entorno-ciervos.jpg',
     gridClass: '',
   },
   {
-    alt: 'Flora nativa en floración, Región de Los Ríos',
+    alt: 'Copihues, la flor nacional de Chile, en el bosque nativo del fundo',
+    caption: 'Copihues',
+    image: '/images/entorno-copihues.jpg',
+    gridClass: '',
+  },
+  {
+    alt: 'Perros Gran Pirineo en el bosque nativo con rayos de sol filtrados entre los árboles',
+    caption: 'Gran Pirineo',
+    image: '/images/entorno-pirineo.jpg',
+    gridClass: '',
+  },
+  {
+    alt: 'Ovejas con crías en los potreros del Fundo Los Huapes con bosque nativo al fondo',
+    caption: 'Ovejas',
+    image: '/images/entorno-ovejas.jpg',
+    gridClass: '',
+  },
+  {
+    alt: 'Flora nativa en floración en los campos de la Región de Los Ríos',
     caption: 'Flora nativa',
-    image: '/images/entorno-flora.jpg',
-    gridClass: '',
-  },
-  {
-    alt: 'Aguas turquesas del Río San Pedro, sur de Chile',
-    caption: 'Río San Pedro',
-    image: '/images/entorno-rio.jpg',
-    gridClass: '',
-  },
-  {
-    alt: 'Campo ganadero en el Fundo Los Huapes',
-    caption: 'Campo ganadero',
-    image: '/images/fundo-campo.jpg',
+    image: '/images/entorno-flores.jpg',
     gridClass: '',
   },
 ]
@@ -353,61 +398,87 @@ export default function HomePage() {
               <RevealOnScroll key={program.slug} delay={index * 0.08}>
                 <Link
                   href={`/programas/${program.slug}`}
-                  className="group relative flex flex-col bg-forest hover:bg-[#2D5A3D] transition-colors duration-300 p-8 sm:p-10 h-full min-h-[420px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember focus-visible:ring-inset"
+                  className="group relative flex flex-col bg-forest hover:bg-[#2D5A3D] transition-colors duration-300 h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember focus-visible:ring-inset"
                   aria-label={`Ver programa ${program.title} — ${program.price} por persona`}
                 >
-                  {/* Ghost number */}
-                  <span
-                    className="block font-display text-[4.5rem] font-bold text-cream/[0.06] leading-none mb-5 select-none"
-                    aria-hidden="true"
-                  >
-                    {program.num}
-                  </span>
-
-                  {/* Duration badge */}
-                  <div className="mb-4">
-                    <Badge variant="highlight" className="text-[0.65rem]">
-                      {program.tag}
-                    </Badge>
+                  {/* Card image */}
+                  <div className="relative h-48 overflow-hidden shrink-0">
+                    <Image
+                      src={program.image}
+                      alt={program.imageAlt}
+                      fill
+                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                    />
+                    <div className="absolute inset-0 bg-forest/30" aria-hidden="true" />
+                    {/* Ghost number overlay */}
+                    <span
+                      className="absolute bottom-2 left-4 font-display text-[4rem] font-bold text-cream/[0.18] leading-none select-none"
+                      aria-hidden="true"
+                    >
+                      {program.num}
+                    </span>
+                    {/* Duration badge */}
+                    <div className="absolute top-3 left-3">
+                      <Badge variant="highlight" className="text-[0.65rem]">
+                        {program.tag}
+                      </Badge>
+                    </div>
                   </div>
 
-                  {/* Title */}
-                  <h3 className="font-display text-[1.4rem] text-cream mb-4 leading-[1.2]">
-                    {program.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="font-body text-sm text-cream/60 leading-relaxed mb-5 flex-1">
-                    {program.description}
-                  </p>
-
-                  {/* Highlights */}
-                  <ul className="space-y-1.5 mb-7" role="list">
-                    {program.highlights.map((highlight) => (
-                      <li
-                        key={highlight}
-                        className="flex items-center gap-2 font-ui text-xs text-cream/50 border-b border-cream/[0.06] pb-1.5"
+                  {/* Activity icons */}
+                  <div className="flex gap-3 px-6 pt-4 pb-2 border-b border-cream/[0.08]">
+                    {program.activities.map((activity) => (
+                      <span
+                        key={activity.label}
+                        className="flex items-center gap-1 font-ui text-[0.68rem] text-ember/90 tracking-wide"
                       >
-                        <span className="text-ember font-medium shrink-0" aria-hidden="true">—</span>
-                        {highlight}
-                      </li>
+                        {activity.icon}
+                        {activity.label}
+                      </span>
                     ))}
-                  </ul>
+                  </div>
 
-                  {/* Price */}
-                  <p className="font-display text-[1.6rem] font-bold text-cream">
-                    {program.price}{' '}
-                    <span className="font-body text-sm font-normal text-cream/50">
-                      / persona
-                    </span>
-                  </p>
+                  {/* Text content */}
+                  <div className="flex flex-col flex-1 p-6">
+                    {/* Title */}
+                    <h3 className="font-display text-[1.25rem] text-cream mb-3 leading-[1.2]">
+                      {program.title}
+                    </h3>
 
-                  {/* Arrow */}
-                  <ArrowUpRight
-                    size={20}
-                    className="absolute bottom-8 right-8 text-ember transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
-                    aria-hidden="true"
-                  />
+                    {/* Description */}
+                    <p className="font-body text-sm text-cream/60 leading-relaxed mb-4 flex-1">
+                      {program.description}
+                    </p>
+
+                    {/* Highlights */}
+                    <ul className="space-y-1.5 mb-5" role="list">
+                      {program.highlights.map((highlight) => (
+                        <li
+                          key={highlight}
+                          className="flex items-center gap-2 font-ui text-xs text-cream/50 border-b border-cream/[0.06] pb-1.5"
+                        >
+                          <span className="text-ember font-medium shrink-0" aria-hidden="true">—</span>
+                          {highlight}
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Price + arrow */}
+                    <div className="flex items-end justify-between">
+                      <p className="font-display text-[1.5rem] font-bold text-cream">
+                        {program.price}{' '}
+                        <span className="font-body text-sm font-normal text-cream/50">
+                          / persona
+                        </span>
+                      </p>
+                      <ArrowUpRight
+                        size={20}
+                        className="text-ember transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  </div>
                 </Link>
               </RevealOnScroll>
             ))}
@@ -437,11 +508,11 @@ export default function HomePage() {
             </p>
           </RevealOnScroll>
 
-          {/* Asymmetric mosaic gallery */}
+          {/* Asymmetric mosaic gallery — 6 photos */}
           <RevealOnScroll delay={0.1}>
             <div
               className="grid grid-cols-2 md:grid-cols-3 gap-1.5"
-              style={{ gridTemplateRows: 'repeat(2, 280px)' }}
+              style={{ gridTemplateRows: 'repeat(3, 240px)' }}
               role="list"
               aria-label="Galería del entorno del Fundo Los Huapes"
             >
