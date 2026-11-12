@@ -1,29 +1,30 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import JsonLd from '@/components/JsonLd'
-import { getBreadcrumbJsonLd } from '@/lib/jsonld'
+import { getBreadcrumbJsonLd, getItemListJsonLd } from '@/lib/jsonld'
 
 export const metadata: Metadata = {
-  title: 'Programas — 4 Experiencias en el Campo y el Río',
+  title: { absolute: 'Programas de Cabalgata y Balsa | Río San Pedro, Los Ríos' },
   description:
-    'Cuatro programas de turismo rural en el Fundo Los Huapes: desde cabalgata media jornada hasta travesía 2 días con balsa, asado y noche en el campo. Río San Pedro, Región de Los Ríos.',
+    '4 programas en el Fundo Los Huapes: de cabalgata media jornada a travesía 2 días con balsa por el Río San Pedro y noche en el campo. Región de Los Ríos.',
   alternates: {
-    canonical: 'https://loshuapes.cl/programas',
+    canonical: 'https://www.loshuapes.cl/programas',
   },
   openGraph: {
     title: 'Programas | Fundo Los Huapes',
     description:
       'Cuatro experiencias en el Río San Pedro y el campo. Media jornada a 2 días completos. Grupos de 5 a 10 personas.',
-    url: 'https://loshuapes.cl/programas',
+    url: 'https://www.loshuapes.cl/programas',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Programas Fundo Los Huapes' }],
   },
 }
 
 interface ProgramCard {
   number: string
+  /** Anchor usado por los enlaces del Footer (/programas#...) */
+  anchorId: string
   href: string
   name: string
   shortDesc: string
@@ -38,6 +39,7 @@ interface ProgramCard {
 const programs: ProgramCard[] = [
   {
     number: '01',
+    anchorId: 'media-jornada',
     href: '/programas/cabalgata-picoteo',
     name: 'Cabalgata y Picoteo',
     shortDesc:
@@ -51,6 +53,7 @@ const programs: ProgramCard[] = [
   },
   {
     number: '02',
+    anchorId: 'jornada-completa',
     href: '/programas/potrero-al-rio',
     name: 'Del Potrero al Río',
     shortDesc:
@@ -64,6 +67,7 @@ const programs: ProgramCard[] = [
   },
   {
     number: '03',
+    anchorId: 'dia-noche',
     href: '/programas/rio-al-potrero',
     name: 'Del Río al Potrero',
     shortDesc:
@@ -77,6 +81,7 @@ const programs: ProgramCard[] = [
   },
   {
     number: '04',
+    anchorId: 'dos-dias',
     href: '/programas/travesia-san-pedro',
     name: 'Travesía San Pedro',
     shortDesc:
@@ -92,13 +97,21 @@ const programs: ProgramCard[] = [
 
 export default function ProgramasPage() {
   const breadcrumb = getBreadcrumbJsonLd([
-    { name: 'Inicio', item: 'https://loshuapes.cl' },
-    { name: 'Programas', item: 'https://loshuapes.cl/programas' },
+    { name: 'Inicio', item: 'https://www.loshuapes.cl' },
+    { name: 'Programas', item: 'https://www.loshuapes.cl/programas' },
   ])
+
+  const itemList = getItemListJsonLd(
+    programs.map((program) => ({
+      name: program.name,
+      url: `https://www.loshuapes.cl${program.href}`,
+    })),
+  )
 
   return (
     <>
       <JsonLd data={breadcrumb} />
+      <JsonLd data={itemList} />
 
       {/* Hero */}
       <section className="relative bg-forest text-cream overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
@@ -129,6 +142,24 @@ export default function ProgramasPage() {
         </div>
       </section>
 
+      {/* Intro — párrafo citable (GEO) */}
+      <section className="bg-cream pt-16 lg:pt-24" aria-label="Cómo elegir programa">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="font-body text-[1.05rem] text-dark/70 leading-relaxed max-w-[720px]">
+            En el Fundo Los Huapes combinamos tres elementos que pocas veces se encuentran
+            juntos: cabalgatas por bosque nativo, bajadas en balsa por el Río San Pedro y
+            gastronomía de campo preparada a la usanza tradicional. Todos los programas
+            operan con grupos reducidos de 5 a 10 personas y atención directa, durante la
+            temporada de octubre a mayo. Para elegir, el criterio principal es el tiempo
+            disponible: si cuenta con medio día, la Cabalgata y Picoteo es la opción; con
+            un día completo puede partir por el campo o por el río, según prefiera
+            cabalgar en la mañana o navegar primero; y si busca la experiencia completa,
+            la Travesía San Pedro suma pesca con mosca, asado acampado y una noche en el
+            campo. Las edades mínimas van desde los 5 años en los programas familiares.
+          </p>
+        </div>
+      </section>
+
       {/* Program grid */}
       <section className="py-16 lg:py-24 bg-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -136,7 +167,8 @@ export default function ProgramasPage() {
             {programs.map((program) => (
               <article
                 key={program.number}
-                className="group relative flex flex-col overflow-hidden rounded-2xl border border-forest/10 bg-white shadow-sm hover:shadow-lg transition-shadow duration-300"
+                id={program.anchorId}
+                className="group relative flex flex-col overflow-hidden rounded-2xl border border-forest/10 bg-white shadow-sm hover:shadow-lg transition-shadow duration-300 scroll-mt-24"
               >
                 {/* Photo */}
                 <div className="relative h-56 lg:h-64 overflow-hidden">

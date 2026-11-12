@@ -12,7 +12,7 @@ import { getFAQJsonLd, getBreadcrumbJsonLd } from '@/lib/jsonld'
 export const metadata: Metadata = {
   title: 'El Entorno Natural | Río San Pedro y Bosque Nativo',
   description:
-    'El Fundo Los Huapes está rodeado de bosque nativo valdiviano y bordeado por el Río San Pedro. Ciervos, copihues, liebres y Gran Pirineo habitan el paisaje de la Región de Los Ríos, Chile.',
+    'Bosque nativo valdiviano y Río San Pedro a 45 km de Valdivia. Ciervos, copihues y fauna silvestre en el Fundo Los Huapes, Región de Los Ríos, Chile.',
   keywords: [
     'bosque nativo valdiviano',
     'naturaleza Región Los Ríos',
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     'Río San Pedro paisaje',
     'ecoturismo Valdivia',
   ],
-  alternates: { canonical: 'https://loshuapes.cl/el-entorno' },
+  alternates: { canonical: 'https://www.loshuapes.cl/el-entorno' },
   openGraph: {
-    url: 'https://loshuapes.cl/el-entorno',
+    url: 'https://www.loshuapes.cl/el-entorno',
     title: 'El Entorno Natural | Río San Pedro y Bosque Nativo | Fundo Los Huapes',
     description:
       'Bosque nativo valdiviano, río turquesa y fauna silvestre a minutos de Valdivia. El escenario del Fundo Los Huapes en la Región de Los Ríos.',
@@ -39,7 +39,7 @@ function getTouristAttractionPageJsonLd() {
     '@context': 'https://schema.org',
     '@type': 'TouristAttraction',
     name: 'Entorno Natural del Fundo Los Huapes',
-    url: 'https://loshuapes.cl/el-entorno',
+    url: 'https://www.loshuapes.cl/el-entorno',
     description:
       'Bosque nativo valdiviano y Río San Pedro en la Región de Los Ríos, Chile. Flora nativa con ulmos, tilos, avellanos y copihues. Fauna silvestre: ciervos, liebres y aves acuáticas.',
     address: {
@@ -136,8 +136,8 @@ export default function ElEntornoPage() {
       <JsonLd data={getFAQJsonLd(faqs)} />
       <JsonLd
         data={getBreadcrumbJsonLd([
-          { name: 'Inicio', item: 'https://loshuapes.cl' },
-          { name: 'El Entorno', item: 'https://loshuapes.cl/el-entorno' },
+          { name: 'Inicio', item: 'https://www.loshuapes.cl' },
+          { name: 'El Entorno', item: 'https://www.loshuapes.cl/el-entorno' },
         ])}
       />
 
@@ -173,10 +173,11 @@ export default function ElEntornoPage() {
             id="hero-entorno-heading"
             className="font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl max-w-2xl"
           >
-            Un escenario que no se encuentra en la ciudad
+            Bosque nativo y Río San Pedro: el entorno del Fundo Los Huapes
           </h1>
           <p className="mt-6 font-body text-lg text-cream/80 max-w-xl leading-relaxed">
-            Bosque nativo, río turquesa y fauna silvestre a minutos de Valdivia.
+            Bosque nativo, río turquesa y fauna silvestre. El fundo está a 45 km de
+            Valdivia — unos 50 minutos en auto.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Button href="/programas" variant="primary" size="lg">
@@ -322,9 +323,12 @@ export default function ElEntornoPage() {
             {/* Quote */}
             <blockquote className="mt-8 border-l-4 border-gold pl-6">
               <p className="font-display text-xl italic text-cream/90 leading-relaxed">
-                "Llegar al campo navegando, y no por la carretera, cambia por completo la
-                experiencia."
+                &ldquo;Llegar al campo navegando, y no por la carretera, cambia por completo la
+                experiencia.&rdquo;
               </p>
+              <footer className="mt-3 font-ui text-sm text-cream/60">
+                — Fundo Los Huapes
+              </footer>
             </blockquote>
           </div>
 
@@ -361,16 +365,8 @@ export default function ElEntornoPage() {
           </div>
 
           <p className="mt-8 font-ui text-sm text-cream/50">
-            Operación en el río:{' '}
-            <a
-              href="https://flyfishingrinihuε.cl"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gold hover:text-cream transition-colors underline underline-offset-4"
-            >
-              Fly Fishing Riñihue
-            </a>{' '}
-            — Guías locales del San Pedro
+            {/* TODO: confirmar dominio del partner de pesca */}
+            Operación en el río: Fly Fishing Riñihue — Guías locales del San Pedro
           </p>
         </div>
       </section>
@@ -538,6 +534,17 @@ export default function ElEntornoPage() {
                 Para los programas con llegada en balsa (Programas 02 y 03), el zarpe es en
                 Puente Ciruelos y el punto de encuentro es diferente al acceso en auto.
               </p>
+              <div className="mt-8">
+                {/* TODO: reemplazar por coordenadas GPS precisas del portón */}
+                <a
+                  href="https://maps.google.com/?q=-39.8,-72.9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center font-ui text-sm font-semibold bg-forest text-cream rounded-full px-6 py-3 hover:bg-forest/90 transition-colors"
+                >
+                  Ver en Google Maps
+                </a>
+              </div>
             </div>
 
             {/* Coordinates card */}

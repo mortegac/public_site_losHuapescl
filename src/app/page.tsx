@@ -20,24 +20,28 @@ import { HeroAnimated } from '@/components/HeroAnimated'
 import { RevealOnScroll } from '@/components/RevealOnScroll'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
-import { getTouristAttractionJsonLd, getLocalBusinessJsonLd } from '@/lib/jsonld'
+import {
+  getTouristAttractionJsonLd,
+  getLocalBusinessJsonLd,
+  getWebSiteJsonLd,
+} from '@/lib/jsonld'
 
 // ---------------------------------------------------------------------------
 // Metadata
 // ---------------------------------------------------------------------------
 
 export const metadata: Metadata = {
-  title: 'Cabalgatas y Experiencias en Fundo Los Huapes | Río San Pedro, Los Ríos',
+  title: { absolute: 'Cabalgatas y Balsa en el Río San Pedro | Los Huapes' },
   description:
-    'Cabalgatas por bosque nativo, bajadas en balsa por el Río San Pedro y asado acampado en el Fundo Los Huapes. 4 programas desde media jornada hasta 2 días. Grupos de 5 a 10 personas, Región de Los Ríos, Chile.',
+    'Cabalgatas por bosque nativo y bajadas en balsa por el Río San Pedro, en la Región de Los Ríos. 4 programas desde media jornada hasta 2 días.',
   alternates: {
-    canonical: 'https://loshuapes.cl',
+    canonical: 'https://www.loshuapes.cl',
   },
   openGraph: {
-    title: 'Cabalgatas y Experiencias en Fundo Los Huapes | Río San Pedro, Los Ríos',
+    title: 'Cabalgatas y Balsa en el Río San Pedro | Los Huapes',
     description:
-      'Cabalgatas por bosque nativo, bajadas en balsa por el Río San Pedro y asado acampado en el Fundo Los Huapes. 4 programas desde media jornada hasta 2 días.',
-    url: 'https://loshuapes.cl',
+      'Cabalgatas por bosque nativo y bajadas en balsa por el Río San Pedro, en la Región de Los Ríos. 4 programas desde media jornada hasta 2 días.',
+    url: 'https://www.loshuapes.cl',
     images: [
       {
         url: '/og-image.jpg',
@@ -266,6 +270,7 @@ export default function HomePage() {
   return (
     <>
       {/* Structured data */}
+      <JsonLd data={getWebSiteJsonLd()} />
       <JsonLd data={getTouristAttractionJsonLd()} />
       <JsonLd data={getLocalBusinessJsonLd()} />
 
@@ -281,6 +286,7 @@ export default function HomePage() {
             alt=""
             fill
             priority
+            fetchPriority="high"
             className="object-cover"
             sizes="100vw"
           />
@@ -300,6 +306,28 @@ export default function HomePage() {
         {/* Animated content — isolated Client Component */}
         <div className="relative z-10 w-full max-w-7xl mx-auto">
           <HeroAnimated />
+        </div>
+      </section>
+
+      {/* ── 1b. INTRO — párrafo citable (GEO) ───────────────────────────── */}
+      <section
+        className="bg-cream pt-16 sm:pt-20 px-4 sm:px-8 lg:px-12"
+        aria-label="Qué es el Fundo Los Huapes"
+      >
+        <div className="max-w-7xl mx-auto">
+          <p className="font-body text-[1.05rem] text-muted leading-relaxed max-w-[720px]">
+            El Fundo Los Huapes es un campo de turismo rural ubicado a orillas del Río San
+            Pedro, en la Región de Los Ríos, a unos 45 kilómetros de Valdivia, en el sur de
+            Chile. Ofrecemos cabalgatas guiadas por bosque nativo y potreros, bajadas en
+            balsa por el río en tramos de 15 y 20 kilómetros, y asado acampado preparado a
+            la usanza tradicional del campo chileno. Contamos con cuatro programas que van
+            desde una media jornada a caballo hasta una travesía de dos días con noche en
+            el campo, con precios desde $80.000 por persona. Trabajamos con grupos
+            reducidos de 5 a 10 personas, lo que permite una atención directa en cada
+            salida. La temporada va del 1 de octubre al 30 de mayo. El entorno combina
+            bosque nativo valdiviano, el estero Huillinco y la ribera del San Pedro, donde
+            ciervos, liebres y copihues son parte del paisaje cotidiano.
+          </p>
         </div>
       </section>
 
@@ -745,8 +773,9 @@ export default function HomePage() {
               >
                 Consultar disponibilidad
               </Link>
+              {/* TODO: confirmar número real */}
               <a
-                href="https://wa.me/56900000000"
+                href="https://wa.me/56912345678"
                 className="inline-flex items-center gap-3 font-ui text-sm font-semibold tracking-wide bg-[#25D366] text-cream px-10 py-4 transition-all duration-200 hover:bg-[#1db954] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-forest"
                 rel="noopener noreferrer"
                 target="_blank"

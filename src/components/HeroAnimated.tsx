@@ -2,23 +2,44 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { useSyncExternalStore } from 'react'
+
+const emptySubscribe = () => () => {}
+
+/** `false` during SSR and the hydration render, `true` right after hydration. */
+function useMounted(): boolean {
+  return useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  )
+}
 
 /**
  * Animated hero content block.
  * Isolated as a Client Component so the parent page stays a Server Component.
+ *
+ * CLS fix: while `mounted` is false (SSR + hydration render) every `initial`
+ * is `false`, so the server HTML ships fully visible and in its final position
+ * (no inline `opacity:0` / `translateY`), keeping the H1 readable without JS
+ * and avoiding layout shift. After mount, the wrapper is re-keyed so the
+ * entrance animation runs on the client only.
  */
 export function HeroAnimated() {
+  const mounted = useMounted()
+
   return (
     <motion.div
+      key={mounted ? 'hero-animated' : 'hero-static'}
       className="relative z-10 max-w-2xl"
-      initial={{ opacity: 0, y: 28 }}
+      initial={mounted ? { opacity: 0, y: 28 } : false}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
       {/* Eyebrow */}
       <motion.span
         className="block font-ui text-xs font-semibold tracking-[0.22em] uppercase text-ember mb-5"
-        initial={{ opacity: 0 }}
+        initial={mounted ? { opacity: 0 } : false}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.7 }}
       >
@@ -28,7 +49,7 @@ export function HeroAnimated() {
       {/* H1 */}
       <motion.h1
         className="font-display text-[clamp(2.8rem,5.5vw,4.5rem)] font-bold text-cream leading-[1.05] mb-6"
-        initial={{ opacity: 0, y: 16 }}
+        initial={mounted ? { opacity: 0, y: 16 } : false}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.35, duration: 0.8 }}
       >
@@ -38,7 +59,7 @@ export function HeroAnimated() {
       {/* Subtitle */}
       <motion.p
         className="font-body text-[1.15rem] font-light text-cream/82 max-w-xl mb-10 leading-[1.65]"
-        initial={{ opacity: 0, y: 12 }}
+        initial={mounted ? { opacity: 0, y: 12 } : false}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.7 }}
       >
@@ -48,7 +69,7 @@ export function HeroAnimated() {
       {/* CTAs */}
       <motion.div
         className="flex flex-wrap gap-4"
-        initial={{ opacity: 0, y: 8 }}
+        initial={mounted ? { opacity: 0, y: 8 } : false}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.65, duration: 0.6 }}
       >

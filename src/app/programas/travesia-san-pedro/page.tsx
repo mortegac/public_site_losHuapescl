@@ -6,14 +6,14 @@ import { Button } from '@/components/ui/Button'
 import JsonLd from '@/components/JsonLd'
 import { getTouristTripJsonLd, getFAQJsonLd, getBreadcrumbJsonLd } from '@/lib/jsonld'
 
-const BASE_URL = 'https://loshuapes.cl'
+const BASE_URL = 'https://www.loshuapes.cl'
 const PROGRAM_URL = `${BASE_URL}/programas/travesia-san-pedro`
 
 export function generateMetadata(): Metadata {
   return {
-    title: 'Travesía San Pedro — 2 Días 1 Noche en el Río y el Campo',
+    title: 'Travesía San Pedro — 2 Días y 1 Noche en Los Ríos',
     description:
-      'Dos días completos en el Río San Pedro y el Fundo Los Huapes. Balsa 20 km, pesca con mosca, asado acampado, noche en el campo y cabalgata. $280.000 por persona. Grupos de 5 a 10 personas.',
+      'Dos días en el Río San Pedro, Los Ríos: balsa 20 km, pesca con mosca, asado acampado, noche en el campo y cabalgata. $280.000 por persona, todo incluido.',
     keywords: [
       'travesía río San Pedro 2 días',
       'pesca con mosca San Pedro Chile',
@@ -22,7 +22,7 @@ export function generateMetadata(): Metadata {
     ],
     alternates: { canonical: PROGRAM_URL },
     openGraph: {
-      title: 'Travesía San Pedro — 2 Días 1 Noche | Fundo Los Huapes',
+      title: 'Travesía San Pedro — 2 Días y 1 Noche en Los Ríos | Fundo Los Huapes',
       description:
         'Balsa, pesca con mosca, asado acampado y cabalgata. 2 días todo incluido. $280.000 / persona.',
       url: PROGRAM_URL,
@@ -42,32 +42,59 @@ const faqs = [
   {
     question: '¿Qué tan difícil es la jornada de 8 horas en el río?',
     answer:
-      'El nivel es accesible para personas sin experiencia previa. La balsa es guiada, el equipo de seguridad está incluido y los guías de Fly Fishing Riñihue ajustan el ritmo al grupo.',
+      'El nivel es accesible para personas sin experiencia previa. La balsa es guiada, el equipo de seguridad está incluido y los guías de Fly Fishing Riñihue ajustan el ritmo al grupo. La jornada baja por la cuenca del Río San Pedro desde el desagüe de Riñihue, con snack y almuerzo servidos durante la ruta, de modo que hay pausas para descansar. Quien prefiera algo más tranquilo puede optar por el paseo en el lago, la alternativa que incluye el Lago Riñihue.',
   },
   {
     question: '¿Dónde se duerme durante la noche?',
     answer:
-      'En el campo, en instalaciones del Fundo Los Huapes. Se confirman los detalles de alojamiento al momento de la reserva.',
+      'En el campo, en instalaciones del Fundo Los Huapes, después del asado acampado que cierra el primer día alrededor de las 20:00. El alojamiento de una noche está incluido en el precio del programa, igual que el desayuno campestre del día siguiente, cuyo horario se acuerda con el grupo. Los detalles del alojamiento se confirman al momento de la reserva; para la noche conviene llevar ropa abrigada, bolsa de dormir y artículos de aseo personal.',
   },
   {
     question: '¿La pesca con mosca es obligatoria?',
     answer:
-      'No. El grupo elige entre una experiencia de pesca con mosca o simplemente disfrutar del río y el paisaje.',
+      'No. La pesca con mosca es una de las opciones del programa: el grupo elige entre pescar durante la jornada en el río o simplemente disfrutar del paisaje y la navegación. El equipamiento de pesca no está incluido, pero está disponible con Fly Fishing Riñihue, el operador del río. En el formulario de reserva se puede indicar el interés del grupo: todos, algunos o ninguno. La jornada de balsa y el resto del programa son iguales en ambos casos.',
   },
   {
     question: '¿Qué se necesita llevar para la noche?',
     answer:
-      'Ropa abrigada, bolsa de dormir y artículos de aseo personal. El fundo provee el alojamiento y la gastronomía.',
+      'Ropa abrigada, bolsa de dormir y artículos de aseo personal. El fundo provee el alojamiento y toda la gastronomía: asado acampado la primera noche, desayuno campestre al día siguiente y el almuerzo con snack durante la jornada en el río. El equipo de seguridad de la balsa está incluido; solo el equipamiento de pesca va aparte, disponible con Fly Fishing Riñihue para quienes elijan la opción de pesca con mosca.',
   },
   {
     question: '¿La Travesía San Pedro es apta para turistas extranjeros?',
     answer:
-      'Sí. Es el programa más demandado por turistas nacionales e internacionales, pescadores con mosca y quienes buscan desconectarse completamente.',
+      'Sí. Es el programa más demandado por turistas nacionales e internacionales, pescadores con mosca y quienes buscan desconectarse completamente. Son dos días y una noche en el Río San Pedro y el campo, en la Región de Los Ríos, con grupos de 5 a 10 personas y edad mínima de 10 años. La temporada va del 1 de octubre al 30 de mayo, y la reserva se coordina por el formulario con respuesta en menos de 24 horas.',
   },
   {
     question: '¿Cuánto cuesta y qué incluye el precio?',
     answer:
-      '$280.000 por persona. Incluye balsa, cabalgata con picoteo, asado acampado, alojamiento una noche, desayuno campestre y almuerzo en el río. Todo incluido.',
+      '$280.000 por persona, todo incluido. El precio cubre la bajada en balsa de 20 km, la cabalgata guiada con picoteo en el estero, el asado acampado de la primera noche, el alojamiento de una noche en el campo, el desayuno campestre y el almuerzo en el río con snack. No incluye el traslado al punto de zarpe, el equipamiento de pesca ni alojamiento adicional. Como opciones están la pesca con mosca, el paseo en el lago y el asado campestre del segundo día.',
+  },
+]
+
+const otherPrograms = [
+  {
+    number: '01',
+    href: '/programas/cabalgata-picoteo',
+    name: 'Cabalgata y Picoteo',
+    desc: 'Cabalgata guiada por bosque nativo con picoteo en el estero Huillinco.',
+    price: '$80.000',
+    duration: 'Media jornada',
+  },
+  {
+    number: '02',
+    href: '/programas/potrero-al-rio',
+    name: 'Del Potrero al Río',
+    desc: 'Mañana a caballo y tarde en balsa 15 km por el Río San Pedro. Almuerzo incluido.',
+    price: '$180.000',
+    duration: 'Día completo',
+  },
+  {
+    number: '03',
+    href: '/programas/rio-al-potrero',
+    name: 'Del Río al Potrero',
+    desc: 'Balsa 20 km en la mañana y cabalgata en la tarde. Apto desde 5 años.',
+    price: '$180.000',
+    duration: 'Día completo',
   },
 ]
 
@@ -128,7 +155,7 @@ export default function TravesiaSanPedroPage() {
             </div>
 
             <h1 className="font-display text-5xl font-bold leading-tight mb-6 lg:text-7xl">
-              Travesía San Pedro
+              Travesía por el Río San Pedro
             </h1>
 
             <p className="font-body text-lg text-cream/80 leading-relaxed mb-8 lg:text-xl max-w-2xl">
@@ -155,12 +182,30 @@ export default function TravesiaSanPedroPage() {
         </div>
       </section>
 
+      {/* ── Resumen del programa ── */}
+      <section className="py-12 bg-cream border-b border-forest/10 lg:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="max-w-3xl font-body text-base text-dark/80 leading-relaxed lg:text-lg">
+            La Travesía San Pedro es el programa más completo del Fundo Los Huapes: dos días y una
+            noche entre el río y el campo, en la Región de Los Ríos. El primer día se navega en
+            balsa por la cuenca del Río San Pedro desde el desagüe de Riñihue —una jornada de
+            aproximadamente 8 horas con snack y almuerzo en la ruta y opción de pesca con mosca—, y
+            termina con asado acampado y noche en el campo. El segundo día incluye desayuno
+            campestre, cabalgata con picoteo en el estero y actividades de campo como rodear
+            caballos. El valor es de $280.000 por persona, todo incluido: balsa, cabalgata, picoteo,
+            asado acampado, alojamiento, desayuno y almuerzo. Los grupos son de 5 a 10 personas,
+            desde los 10 años, y operan junto a Fly Fishing Riñihue y De la Hoguera. La temporada va
+            del 1 de octubre al 30 de mayo.
+          </p>
+        </div>
+      </section>
+
       {/* ── Itinerario 2 días ── */}
       <section className="py-16 bg-cream lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h2 className="font-display text-3xl font-bold text-forest mb-10 lg:text-4xl">
-              Itinerario
+              ¿Cómo es el itinerario de los 2 días?
             </h2>
 
             <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
@@ -243,7 +288,9 @@ export default function TravesiaSanPedroPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-3 max-w-4xl">
             <div>
-              <h2 className="font-display text-2xl font-bold text-forest mb-6">Incluye</h2>
+              <h2 className="font-display text-2xl font-bold text-forest mb-6">
+                ¿Qué incluye el precio?
+              </h2>
               <ul className="space-y-3">
                 {[
                   'Bajada en balsa (20 km)',
@@ -278,7 +325,7 @@ export default function TravesiaSanPedroPage() {
             </div>
 
             <div>
-              <h2 className="font-display text-2xl font-bold text-forest mb-6">No incluye</h2>
+              <h2 className="font-display text-2xl font-bold text-forest mb-6">¿Qué no incluye?</h2>
               <ul className="space-y-3">
                 {[
                   'Traslado al punto de zarpe',
@@ -334,6 +381,7 @@ export default function TravesiaSanPedroPage() {
                   src={item.image}
                   alt={item.alt}
                   fill
+                  priority={index === 0}
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
@@ -368,6 +416,36 @@ export default function TravesiaSanPedroPage() {
                 </details>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Otros programas ── */}
+      <section className="py-16 bg-cream border-b border-forest/10 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl font-bold text-forest mb-10 lg:text-4xl">
+            Otros programas
+          </h2>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 max-w-4xl">
+            {otherPrograms.map((program) => (
+              <Link
+                key={program.href}
+                href={program.href}
+                className="group block rounded-xl border border-forest/10 bg-white p-6 hover:border-ember/40 hover:shadow-md transition-all duration-200"
+              >
+                <p className="font-ui text-xs tracking-widest uppercase text-muted mb-2">
+                  Programa {program.number}
+                </p>
+                <h3 className="font-display text-xl font-bold text-forest mb-2 group-hover:text-ember transition-colors duration-200">
+                  {program.name}
+                </h3>
+                <p className="font-body text-sm text-dark/70 leading-relaxed mb-4">{program.desc}</p>
+                <p className="font-ui text-sm font-semibold text-ember">
+                  {program.price}{' '}
+                  <span className="text-muted font-normal">· {program.duration}</span>
+                </p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

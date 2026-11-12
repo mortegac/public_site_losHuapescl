@@ -6,14 +6,14 @@ import { Button } from '@/components/ui/Button'
 import JsonLd from '@/components/JsonLd'
 import { getTouristTripJsonLd, getFAQJsonLd, getBreadcrumbJsonLd } from '@/lib/jsonld'
 
-const BASE_URL = 'https://loshuapes.cl'
+const BASE_URL = 'https://www.loshuapes.cl'
 const PROGRAM_URL = `${BASE_URL}/programas/rio-al-potrero`
 
 export function generateMetadata(): Metadata {
   return {
-    title: 'Del Río al Potrero — Balsa y Cabalgata Día Completo',
+    title: 'Del Río San Pedro al Potrero — Balsa y Cabalgata Familiar',
     description:
-      'Mañana en balsa por el Río San Pedro (20 km) y tarde a caballo en el Fundo Los Huapes. Día completo desde 5 años. $180.000 por persona. Asado acampado opcional.',
+      'Balsa 20 km por el Río San Pedro en la mañana y cabalgata por el fundo en la tarde. Día completo en Los Ríos, desde 5 años. $180.000 por persona.',
     keywords: [
       'bajada en balsa Río San Pedro 20 km',
       'cabalgata río San Pedro familias',
@@ -21,7 +21,7 @@ export function generateMetadata(): Metadata {
     ],
     alternates: { canonical: PROGRAM_URL },
     openGraph: {
-      title: 'Del Río al Potrero — Balsa y Cabalgata Día Completo | Fundo Los Huapes',
+      title: 'Del Río San Pedro al Potrero — Balsa y Cabalgata | Fundo Los Huapes',
       description:
         'Balsa 20 km mañana + cabalgata tarde. Desde 5 años. Asado acampado opcional. $180.000 / persona.',
       url: PROGRAM_URL,
@@ -41,26 +41,54 @@ const faqs = [
   {
     question: '¿Por qué este programa parte más temprano que los demás?',
     answer:
-      'Porque el tramo de balsa es el más largo —20 km desde Puente Ciruelos—. El zarpe a las 9:30 permite llegar al campo a la hora del almuerzo y tener la tarde para la cabalgata.',
+      'Porque el tramo de balsa es el más largo de los programas: 20 km desde Puente Ciruelos por el Río San Pedro. El zarpe a las 9:30 permite navegar entre 3 y 4 horas, con snack a mitad de recorrido, y llegar a la isla del campo cerca de las 13:30, justo a la hora del almuerzo. Así la tarde queda libre para la cabalgata, que parte a las 15:30 y termina alrededor de las 19:30.',
   },
   {
     question: '¿Qué es el snack en el río?',
     answer:
-      'Durante la bajada, el equipo de guías sirve un snack en un punto estratégico del recorrido: frutas, bebidas y algo seco para recargar energías.',
+      'Durante la bajada de 20 km, el equipo de guías de Fly Fishing Riñihue sirve un snack en un punto estratégico del recorrido: frutas, bebidas y algo seco para recargar energías. Es una pausa breve dentro de las 3 a 4 horas de navegación, pensada para llegar bien a la isla del campo, donde espera el almuerzo campestre completo antes de la cabalgata de la tarde. El snack está incluido en el valor del programa.',
   },
   {
     question: '¿Este programa es apto para niños pequeños?',
     answer:
-      'Sí, desde los 5 años acompañados por sus padres. La cabalgata es la de turno tarde, que está pensada para grupos mixtos en nivel de experiencia.',
+      'Sí, desde los 5 años acompañados por sus padres, lo que lo convierte en el programa de día completo más accesible para familias. La cabalgata es la de turno tarde, pensada para grupos mixtos en nivel de experiencia, y la balsa es guiada por el equipo de Fly Fishing Riñihue. Al reservar, el formulario permite indicar las edades aproximadas de los participantes para preparar la jornada según el grupo.',
   },
   {
     question: '¿El Programa 03 incluye almuerzo?',
     answer:
-      'Sí. Al llegar a la isla del campo, el grupo almuerza antes de iniciar la cabalgata.',
+      'Sí. Al llegar a la isla del campo, cerca de las 13:30, el grupo almuerza antes de iniciar la cabalgata de las 15:30. El almuerzo campestre está incluido en el valor del programa, igual que el snack en el río y el picoteo con bebestibles que se sirve durante el descanso en el estero, a las 17:00. Lo único que no está incluido en comida es el asado acampado, que es opcional al final del día.',
   },
   {
     question: '¿Se puede agregar el asado acampado al final?',
-    answer: 'Sí, se puede agregar por $40.000 por persona adicionales.',
+    answer:
+      'Sí, se puede agregar por $40.000 adicionales por persona. El asado acampado se sirve alrededor de las 20:00, después del término de la cabalgata a las 19:30, y cierra la jornada completa de río y campo. Se puede marcar directamente en el formulario de reserva al indicar el número de personas. Si no se agrega, el programa termina con la segunda etapa de la cabalgata y el día igual incluye almuerzo, snack y picoteo.',
+  },
+]
+
+const otherPrograms = [
+  {
+    number: '01',
+    href: '/programas/cabalgata-picoteo',
+    name: 'Cabalgata y Picoteo',
+    desc: 'Cabalgata guiada por bosque nativo con picoteo en el estero Huillinco.',
+    price: '$80.000',
+    duration: 'Media jornada',
+  },
+  {
+    number: '02',
+    href: '/programas/potrero-al-rio',
+    name: 'Del Potrero al Río',
+    desc: 'Mañana a caballo y tarde en balsa 15 km por el Río San Pedro. Almuerzo incluido.',
+    price: '$180.000',
+    duration: 'Día completo',
+  },
+  {
+    number: '04',
+    href: '/programas/travesia-san-pedro',
+    name: 'Travesía San Pedro',
+    desc: 'Balsa, pesca con mosca, asado acampado, noche en el campo y cabalgata.',
+    price: '$280.000',
+    duration: '2 días · 1 noche',
   },
 ]
 
@@ -121,7 +149,7 @@ export default function RioAlPotreroPage() {
             </div>
 
             <h1 className="font-display text-5xl font-bold leading-tight mb-6 lg:text-7xl">
-              Del Río al Potrero
+              Del Río San Pedro al Potrero
             </h1>
 
             <p className="font-body text-lg text-cream/80 leading-relaxed mb-8 lg:text-xl max-w-2xl">
@@ -145,12 +173,30 @@ export default function RioAlPotreroPage() {
         </div>
       </section>
 
+      {/* ── Resumen del programa ── */}
+      <section className="py-12 bg-cream border-b border-forest/10 lg:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="max-w-3xl font-body text-base text-dark/80 leading-relaxed lg:text-lg">
+            Del Río al Potrero es el programa familiar de día completo del Fundo Los Huapes, apto
+            desde los 5 años. La mañana parte a las 9:30 con el zarpe en balsa desde Puente
+            Ciruelos: 20 km por el tramo largo del Río San Pedro, con snack a mitad de recorrido y
+            entre 3 y 4 horas de navegación guiada por el equipo de Fly Fishing Riñihue. Al llegar a
+            la isla del campo, cerca de las 13:30, el grupo almuerza antes de iniciar la cabalgata
+            de la tarde, con descanso y picoteo en el estero y término alrededor de las 19:30. El
+            valor es de $180.000 por persona e incluye balsa, snack, almuerzo campestre, cabalgata y
+            picoteo; el asado acampado se puede agregar por $40.000 adicionales. Los grupos son de 5
+            a 10 personas y la temporada va del 1 de octubre al 30 de mayo, en la Región de Los
+            Ríos.
+          </p>
+        </div>
+      </section>
+
       {/* ── Itinerario ── */}
       <section className="py-16 bg-cream lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <h2 className="font-display text-3xl font-bold text-forest mb-10 lg:text-4xl">
-              Itinerario del día
+              ¿Cómo es el itinerario del día?
             </h2>
 
             <ol className="relative border-l-2 border-forest/20 space-y-8 pl-6">
@@ -185,7 +231,9 @@ export default function RioAlPotreroPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 max-w-3xl">
             <div>
-              <h2 className="font-display text-2xl font-bold text-forest mb-6">Incluye</h2>
+              <h2 className="font-display text-2xl font-bold text-forest mb-6">
+                ¿Qué incluye el precio?
+              </h2>
               <ul className="space-y-3">
                 {[
                   'Bajada guiada en balsa (20 km)',
@@ -203,7 +251,7 @@ export default function RioAlPotreroPage() {
             </div>
 
             <div>
-              <h2 className="font-display text-2xl font-bold text-forest mb-6">No incluye</h2>
+              <h2 className="font-display text-2xl font-bold text-forest mb-6">¿Qué no incluye?</h2>
               <ul className="space-y-3">
                 {[
                   'Traslado hacia Puente Ciruelos (punto de zarpe)',
@@ -251,6 +299,7 @@ export default function RioAlPotreroPage() {
                   src={item.image}
                   alt={item.alt}
                   fill
+                  priority={index === 0}
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
@@ -285,6 +334,45 @@ export default function RioAlPotreroPage() {
                 </details>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Otros programas ── */}
+      <section className="py-16 bg-cream border-b border-forest/10 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl font-bold text-forest mb-10 lg:text-4xl">
+            Otros programas
+          </h2>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 max-w-4xl">
+            {otherPrograms.map((program) => (
+              <Link
+                key={program.href}
+                href={program.href}
+                className="group block rounded-xl border border-forest/10 bg-white p-6 hover:border-ember/40 hover:shadow-md transition-all duration-200"
+              >
+                <p className="font-ui text-xs tracking-widest uppercase text-muted mb-2">
+                  Programa {program.number}
+                </p>
+                <h3 className="font-display text-xl font-bold text-forest mb-2 group-hover:text-ember transition-colors duration-200">
+                  {program.name}
+                </h3>
+                <p className="font-body text-sm text-dark/70 leading-relaxed mb-4">{program.desc}</p>
+                <p className="font-ui text-sm font-semibold text-ember">
+                  {program.price}{' '}
+                  <span className="text-muted font-normal">· {program.duration}</span>
+                </p>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-10 max-w-4xl flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between rounded-xl border border-forest/10 bg-forest/5 p-6">
+            <p className="font-body text-dark/80">
+              ¿Quieres cerrar la jornada con un asado al palo junto al río?
+            </p>
+            <Button href="/gastronomia" variant="secondary" size="md" className="flex-shrink-0">
+              Agrega el asado acampado
+            </Button>
           </div>
         </div>
       </section>

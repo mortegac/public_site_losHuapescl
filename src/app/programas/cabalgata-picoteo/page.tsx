@@ -6,14 +6,14 @@ import { Button } from '@/components/ui/Button'
 import JsonLd from '@/components/JsonLd'
 import { getTouristTripJsonLd, getFAQJsonLd, getBreadcrumbJsonLd } from '@/lib/jsonld'
 
-const BASE_URL = 'https://loshuapes.cl'
+const BASE_URL = 'https://www.loshuapes.cl'
 const PROGRAM_URL = `${BASE_URL}/programas/cabalgata-picoteo`
 
 export function generateMetadata(): Metadata {
   return {
-    title: 'Cabalgata y Picoteo en Bosque Nativo | Media Jornada',
+    title: 'Cabalgata y Picoteo en el Río San Pedro | Media Jornada',
     description:
-      'Cabalgata guiada en dos etapas por bosque nativo y potreros del Fundo Los Huapes, con picoteo de campo en el estero. Mañana o tarde. Desde 5 años. $80.000 por persona. Asado acampado opcional.',
+      'Cabalgata guiada por bosque nativo junto al Río San Pedro, Los Ríos, con picoteo en el estero Huillinco. Media jornada, desde 5 años. $80.000 por persona.',
     keywords: [
       'cabalgata bosque nativo Los Ríos',
       'cabalgata Río San Pedro Chile',
@@ -21,7 +21,7 @@ export function generateMetadata(): Metadata {
     ],
     alternates: { canonical: PROGRAM_URL },
     openGraph: {
-      title: 'Cabalgata y Picoteo en Bosque Nativo | Media Jornada | Fundo Los Huapes',
+      title: 'Cabalgata y Picoteo en el Río San Pedro | Fundo Los Huapes',
       description:
         'Cabalgata guiada por bosque nativo y potreros con picoteo en el estero Huillinco. $80.000 / persona.',
       url: PROGRAM_URL,
@@ -41,32 +41,59 @@ const faqs = [
   {
     question: '¿Se necesita experiencia previa en equitación?',
     answer:
-      'No. Los caballos del fundo están adaptados a todos los niveles, y el guía acompaña a cada jinete durante todo el recorrido.',
+      'No. Los caballos del fundo están adaptados a todos los niveles y el guía acompaña a cada jinete durante todo el recorrido. La cabalgata se hace en dos etapas —primero bosque nativo y luego potreros— con un alto intermedio en el estero Huillinco para el picoteo, lo que permite descansar y retomar con calma. Los grupos son de 5 a 10 personas, ideales para que el guía pueda atender a cada participante.',
   },
   {
     question: '¿Cuánto dura la cabalgata?',
     answer:
-      'Aproximadamente 4 horas, incluyendo el picoteo en el estero Huillinco.',
+      'Aproximadamente 4 horas en total, incluyendo el picoteo en el estero Huillinco. En el turno mañana, la cabalgata parte a las 10:30 y termina a las 14:30, con el picoteo a las 12:00; en el turno tarde, parte a las 15:30 y termina a las 19:30, con el picoteo a las 17:00. En ambos casos, la llegada y bienvenida es media hora antes del inicio y, si se agrega el asado acampado, la jornada se extiende después del término.',
   },
   {
     question: '¿Desde qué edad pueden participar los niños?',
     answer:
-      'Desde los 10 años en el turno mañana y desde los 5 años en el turno tarde. Siempre acompañados por sus padres.',
+      'Desde los 10 años en el turno mañana y desde los 5 años en el turno tarde, siempre acompañados por sus padres. Por eso, para familias con niños pequeños el turno tarde es la opción indicada: parte a las 15:30, incluye el picoteo en el estero a las 17:00 y termina a las 19:30. Los grupos son de 5 a 10 personas, por lo que conviene indicar las edades de los participantes al momento de reservar.',
   },
   {
     question: '¿Qué incluye el picoteo?',
     answer:
-      'Arrollado huaso, queso fresco con aceite de oliva y ají verde, pernil, tortillas y pan amasado. Para tomar: cervezas, jugos naturales, bebidas y agua mineral.',
+      'El picoteo de campo se sirve a mitad del recorrido, en el estero Huillinco, a la sombra. Incluye arrollado huaso, queso fresco con aceite de oliva y ají verde, pernil, tortillas y pan amasado. Para tomar hay cervezas, jugos naturales, bebidas y agua mineral, todo incluido en el precio del programa. Es la pausa entre la primera y la segunda etapa de la cabalgata: alrededor de 45 minutos para reponer energía antes de volver a montar.',
   },
   {
     question: '¿Dónde queda el Fundo Los Huapes?',
     answer:
-      'En la orilla del Río San Pedro, Región de Los Ríos, Chile. Se confirma el punto de encuentro exacto al momento de la reserva.',
+      'El Fundo Los Huapes está en la orilla del Río San Pedro, en la Región de Los Ríos, Chile. El punto de encuentro exacto se confirma al momento de la reserva, junto con las indicaciones de llegada. El traslado hasta el fundo no está incluido en el programa, así que cada grupo llega por sus propios medios a la hora de bienvenida: 10:00 para el turno mañana y 15:00 para el turno tarde.',
   },
   {
     question: '¿Se puede agregar el asado acampado?',
     answer:
-      'Sí, el asado acampado se puede agregar a cualquier programa por $40.000 adicionales por persona. Lo prepara De la Hoguera con cordero y estomaguillo al palo.',
+      'Sí. El asado acampado se puede agregar a este programa por $40.000 adicionales por persona y lo prepara De la Hoguera, con cordero y estomaguillo al palo. Se sirve al término de la cabalgata: a las 15:00 en el turno mañana o a las 20:00 en el turno tarde. Puedes marcarlo directamente en el formulario de reserva. Si prefieres solo la cabalgata, el programa incluye de todas formas el picoteo y los bebestibles en el estero.',
+  },
+]
+
+const otherPrograms = [
+  {
+    number: '02',
+    href: '/programas/potrero-al-rio',
+    name: 'Del Potrero al Río',
+    desc: 'Mañana a caballo y tarde en balsa 15 km por el Río San Pedro. Almuerzo incluido.',
+    price: '$180.000',
+    duration: 'Día completo',
+  },
+  {
+    number: '03',
+    href: '/programas/rio-al-potrero',
+    name: 'Del Río al Potrero',
+    desc: 'Balsa 20 km en la mañana y cabalgata en la tarde. Apto desde 5 años.',
+    price: '$180.000',
+    duration: 'Día completo',
+  },
+  {
+    number: '04',
+    href: '/programas/travesia-san-pedro',
+    name: 'Travesía San Pedro',
+    desc: 'Balsa, pesca con mosca, asado acampado, noche en el campo y cabalgata.',
+    price: '$280.000',
+    duration: '2 días · 1 noche',
   },
 ]
 
@@ -109,11 +136,17 @@ export default function CabalgataPickoteoPage() {
 
       {/* ── Hero ── */}
       <section className="relative bg-forest text-cream overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
-        {/* Decorative gradient blob */}
-        <div
-          className="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-l from-ember/20 to-transparent pointer-events-none"
-          aria-hidden="true"
-        />
+        <div className="absolute inset-0" aria-hidden="true">
+          <Image
+            src="/images/cabalgata-bosque.jpg"
+            alt=""
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-forest/80" />
+        </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
@@ -129,7 +162,7 @@ export default function CabalgataPickoteoPage() {
             </div>
 
             <h1 className="font-display text-5xl font-bold leading-tight mb-6 lg:text-7xl">
-              Cabalgata y Picoteo
+              Cabalgata y Picoteo en el Río San Pedro
             </h1>
 
             <p className="font-body text-lg text-cream/80 leading-relaxed mb-8 lg:text-xl max-w-2xl">
@@ -154,12 +187,30 @@ export default function CabalgataPickoteoPage() {
         </div>
       </section>
 
+      {/* ── Resumen del programa ── */}
+      <section className="py-12 bg-cream border-b border-forest/10 lg:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="max-w-3xl font-body text-base text-dark/80 leading-relaxed lg:text-lg">
+            Cabalgata y Picoteo es el programa de media jornada del Fundo Los Huapes: una cabalgata
+            guiada en dos etapas por bosque nativo y potreros, con un alto en el estero Huillinco
+            para un picoteo de campo con arrollado huaso, queso fresco, pernil, tortillas y pan
+            amasado, acompañado de cervezas, jugos naturales, bebidas y agua mineral. El recorrido
+            dura aproximadamente 4 horas y se ofrece en turno mañana o tarde. El valor es de $80.000
+            por persona e incluye la cabalgata guiada, el picoteo y los bebestibles; el asado
+            acampado se puede agregar por $40.000 adicionales por persona. Los grupos son de 5 a 10
+            personas, con edad mínima de 10 años en la mañana y 5 años en la tarde, siempre
+            acompañados por sus padres. El fundo está en la orilla del Río San Pedro, Región de Los
+            Ríos, Chile, y la temporada va del 1 de octubre al 30 de mayo.
+          </p>
+        </div>
+      </section>
+
       {/* ── Itinerario ── */}
       <section className="py-16 bg-cream lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h2 className="font-display text-3xl font-bold text-forest mb-10 lg:text-4xl">
-              Itinerario
+              ¿Cuánto dura y cuál es el itinerario?
             </h2>
 
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
@@ -227,7 +278,9 @@ export default function CabalgataPickoteoPage() {
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 max-w-3xl">
             {/* Incluye */}
             <div>
-              <h2 className="font-display text-2xl font-bold text-forest mb-6">Incluye</h2>
+              <h2 className="font-display text-2xl font-bold text-forest mb-6">
+                ¿Qué incluye el precio?
+              </h2>
               <ul className="space-y-3">
                 {[
                   'Cabalgata guiada en dos etapas',
@@ -244,7 +297,7 @@ export default function CabalgataPickoteoPage() {
 
             {/* No incluye */}
             <div>
-              <h2 className="font-display text-2xl font-bold text-forest mb-6">No incluye</h2>
+              <h2 className="font-display text-2xl font-bold text-forest mb-6">¿Qué no incluye?</h2>
               <ul className="space-y-3">
                 {[
                   'Traslado al fundo',
@@ -293,6 +346,7 @@ export default function CabalgataPickoteoPage() {
                   src={item.image}
                   alt={item.alt}
                   fill
+                  priority={index === 0}
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
@@ -327,6 +381,45 @@ export default function CabalgataPickoteoPage() {
                 </details>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Otros programas ── */}
+      <section className="py-16 bg-cream border-b border-forest/10 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl font-bold text-forest mb-10 lg:text-4xl">
+            Otros programas
+          </h2>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 max-w-4xl">
+            {otherPrograms.map((program) => (
+              <Link
+                key={program.href}
+                href={program.href}
+                className="group block rounded-xl border border-forest/10 bg-white p-6 hover:border-ember/40 hover:shadow-md transition-all duration-200"
+              >
+                <p className="font-ui text-xs tracking-widest uppercase text-muted mb-2">
+                  Programa {program.number}
+                </p>
+                <h3 className="font-display text-xl font-bold text-forest mb-2 group-hover:text-ember transition-colors duration-200">
+                  {program.name}
+                </h3>
+                <p className="font-body text-sm text-dark/70 leading-relaxed mb-4">{program.desc}</p>
+                <p className="font-ui text-sm font-semibold text-ember">
+                  {program.price}{' '}
+                  <span className="text-muted font-normal">· {program.duration}</span>
+                </p>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-10 max-w-4xl flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between rounded-xl border border-forest/10 bg-forest/5 p-6">
+            <p className="font-body text-dark/80">
+              ¿Quieres cerrar la jornada con cordero y estomaguillo al palo de De la Hoguera?
+            </p>
+            <Button href="/gastronomia" variant="secondary" size="md" className="flex-shrink-0">
+              Agrega el asado acampado
+            </Button>
           </div>
         </div>
       </section>

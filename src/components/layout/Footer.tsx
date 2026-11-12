@@ -36,14 +36,17 @@ const footerColumns: FooterColumn[] = [
     title: 'Contacto',
     links: [
       { label: 'Reservar', href: '/reservar' },
+      // TODO: confirmar número real
       { label: 'WhatsApp', href: 'https://wa.me/56912345678' },
       { label: 'hola@loshuapes.cl', href: 'mailto:hola@loshuapes.cl' },
     ],
   },
 ]
 
+// Año de build: el sitio es estático, se actualiza en cada deploy.
+const currentYear = new Date().getFullYear()
+
 export function Footer() {
-  const currentYear = 2025
 
   return (
     <footer className="bg-forest text-cream">
@@ -56,7 +59,7 @@ export function Footer() {
               href="/"
               className="font-display text-2xl font-bold text-cream hover:text-gold transition-colors duration-200"
             >
-              Los Huapes
+              Fundo Los Huapes
             </Link>
             <p className="mt-3 font-ui text-sm text-cream/70 leading-relaxed">
               Río San Pedro · Región de Los Ríos · Chile

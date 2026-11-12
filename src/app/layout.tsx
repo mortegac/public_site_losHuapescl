@@ -26,13 +26,13 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://loshuapes.cl'),
+  metadataBase: new URL('https://www.loshuapes.cl'),
   title: {
     default: 'Fundo Los Huapes',
     template: '%s | Fundo Los Huapes',
   },
   description:
-    'Cabalgatas por bosque nativo, bajadas en balsa por el Río San Pedro y asado acampado en el Fundo Los Huapes. 4 programas desde media jornada hasta 2 días. Grupos de 5 a 10 personas, Región de Los Ríos, Chile.',
+    'Cabalgatas por bosque nativo, balsa por el Río San Pedro y asado acampado. 4 programas, grupos de 5 a 10 personas. Región de Los Ríos, Chile.',
   keywords: [
     'cabalgatas Los Ríos',
     'cabalgatas Valdivia',
@@ -43,9 +43,12 @@ export const metadata: Metadata = {
     'experiencias campo chileno',
     'cabalgatas bosque nativo sur Chile',
   ],
-  authors: [{ name: 'Fundo Los Huapes', url: 'https://loshuapes.cl' }],
+  authors: [{ name: 'Fundo Los Huapes', url: 'https://www.loshuapes.cl' }],
   creator: 'Fundo Los Huapes',
   publisher: 'Fundo Los Huapes',
+  // robots se define una sola vez aquí (index,follow global). La página 404
+  // usa src/app/not-found.tsx con robots noindex, que sobreescribe esta
+  // definición a nivel de ruta — así no hay directivas duplicadas/conflictivas.
   robots: {
     index: true,
     follow: true,
@@ -60,7 +63,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_CL',
-    url: 'https://loshuapes.cl',
+    url: 'https://www.loshuapes.cl',
     siteName: 'Fundo Los Huapes',
     title: 'Cabalgatas y Experiencias en Fundo Los Huapes | Río San Pedro, Los Ríos',
     description:
@@ -82,7 +85,7 @@ export const metadata: Metadata = {
     images: ['/og-image.jpg'],
   },
   alternates: {
-    canonical: 'https://loshuapes.cl',
+    canonical: 'https://www.loshuapes.cl',
   },
 }
 
@@ -102,10 +105,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
       lang="es-CL"
       className={`${playfairDisplay.variable} ${sourceSerif4.variable} ${dmSans.variable} h-full antialiased`}
     >
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      </head>
       <body className="min-h-full flex flex-col">
         <Navbar />
         <main className="flex-1 pt-16 lg:pt-20">{children}</main>

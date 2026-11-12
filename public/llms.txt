@@ -71,6 +71,6 @@ El Río San Pedro nace en el Lago Riñihue y recorre más de 70 km hasta unirse 
 
 ## Contacto y reservas
 
-- URL: https://loshuapes.cl
-- Reservas: https://loshuapes.cl/reservas
-- Consultas para agencias: https://loshuapes.cl/para-agencias
+- URL: https://www.loshuapes.cl
+- Reservas: https://www.loshuapes.cl/reservar
+- Consultas para agencias: https://www.loshuapes.cl/para-agencias

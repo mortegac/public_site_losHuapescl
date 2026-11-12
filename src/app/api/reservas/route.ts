@@ -9,6 +9,8 @@ interface ReservaPayload {
   programa?: string
   mensaje?: string
   agencia?: string
+  turno?: string
+  asado?: string
 }
 
 function validatePayload(body: unknown): body is ReservaPayload {
@@ -43,7 +45,15 @@ function isRateLimited(ip: string): boolean {
 export async function POST(req: NextRequest) {
   const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown'
 
+  // Los formularios HTML de las páginas de programa postean form-encoded y
+  // esperan una navegación; los client components postean JSON.
+  const contentType = req.headers.get('content-type') ?? ''
+  const isFormPost = !contentType.includes('application/json')
+  const formRedirect = (query: string) =>
+    NextResponse.redirect(new URL(`/gracias${query}`, req.url), 303)
+
   if (isRateLimited(ip)) {
+    if (isFormPost) return formRedirect('?error=limite')
     return NextResponse.json(
       { success: false, error: 'Demasiadas solicitudes. Intenta en unos minutos.' },
       { status: 429 }
@@ -52,12 +62,21 @@ export async function POST(req: NextRequest) {
 
   let body: unknown
   try {
-    body = await req.json()
+    if (isFormPost) {
+      const form = await req.formData()
+      body = Object.fromEntries(
+        [...form.entries()].filter(([, v]) => typeof v === 'string')
+      )
+    } else {
+      body = await req.json()
+    }
   } catch {
+    if (isFormPost) return formRedirect('?error=datos')
     return NextResponse.json({ success: false, error: 'Formato inválido.' }, { status: 400 })
   }
 
   if (!validatePayload(body)) {
+    if (isFormPost) return formRedirect('?error=datos')
     return NextResponse.json(
       { success: false, error: 'Faltan campos obligatorios.' },
       { status: 422 }
@@ -95,6 +114,8 @@ export async function POST(req: NextRequest) {
       ${row('Fecha solicitada', body.fecha)}
       ${row('Personas', body.personas)}
       ${body.programa ? row('Programa', body.programa) : ''}
+      ${body.turno    ? row('Turno',    body.turno)    : ''}
+      ${body.asado    ? row('Asado acampado', body.asado) : ''}
       ${body.agencia  ? row('Agencia',  body.agencia)  : ''}
       ${body.mensaje  ? `<tr><td><strong>Mensaje</strong></td><td>${escMultiline(body.mensaje)}</td></tr>` : ''}
     </table>
@@ -109,8 +130,10 @@ export async function POST(req: NextRequest) {
   })
 
   if (error) {
+    if (isFormPost) return formRedirect('?error=envio')
     return NextResponse.json({ success: false, error: 'No se pudo enviar el mensaje.' }, { status: 500 })
   }
 
+  if (isFormPost) return formRedirect('')
   return NextResponse.json({ success: true })
 }

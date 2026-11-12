@@ -6,14 +6,14 @@ import { Button } from '@/components/ui/Button'
 import JsonLd from '@/components/JsonLd'
 import { getTouristTripJsonLd, getFAQJsonLd, getBreadcrumbJsonLd } from '@/lib/jsonld'
 
-const BASE_URL = 'https://loshuapes.cl'
+const BASE_URL = 'https://www.loshuapes.cl'
 const PROGRAM_URL = `${BASE_URL}/programas/potrero-al-rio`
 
 export function generateMetadata(): Metadata {
   return {
-    title: 'Del Potrero al Río — Cabalgata y Balsa Día Completo',
+    title: 'Del Potrero al Río — Cabalgata y Balsa en el Río San Pedro',
     description:
-      'Mañana a caballo por bosque nativo y tarde en balsa por el Río San Pedro (15 km hasta Antilhue). Día completo. Desde 10 años. $180.000 por persona. Almuerzo campestre incluido.',
+      'Mañana a caballo por bosque nativo y tarde en balsa 15 km por el Río San Pedro hasta Antilhue, Los Ríos. Día completo con almuerzo. $180.000 por persona.',
     keywords: [
       'bajada en balsa Río San Pedro',
       'cabalgata y balsa Los Ríos',
@@ -21,7 +21,7 @@ export function generateMetadata(): Metadata {
     ],
     alternates: { canonical: PROGRAM_URL },
     openGraph: {
-      title: 'Del Potrero al Río — Cabalgata y Balsa Día Completo | Fundo Los Huapes',
+      title: 'Del Potrero al Río — Cabalgata y Balsa en el Río San Pedro | Fundo Los Huapes',
       description:
         'Cabalgata mañana + balsa 15 km tarde. Almuerzo campestre incluido. $180.000 / persona.',
       url: PROGRAM_URL,
@@ -41,27 +41,54 @@ const faqs = [
   {
     question: '¿Se necesita experiencia en kayak o rafting?',
     answer:
-      'No. La balsa es guiada y el equipo de Fly Fishing Riñihue se encarga de todo. Solo hay que disfrutar el río.',
+      'No. La balsa es guiada y el equipo de Fly Fishing Riñihue, operador del tramo de río, se encarga de la navegación y del equipamiento, que está incluido en el programa. El recorrido de 15 km desde la isla del campo hasta Balsa San Javier dura entre 3 y 4 horas, a un ritmo que se ajusta al nivel del río y del grupo. Solo hay que disfrutar el paisaje del Río San Pedro.',
   },
   {
     question: '¿Qué incluye el almuerzo campestre?',
     answer:
-      'Empanada, mix de parrilla (tapabarriga, pollo, longaniza), ensalada chilena, papas cocidas y postre de frutas de la estación.',
+      'El almuerzo campestre incluye empanada, mix de parrilla —tapabarriga, pollo y longaniza—, ensalada chilena, papas cocidas y postre de frutas de la estación. Se sirve alrededor de las 14:15, al término de la cabalgata de la mañana y antes del zarpe en balsa de las 15:00. Está incluido en el valor del programa, igual que el picoteo y los bebestibles que se sirven durante el descanso en el estero.',
   },
   {
     question: '¿Dónde termina la bajada en balsa?',
     answer:
-      'En Balsa San Javier, Antilhue. Desde ahí, el traslado de regreso al campo está incluido en el programa.',
+      'La bajada termina en Balsa San Javier, en Antilhue, después de 15 km de navegación por el Río San Pedro desde la isla del campo. Desde ahí, el traslado de regreso al campo está incluido en el programa, por lo que no hay que coordinar transporte adicional al final del día. El horario de llegada es referencial: el tramo dura entre 3 y 4 horas según el nivel del río y el ritmo del grupo.',
   },
   {
     question: '¿Cuánto dura la bajada en balsa?',
     answer:
-      'El tramo de 15 km dura entre 3 y 4 horas según el nivel del río y el ritmo del grupo.',
+      'El tramo de 15 km dura entre 3 y 4 horas, según el nivel del río y el ritmo del grupo. El zarpe es a las 15:00 desde la isla del campo, después del almuerzo campestre, y el recorrido termina en Balsa San Javier, Antilhue. Los horarios son referenciales: el equipo de Fly Fishing Riñihue, que guía la bajada, puede ajustar el zarpe y el término según las condiciones del día.',
   },
   {
     question: '¿Puedo hacer solo la cabalgata y no la balsa?',
     answer:
-      'Sí. El Programa 01 (Cabalgata y Picoteo) cubre solo la cabalgata con picoteo en el estero.',
+      'Sí. El Programa 01, Cabalgata y Picoteo, cubre solo la cabalgata guiada en dos etapas con picoteo en el estero, en media jornada de mañana o tarde. Es una buena alternativa si el grupo incluye niños menores de 10 años —la edad mínima de este programa— o si se prefiere una actividad más corta. También existe la opción inversa: el Programa 03, Del Río al Potrero, hace la balsa en la mañana y la cabalgata en la tarde.',
+  },
+]
+
+const otherPrograms = [
+  {
+    number: '01',
+    href: '/programas/cabalgata-picoteo',
+    name: 'Cabalgata y Picoteo',
+    desc: 'Cabalgata guiada por bosque nativo con picoteo en el estero Huillinco.',
+    price: '$80.000',
+    duration: 'Media jornada',
+  },
+  {
+    number: '03',
+    href: '/programas/rio-al-potrero',
+    name: 'Del Río al Potrero',
+    desc: 'Balsa 20 km en la mañana y cabalgata en la tarde. Apto desde 5 años.',
+    price: '$180.000',
+    duration: 'Día completo',
+  },
+  {
+    number: '04',
+    href: '/programas/travesia-san-pedro',
+    name: 'Travesía San Pedro',
+    desc: 'Balsa, pesca con mosca, asado acampado, noche en el campo y cabalgata.',
+    price: '$280.000',
+    duration: '2 días · 1 noche',
   },
 ]
 
@@ -122,7 +149,7 @@ export default function PotrreroAlRioPage() {
             </div>
 
             <h1 className="font-display text-5xl font-bold leading-tight mb-6 lg:text-7xl">
-              Del Potrero al Río
+              Del Potrero al Río San Pedro
             </h1>
 
             <p className="font-body text-lg text-cream/80 leading-relaxed mb-8 lg:text-xl max-w-2xl">
@@ -146,12 +173,29 @@ export default function PotrreroAlRioPage() {
         </div>
       </section>
 
+      {/* ── Resumen del programa ── */}
+      <section className="py-12 bg-cream border-b border-forest/10 lg:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="max-w-3xl font-body text-base text-dark/80 leading-relaxed lg:text-lg">
+            Del Potrero al Río es un programa de día completo del Fundo Los Huapes que combina la
+            mañana a caballo con la tarde en el agua. La jornada parte a las 10:00 con una cabalgata
+            guiada en dos etapas por potreros y bosque nativo, con descanso y picoteo en el estero.
+            Después del almuerzo campestre —empanada, mix de parrilla, ensalada chilena, papas
+            cocidas y postre—, el grupo zarpa en balsa desde la isla del campo y navega 15 km por el
+            Río San Pedro hasta Balsa San Javier, en Antilhue, con el traslado de regreso incluido.
+            La bajada es guiada por el equipo de Fly Fishing Riñihue y dura entre 3 y 4 horas. El
+            valor es de $180.000 por persona, para grupos de 5 a 10 personas desde los 10 años. La
+            temporada va del 1 de octubre al 30 de mayo en la Región de Los Ríos.
+          </p>
+        </div>
+      </section>
+
       {/* ── Itinerario ── */}
       <section className="py-16 bg-cream lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <h2 className="font-display text-3xl font-bold text-forest mb-10 lg:text-4xl">
-              Itinerario del día
+              ¿Cómo es el itinerario del día?
             </h2>
 
             <ol className="relative border-l-2 border-forest/20 space-y-8 pl-6">
@@ -187,7 +231,9 @@ export default function PotrreroAlRioPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 max-w-3xl">
             <div>
-              <h2 className="font-display text-2xl font-bold text-forest mb-6">Incluye</h2>
+              <h2 className="font-display text-2xl font-bold text-forest mb-6">
+                ¿Qué incluye el precio?
+              </h2>
               <ul className="space-y-3">
                 {[
                   'Cabalgata guiada de mañana',
@@ -205,7 +251,7 @@ export default function PotrreroAlRioPage() {
             </div>
 
             <div>
-              <h2 className="font-display text-2xl font-bold text-forest mb-6">No incluye</h2>
+              <h2 className="font-display text-2xl font-bold text-forest mb-6">¿Qué no incluye?</h2>
               <ul className="space-y-3">
                 {[
                   'Traslado de llegada al fundo',
@@ -253,6 +299,7 @@ export default function PotrreroAlRioPage() {
                   src={item.image}
                   alt={item.alt}
                   fill
+                  priority={index === 0}
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
@@ -287,6 +334,36 @@ export default function PotrreroAlRioPage() {
                 </details>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Otros programas ── */}
+      <section className="py-16 bg-cream border-b border-forest/10 lg:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-display text-3xl font-bold text-forest mb-10 lg:text-4xl">
+            Otros programas
+          </h2>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 max-w-4xl">
+            {otherPrograms.map((program) => (
+              <Link
+                key={program.href}
+                href={program.href}
+                className="group block rounded-xl border border-forest/10 bg-white p-6 hover:border-ember/40 hover:shadow-md transition-all duration-200"
+              >
+                <p className="font-ui text-xs tracking-widest uppercase text-muted mb-2">
+                  Programa {program.number}
+                </p>
+                <h3 className="font-display text-xl font-bold text-forest mb-2 group-hover:text-ember transition-colors duration-200">
+                  {program.name}
+                </h3>
+                <p className="font-body text-sm text-dark/70 leading-relaxed mb-4">{program.desc}</p>
+                <p className="font-ui text-sm font-semibold text-ember">
+                  {program.price}{' '}
+                  <span className="text-muted font-normal">· {program.duration}</span>
+                </p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

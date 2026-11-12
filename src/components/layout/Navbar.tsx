@@ -29,10 +29,12 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Close menu on route change
-  useEffect(() => {
+  // Close menu on route change (adjust state during render, per react.dev)
+  const [prevPathname, setPrevPathname] = useState(pathname)
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname)
     setMenuOpen(false)
-  }, [pathname])
+  }
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
@@ -85,7 +87,7 @@ export function Navbar() {
             ))}
             <Link
               href="/reservar"
-              className="font-ui text-sm font-medium bg-ember text-cream px-5 py-2.5 rounded transition-all duration-200 hover:bg-ember/90 hover:shadow-md ml-2"
+              className="font-ui text-sm font-medium bg-ember text-cream px-5 py-3 rounded transition-all duration-200 hover:bg-ember/90 hover:shadow-md ml-2"
             >
               Reservar
             </Link>

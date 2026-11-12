@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import JsonLd from '@/components/JsonLd'
@@ -13,7 +12,7 @@ import { getFAQJsonLd, getBreadcrumbJsonLd } from '@/lib/jsonld'
 export const metadata: Metadata = {
   title: 'Gastronomía Campestre | Picoteo y Asado Acampado',
   description:
-    'Picoteo de campo con arrollado huaso, queso fresco y pan amasado en el estero Huillinco. Asado acampado con cordero y estomaguillo al palo, preparado por De la Hoguera. Fundo Los Huapes, Región de Los Ríos.',
+    'Picoteo de campo y asado acampado con cordero y estomaguillo al palo, preparados por De la Hoguera. Fundo Los Huapes, Región de Los Ríos, Chile.',
   keywords: [
     'asado acampado sur de Chile',
     'picoteo campo chileno',
@@ -21,9 +20,9 @@ export const metadata: Metadata = {
     'cordero al palo campo chileno',
     'De la Hoguera asado',
   ],
-  alternates: { canonical: 'https://loshuapes.cl/gastronomia' },
+  alternates: { canonical: 'https://www.loshuapes.cl/gastronomia' },
   openGraph: {
-    url: 'https://loshuapes.cl/gastronomia',
+    url: 'https://www.loshuapes.cl/gastronomia',
     title: 'Gastronomía Campestre | Picoteo y Asado Acampado | Fundo Los Huapes',
     description:
       'Picoteo de campo con arrollado huaso, queso fresco y pan amasado en el estero Huillinco. Asado acampado con cordero y estomaguillo al palo, preparado por De la Hoguera.',
@@ -40,7 +39,7 @@ function getFoodEstablishmentJsonLd() {
     '@context': 'https://schema.org',
     '@type': 'FoodEstablishment',
     name: 'Fundo Los Huapes — Gastronomía de Campo',
-    url: 'https://loshuapes.cl/gastronomia',
+    url: 'https://www.loshuapes.cl/gastronomia',
     description:
       'Gastronomía tradicional chilena preparada con fuego de leña en el Fundo Los Huapes. Picoteo campestre y asado acampado a cargo de De la Hoguera.',
     address: {
@@ -157,8 +156,8 @@ export default function GastronomiaPage() {
       <JsonLd data={getFAQJsonLd(faqs)} />
       <JsonLd
         data={getBreadcrumbJsonLd([
-          { name: 'Inicio', item: 'https://loshuapes.cl' },
-          { name: 'Gastronomía', item: 'https://loshuapes.cl/gastronomia' },
+          { name: 'Inicio', item: 'https://www.loshuapes.cl' },
+          { name: 'Gastronomía', item: 'https://www.loshuapes.cl/gastronomia' },
         ])}
       />
 
