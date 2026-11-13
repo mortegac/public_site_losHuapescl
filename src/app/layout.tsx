@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import Script from 'next/script'
 import { Playfair_Display, Source_Serif_4, DM_Sans } from 'next/font/google'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
@@ -106,6 +107,17 @@ export default function RootLayout({ children }: RootLayoutProps) {
       className={`${playfairDisplay.variable} ${sourceSerif4.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        {/* Google Tag Manager — global en todas las páginas */}
+        <Script
+          id="gtm"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-NLJPK9SG"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());`}
+        </Script>
         <Navbar />
         <main className="flex-1 pt-16 lg:pt-20">{children}</main>
         <Footer />
