@@ -111,7 +111,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Script
           id="gtm"
           strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtm.js?id=GTM-NLJPK9SG"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-NCKN4PLB"
         />
         <Script id="gtag-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
