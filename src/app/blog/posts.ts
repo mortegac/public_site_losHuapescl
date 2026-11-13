@@ -51,7 +51,7 @@ export interface Post {
 
 const AUTHOR = { name: 'Fundo Los Huapes', role: 'Equipo del fundo' } as const
 
-export const posts: Post[] = [
+const basePosts: Post[] = [
   {
     slug: 'bajada-en-balsa-rio-san-pedro',
     category: 'Río',
@@ -225,6 +225,20 @@ export const posts: Post[] = [
       links: [{ label: 'Ver gastronomía de campo', href: '/gastronomia' }],
     },
   },
+]
+
+// Posts estacionales por ciudad: archivos separados para edición independiente.
+// (import al final para dejar claro que solo aportan datos; usan `import type`
+// de este archivo, sin ciclo en runtime)
+import { valdiviaPosts } from './posts-valdivia'
+import { futronoPosts } from './posts-futrono'
+import { panguipulliPosts } from './posts-panguipulli'
+
+export const posts: Post[] = [
+  ...basePosts,
+  ...valdiviaPosts,
+  ...futronoPosts,
+  ...panguipulliPosts,
 ]
 
 export function getPostBySlug(slug: string): Post | undefined {

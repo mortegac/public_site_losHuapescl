@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { posts } from './blog/posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.loshuapes.cl'
@@ -19,8 +20,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/privacidad`, lastModified },
     { url: `${baseUrl}/terminos`, lastModified },
     { url: `${baseUrl}/blog`, lastModified },
-    { url: `${baseUrl}/blog/bajada-en-balsa-rio-san-pedro`, lastModified },
-    { url: `${baseUrl}/blog/cabalgatas-bosque-nativo-los-rios`, lastModified },
-    { url: `${baseUrl}/blog/asado-acampado-gastronomia-de-campo`, lastModified },
+    ...posts.map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+    })),
   ]
 }
