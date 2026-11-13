@@ -16,6 +16,7 @@ const navLinks: NavLink[] = [
   { href: '/gastronomia', label: 'Gastronomía' },
   { href: '/el-entorno', label: 'El Entorno' },
   { href: '/para-agencias', label: 'Para Agencias' },
+  { href: '/blog', label: 'Blog' },
 ]
 
 export function Navbar() {

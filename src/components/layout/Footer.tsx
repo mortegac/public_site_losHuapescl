@@ -7,6 +7,19 @@ interface FooterColumn {
 
 const footerColumns: FooterColumn[] = [
   {
+    // Réplica del menú principal del Navbar (mismos labels y rutas)
+    title: 'Menú',
+    links: [
+      { label: 'Inicio', href: '/' },
+      { label: 'Programas', href: '/programas' },
+      { label: 'Gastronomía', href: '/gastronomia' },
+      { label: 'El Entorno', href: '/el-entorno' },
+      { label: 'Para Agencias', href: '/para-agencias' },
+      { label: 'Blog', href: '/blog' },
+      { label: 'Reservar', href: '/reservar' },
+    ],
+  },
+  {
     title: 'Programas',
     links: [
       { label: 'Media Jornada', href: '/programas#media-jornada' },
@@ -18,16 +31,8 @@ const footerColumns: FooterColumn[] = [
   {
     title: 'Información',
     links: [
-      { label: 'Gastronomía', href: '/gastronomia' },
-      { label: 'El Entorno', href: '/el-entorno' },
       { label: 'Cómo Llegar', href: '/el-entorno#como-llegar' },
       { label: 'Preguntas Frecuentes', href: '/preguntas-frecuentes' },
-    ],
-  },
-  {
-    title: 'Aliados',
-    links: [
-      { label: 'Para Agencias', href: '/para-agencias' },
       { label: 'Grupos Corporativos', href: '/para-agencias#corporativo' },
       { label: 'Operadores Turísticos', href: '/para-agencias#operadores' },
     ],
@@ -35,7 +40,6 @@ const footerColumns: FooterColumn[] = [
   {
     title: 'Contacto',
     links: [
-      { label: 'Reservar', href: '/reservar' },
       // TODO: confirmar número real
       { label: 'WhatsApp', href: 'https://wa.me/56912345678' },
       { label: 'hola@loshuapes.cl', href: 'mailto:hola@loshuapes.cl' },
@@ -112,6 +116,12 @@ export function Footer() {
               className="font-ui text-xs text-cream/50 hover:text-cream/80 transition-colors duration-200"
             >
               Términos
+            </Link>
+            <Link
+              href="/mapa-del-sitio"
+              className="font-ui text-xs text-cream/50 hover:text-cream/80 transition-colors duration-200"
+            >
+              Mapa del sitio
             </Link>
           </div>
         </div>

@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/preguntas-frecuentes`, lastModified },
     { url: `${baseUrl}/privacidad`, lastModified },
     { url: `${baseUrl}/terminos`, lastModified },
+    { url: `${baseUrl}/mapa-del-sitio`, lastModified },
     { url: `${baseUrl}/blog`, lastModified },
     ...posts.map((post) => ({
       url: `${baseUrl}/blog/${post.slug}`,
