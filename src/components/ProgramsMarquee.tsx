@@ -16,7 +16,6 @@ interface MarqueeProgram {
   number: string
   name: string
   detail: string
-  price: string
   href: string
 }
 
@@ -25,28 +24,24 @@ const PROGRAMS: MarqueeProgram[] = [
     number: '01',
     name: 'Cabalgata y Picoteo',
     detail: 'Media jornada',
-    price: '$80.000',
     href: '/programas/cabalgata-picoteo',
   },
   {
     number: '02',
     name: 'Del Potrero al Río',
     detail: 'Día completo + balsa 15 km',
-    price: '$180.000',
     href: '/programas/potrero-al-rio',
   },
   {
     number: '03',
     name: 'Del Río al Potrero',
     detail: 'Día completo + balsa 20 km',
-    price: '$180.000',
     href: '/programas/rio-al-potrero',
   },
   {
     number: '04',
     name: 'Travesía San Pedro',
     detail: '2 días · 1 noche',
-    price: '$280.000',
     href: '/programas/travesia-san-pedro',
   },
 ]
@@ -71,7 +66,6 @@ function MarqueeItems({ hidden = false }: { hidden?: boolean }) {
               {program.name}
             </span>
             <span className="font-ui text-xs text-cream/60">{program.detail}</span>
-            <span className="font-ui text-xs tracking-wide text-gold">{program.price}</span>
           </Link>
           <span aria-hidden="true" className="px-1 text-[10px] text-gold/70">
             ✦
