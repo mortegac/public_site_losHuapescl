@@ -34,11 +34,14 @@ function AuthorAvatar() {
 }
 
 export default function BlogPage() {
-  const [featured, ...rest] = posts
+  // Más recientes primero (fechas ISO → orden lexicográfico = cronológico).
+  // toSorted: copia ordenada, sin mutar `posts`.
+  const sortedPosts = posts.toSorted((a, b) => b.date.localeCompare(a.date))
+  const [featured] = sortedPosts
   const categories = getAllCategories()
 
   const itemListJsonLd = getItemListJsonLd(
-    posts.map((post) => ({ name: post.title, url: `${BLOG_URL}/${post.slug}` }))
+    sortedPosts.map((post) => ({ name: post.title, url: `${BLOG_URL}/${post.slug}` }))
   )
 
   const breadcrumbJsonLd = getBreadcrumbJsonLd([
@@ -104,7 +107,7 @@ export default function BlogPage() {
 
           {/* ── Grilla de artículos ── */}
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[featured, ...rest].map((post) => (
+            {sortedPosts.map((post) => (
               <article
                 key={post.slug}
                 className="group overflow-hidden rounded-lg border border-forest/10 bg-white transition-shadow duration-200 hover:shadow-md"

@@ -68,3 +68,41 @@ body {
   outline: 2px solid var(--color-ember);
   outline-offset: 2px;
 }
+
+/* ── Marquee de programas (src/components/ProgramsMarquee.tsx) ──
+   CSS-only: el track lleva el contenido duplicado y se desplaza
+   translateX(-50%) en loop lineal. Pausa al hover / focus. Con
+   prefers-reduced-motion queda fila estática scrolleable y se
+   oculta la copia duplicada (aria-hidden). */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 35s linear infinite;
+  will-change: transform;
+}
+
+.marquee-container:hover .marquee-track,
+.marquee-container:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+
+  .marquee-container {
+    overflow-x: auto;
+  }
+
+  .marquee-copy {
+    display: none;
+  }
+}

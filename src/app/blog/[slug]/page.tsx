@@ -5,8 +5,49 @@ import { notFound } from 'next/navigation'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import JsonLd from '@/components/JsonLd'
+import ProgramsMarquee from '@/components/ProgramsMarquee'
 import { getBreadcrumbJsonLd } from '@/lib/jsonld'
-import { getPostBySlug, posts, BLOG_BASE_URL, type Post } from '../posts'
+import { getPostBySlug, posts, BLOG_BASE_URL, type Post, type PostImage } from '../posts'
+
+/**
+ * Foto del aside CTA, elegida determinísticamente según la categoría
+ * del post. Default: fundo-camino.jpg.
+ */
+const CTA_PHOTO_BY_CATEGORY: Record<string, PostImage> = {
+  Río: {
+    src: '/images/estero-picnic.jpg',
+    alt: 'Mesa de pícnic junto al estero, bajo el bosque nativo del Fundo Los Huapes',
+  },
+  Cabalgatas: {
+    src: '/images/caballos-potrillo.jpg',
+    alt: 'Yeguada pastando con un potrillo en los potreros del Fundo Los Huapes',
+  },
+  Gastronomía: {
+    src: '/images/estero-picnic.jpg',
+    alt: 'Mesa de pícnic junto al estero, bajo el bosque nativo del Fundo Los Huapes',
+  },
+  Valdivia: {
+    src: '/images/fundo-camino.jpg',
+    alt: 'Camino de ripio flanqueado por cercos de madera en el Fundo Los Huapes',
+  },
+  Futrono: {
+    src: '/images/caballos-potrillo.jpg',
+    alt: 'Yeguada pastando con un potrillo en los potreros del Fundo Los Huapes',
+  },
+  Panguipulli: {
+    src: '/images/caballos-corral.jpg',
+    alt: 'Caballos negros reunidos en el corral del Fundo Los Huapes',
+  },
+}
+
+const DEFAULT_CTA_PHOTO: PostImage = {
+  src: '/images/fundo-camino.jpg',
+  alt: 'Camino de ripio flanqueado por cercos de madera en el Fundo Los Huapes',
+}
+
+function getCtaPhoto(category: string): PostImage {
+  return CTA_PHOTO_BY_CATEGORY[category] ?? DEFAULT_CTA_PHOTO
+}
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>
@@ -71,6 +112,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   if (!post) notFound()
 
   const postUrl = `${BLOG_BASE_URL}/blog/${post.slug}`
+  const ctaPhoto = getCtaPhoto(post.category)
 
   const breadcrumbJsonLd = getBreadcrumbJsonLd([
     { name: 'Inicio', item: BLOG_BASE_URL },
@@ -202,18 +244,34 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               )
             })}
 
+            {/* ── Cinta de programas ── */}
+            <div className="mt-14">
+              <ProgramsMarquee />
+            </div>
+
             {/* ── CTA al programa ── */}
-            <aside className="mt-14 rounded-lg bg-forest p-8 text-cream lg:p-10">
-              <h2 className="font-display text-2xl font-bold">{post.cta.title}</h2>
-              <p className="mt-3 font-body text-base leading-relaxed text-cream/80">
-                {post.cta.text}
-              </p>
-              <div className="mt-6 flex flex-wrap gap-4">
-                {post.cta.links.map((link) => (
-                  <Button key={link.href} href={link.href} variant="primary" size="md">
-                    {link.label}
-                  </Button>
-                ))}
+            <aside className="mt-14 overflow-hidden rounded-lg bg-forest text-cream md:grid md:grid-cols-[1fr_auto] md:items-stretch">
+              <div className="p-8 lg:p-10">
+                <h2 className="font-display text-2xl font-bold">{post.cta.title}</h2>
+                <p className="mt-3 font-body text-base leading-relaxed text-cream/80">
+                  {post.cta.text}
+                </p>
+                <div className="mt-6 flex flex-wrap gap-4">
+                  {post.cta.links.map((link) => (
+                    <Button key={link.href} href={link.href} variant="primary" size="md">
+                      {link.label}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+              <div className="relative aspect-[4/3] md:aspect-auto md:h-full md:min-h-[340px] md:w-[300px]">
+                <Image
+                  src={ctaPhoto.src}
+                  alt={ctaPhoto.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 320px"
+                />
               </div>
             </aside>
           </div>
