@@ -18,6 +18,7 @@ export type PostBlock =
   | { type: 'h2'; text: string }
   | { type: 'p'; text: string }
   | { type: 'image'; image: PostImage }
+  | { type: 'links'; links: PostCtaLink[] }
 
 export interface PostCtaLink {
   label: string

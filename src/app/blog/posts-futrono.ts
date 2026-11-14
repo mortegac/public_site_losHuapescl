@@ -9,6 +9,103 @@ import type { Post } from './posts'
 const AUTHOR = { name: 'Fundo Los Huapes', role: 'Equipo del fundo' } as const
 
 export const futronoPosts: Post[] = [
+  // Fuentes: reutiliza las fuentes de los posts hijo de este archivo
+  {
+    slug: 'que-hacer-en-futrono-lago-ranco-panoramas',
+    category: 'Futrono',
+    title: 'Qué hacer en Futrono y el Lago Ranco: 6 panoramas',
+    metaTitle: 'Qué hacer en Futrono y el Lago Ranco: 6 panoramas',
+    metaDescription:
+      'Termas de Chihuío, playas del Lago Ranco, festivales, Expo Futrono, Isla Huapi y un día de campo y río en el San Pedro: la guía completa de panoramas.',
+    excerpt:
+      'Termas a 38 °C, playas de arena fina, festivales, ferias de artesanía, Isla Huapi y una jornada de caballos y balsa: la ruta completa del Ranco.',
+    date: '2026-11-14',
+    dateDisplay: '14 de noviembre de 2026',
+    author: AUTHOR,
+    heroImage: {
+      src: '/images/entorno-atardecer.jpg',
+      alt: 'Atardecer sobre los potreros del Fundo Los Huapes, en el valle del Río San Pedro, Región de Los Ríos',
+    },
+    lead: '¿Qué hacer en Futrono? La capital norte del Lago Ranco ofrece lago con playas de arena fina, termas cordilleranas, cultura mapuche huilliche en Isla Huapi, ferias costumbristas y festivales de verano, todo en la Región de Los Ríos, a unos 100 km de Valdivia. Esta guía reúne seis panoramas verificados para armar la ruta completa: las Termas de Chihuío a unos 70 km del pueblo, las playas Coique, Galdámez y Huequecura con aguas sobre 15 °C en verano, los festivales de enero como el Awka Lafken Fest, la Expo Futrono con más de 90 expositores en febrero, el cruce en barcaza a Isla Huapi y, en la ruta entre Valdivia y Futrono, un día de caballos y balsa en el Río San Pedro, en el Fundo Los Huapes. Cada panorama enlaza a su guía completa con fechas, precios y datos para llegar.',
+    blocks: [
+      { type: 'h2', text: '1. Termas de Chihuío: aguas a 38 °C en plena cordillera' },
+      {
+        type: 'p',
+        text: 'A unos 70 kilómetros de Futrono, pasando Llifén, las Termas de Chihuío ofrecen piscinas al aire libre de aguas que brotan a unos 38 °C, rodeadas de bosque valdiviano, con rústicas tinas de coihue ahuecado para baños individuales. Abren todo el año de 9:00 a 20:00 horas, con baños, vestidores y zona de pícnic. El trayecto desde Futrono, bordeando el lago y el valle del río Calcurrupe, es parte del panorama.',
+      },
+      {
+        type: 'links',
+        links: [{ label: 'Leer la guía de las Termas de Chihuío', href: '/blog/termas-de-chihuio-desde-futrono' }],
+      },
+      { type: 'h2', text: '2. Playas del Lago Ranco: Coique, Galdámez y Huequecura' },
+      {
+        type: 'p',
+        text: 'Playa Coique, a 7 kilómetros del pueblo, despliega unos 2 kilómetros de arena fina frente a aguas turquesa; Playa Galdámez queda a pasos del centro, con orilla suave ideal para niños; y Playa Huequecura, a 20 kilómetros en Llifén, suma servicios y salvavidas en temporada. Entre diciembre y febrero el agua del lago supera los 15 °C: suficiente para nadar, remar en kayak o probar el stand up paddle.',
+      },
+      {
+        type: 'links',
+        links: [{ label: 'Leer la guía de playas del Lago Ranco', href: '/blog/playas-lago-ranco-futrono-diciembre' }],
+      },
+      { type: 'h2', text: '3. Festivales de enero: el Awka Lafken Fest y el folclor' },
+      {
+        type: 'p',
+        text: 'En enero, Futrono se convierte en escenario: el Awka Lafken Fest reúne música en vivo, cultura y emprendimiento local en la Plaza de la República —su edición 2026 se realizó el 31 de enero—, y esos mismos días se celebra habitualmente el Festival Internacional de Folclor, que en su XIII versión trajo conjuntos de Ecuador, Perú y Colombia. Las fechas se confirman cada enero en los canales municipales.',
+      },
+      {
+        type: 'links',
+        links: [{ label: 'Leer la guía de festivales de verano', href: '/blog/festivales-verano-futrono-enero' }],
+      },
+      { type: 'h2', text: '4. Expo Futrono y ferias costumbristas: el febrero del Ranco' },
+      {
+        type: 'p',
+        text: 'La Expo Futrono es la feria de artesanía y oficios más importante del verano en la comuna: más de 90 expositores de madera, fibras vegetales, fieltro, alfarería y productos gourmet, con música en vivo frente a la municipalidad. Se celebra habitualmente en la primera quincena de febrero —la edición 2026 fue del 12 al 15—, mientras el circuito de ferias costumbristas de la cuenca funciona durante todo enero y febrero.',
+      },
+      {
+        type: 'links',
+        links: [
+          { label: 'Leer la guía de la Expo Futrono y las ferias', href: '/blog/expo-futrono-ferias-costumbristas-febrero' },
+        ],
+      },
+      { type: 'h2', text: '5. Isla Huapi: cruzar el lago hacia territorio mapuche' },
+      {
+        type: 'p',
+        text: 'La mayor de las trece islas del Lago Ranco suma 826 hectáreas habitadas por comunidades mapuche huilliche. Se llega en la barcaza Epu Huapi desde Puerto Futrono, en torno a una hora de navegación, para recorrer el cerro Treng-Treng, la Piedra Bruja y, en verano, la feria costumbrista Piuke Lafquen. Es territorio habitado, no un parque temático: se visita con calma, respeto y confirmando los zarpes antes de viajar.',
+      },
+      {
+        type: 'links',
+        links: [{ label: 'Leer la guía de Isla Huapi', href: '/blog/isla-huapi-lago-ranco-como-visitarla' }],
+      },
+      { type: 'h2', text: '6. Un día de campo y río en el Fundo Los Huapes' },
+      {
+        type: 'image',
+        image: {
+          src: '/images/balsa-grupo.jpg',
+          alt: 'Grupo navegando en balsa por el Río San Pedro durante un programa del Fundo Los Huapes',
+        },
+      },
+      {
+        type: 'p',
+        text: 'En la ruta entre Valdivia y Futrono, el valle del Río San Pedro guarda el panorama que completa el viaje: el Fundo Los Huapes, a unos 45 km de Valdivia, combina cabalgatas por bosque nativo con bajadas en balsa guiadas por el río. Hay programas para cada ritmo: la Cabalgata y Picoteo de media jornada ($80.000 por persona), los días completos de caballos más balsa ($180.000) y la Travesía San Pedro de dos días y una noche ($280.000).',
+      },
+      {
+        type: 'p',
+        text: 'Los grupos son de 5 a 10 personas y la temporada va del 1 de octubre al 30 de mayo, así que calza con todo el calendario del Ranco: termas en primavera, playas en diciembre, festivales en enero y ferias en febrero. Reservar con anticipación es la regla en los meses de verano.',
+      },
+      {
+        type: 'links',
+        links: [{ label: 'Ver los programas del Fundo Los Huapes', href: '/programas' }],
+      },
+    ],
+    cta: {
+      title: 'Arma tu ruta por Futrono y el Lago Ranco',
+      text: 'Seis panoramas entre lago, cordillera y río. Cierra el viaje con una jornada de caballos y balsa en el San Pedro: grupos de 5 a 10 personas, de octubre a mayo.',
+      links: [
+        { label: 'Ver todos los programas', href: '/programas' },
+        { label: 'Reservar', href: '/reservar' },
+      ],
+    },
+  },
+
   // Fuentes: https://termasenchile.cl/termas/termas-de-chihuio-38
   //          https://www.rancoexplora.cl/termas-de-chihuio/
   //          https://www.interpatagonia.com/futrono/termas-chihuio_i.html

@@ -9,6 +9,119 @@ import type { Post } from './posts'
 const AUTHOR = { name: 'Fundo Los Huapes', role: 'Equipo del fundo' } as const
 
 export const valdiviaPosts: Post[] = [
+  // Fuentes: reutiliza las fuentes de los posts hijo de este archivo
+  {
+    slug: 'que-hacer-en-valdivia-panoramas',
+    category: 'Valdivia',
+    title: 'Qué hacer en Valdivia: 6 panoramas imperdibles',
+    metaTitle: 'Qué hacer en Valdivia: 6 panoramas imperdibles',
+    metaDescription:
+      'Seis panoramas imperdibles en Valdivia: Feria Fluvial, Jardín Botánico, Bierfest, Noche Valdiviana, fuertes de Niebla y un día de campo y río a 50 minutos.',
+    excerpt:
+      'La guía corta de Valdivia: mercado, flora nativa, cerveza, carnaval fluvial, fuertes españoles y un día de caballos y balsa a 50 minutos de la ciudad.',
+    date: '2026-11-14',
+    dateDisplay: '14 de noviembre de 2026',
+    author: AUTHOR,
+    heroImage: {
+      src: '/images/entorno-rio.jpg',
+      alt: 'El Río San Pedro visto desde el Fundo Los Huapes, a 50 minutos de Valdivia',
+    },
+    lead: '¿Qué hacer en Valdivia? Los imperdibles son seis: recorrer la Feria Fluvial con sus lobos marinos, caminar el Jardín Botánico de la UACh en Isla Teja, vivir la Bierfest Kunstmann a fines de enero, ver el corso fluvial de la Noche Valdiviana en febrero, navegar hasta los fuertes españoles de Niebla, Corral e Isla Mancera y, a 50 minutos de la ciudad, pasar un día de campo con cabalgatas y balsa por el Río San Pedro en el Fundo Los Huapes. Valdivia es la ciudad fluvial del sur de Chile: mercado junto al agua, tradición cervecera alemana, historia colonial y naturaleza en todas direcciones. Esta guía resume los seis panoramas, el mejor mes para cada uno y el enlace a la guía completa de cada actividad, pensada para familias y grupos de amigos que arman un viaje por la Región de Los Ríos entre octubre y mayo.',
+    blocks: [
+      { type: 'h2', text: '1. La Feria Fluvial y sus lobos marinos' },
+      {
+        type: 'p',
+        text: 'El mercado tradicional de la costanera Arturo Prat es el símbolo de la identidad fluvial valdiviana: pescados, mariscos, frutas y quesos que llegan desde las comunidades ribereñas y costeras de Los Ríos, con lobos marinos descansando a pasos de los puestos. Es un mercado de verdad, donde compran los restaurantes y las familias de la ciudad, y la mejor variedad está temprano en la mañana.',
+      },
+      {
+        type: 'links',
+        links: [
+          {
+            label: 'Leer la guía completa de la Feria Fluvial',
+            href: '/blog/feria-fluvial-valdivia-que-hacer-noviembre',
+          },
+        ],
+      },
+      { type: 'h2', text: '2. El Jardín Botánico de la UACh en Isla Teja' },
+      {
+        type: 'p',
+        text: 'Una península del Campus Isla Teja, rodeada por los ríos de la ciudad, con alrededor de mil especies de plantas y un foco especial en la flora nativa del sur de Chile. La entrada es liberada, con aporte voluntario, y se combina bien con el resto de la isla: el Parque Saval, los museos de la UACh y las vistas a la costanera desde la otra orilla.',
+      },
+      {
+        type: 'links',
+        links: [
+          {
+            label: 'Leer la guía completa del Jardín Botánico',
+            href: '/blog/jardin-botanico-uach-valdivia-diciembre',
+          },
+        ],
+      },
+      { type: 'h2', text: '3. La Bierfest Kunstmann, a fines de enero' },
+      {
+        type: 'p',
+        text: 'La fiesta cervecera más grande del sur de Chile se celebra habitualmente a fines de enero en el Parque Saval: cuatro días de barriles, carpas gastronómicas, música en vivo y un desfile inaugural que cruza la ciudad. La edición 2026 sirvió más de 830 barriles —unos 25.000 litros— e incluyó una cerveza exclusiva inspirada en el Oktoberfest de Múnich.',
+      },
+      {
+        type: 'links',
+        links: [
+          {
+            label: 'Leer la guía completa de la Bierfest Kunstmann',
+            href: '/blog/bierfest-kunstmann-valdivia-enero',
+          },
+        ],
+      },
+      { type: 'h2', text: '4. La Noche Valdiviana y su corso fluvial' },
+      {
+        type: 'p',
+        text: 'La fiesta mayor de Valdivia corona la Semana Valdiviana un sábado de febrero: embarcaciones alegóricas iluminadas desfilan por el río frente a la costanera y la noche cierra con fuegos artificiales de bajo impacto sonoro. La edición 2026 —la número 108— reunió 32 embarcaciones en competencia y decenas de miles de personas en ambas orillas.',
+      },
+      {
+        type: 'links',
+        links: [
+          {
+            label: 'Leer la guía completa de la Noche Valdiviana',
+            href: '/blog/noche-valdiviana-que-hacer-febrero',
+          },
+        ],
+      },
+      { type: 'h2', text: '5. Niebla, Corral y Mancera: los castillos del fin del mundo' },
+      {
+        type: 'p',
+        text: 'En la desembocadura del río, la corona española levantó en el siglo XVII uno de los sistemas defensivos más grandes de América: el Castillo de Niebla, el fuerte San Sebastián de la Cruz en Corral y el castillo de la Isla Mancera. Se visitan navegando desde el Muelle Schuster, en paseos de medio día a jornada completa, y en marzo se recorren sin las multitudes del verano.',
+      },
+      {
+        type: 'links',
+        links: [
+          {
+            label: 'Leer la guía completa de Niebla, Corral y Mancera',
+            href: '/blog/navegacion-niebla-corral-mancera-marzo',
+          },
+        ],
+      },
+      { type: 'h2', text: '6. Un día de campo y río en el Fundo Los Huapes' },
+      {
+        type: 'p',
+        text: 'A unos 45 km de Valdivia —cerca de 50 minutos en auto— está el panorama que completa el viaje: cabalgatas guiadas por bosque nativo y potreros, picoteo de campo junto al estero Huillinco y bajadas en balsa por el Río San Pedro, sin necesidad de experiencia previa. Los programas van desde la Cabalgata y Picoteo de media jornada por $80.000 hasta la Travesía San Pedro de 2 días y 1 noche por $280.000, pasando por los días completos de caballos y balsa por $180.000.',
+      },
+      {
+        type: 'p',
+        text: 'Los grupos son de 5 a 10 personas —el formato de una familia o una barra de amigos— y la temporada corre del 1 de octubre al 30 de mayo. En enero y febrero los cupos vuelan junto con el alojamiento en Valdivia, así que la jugada correcta es reservar el día de campo apenas fijes las fechas del viaje.',
+      },
+      {
+        type: 'links',
+        links: [{ label: 'Ver todos los programas del fundo', href: '/programas' }],
+      },
+    ],
+    cta: {
+      title: 'Cinco panoramas en la ciudad. El sexto te espera en el campo.',
+      text: 'Ya tienes el mapa de Valdivia: mercado, jardín, cerveza, carnaval y fuertes. Ahora imagina el cierre: caballos cruzando bosque nativo, una balsa bajando el Río San Pedro y un almuerzo de campo junto al agua, en grupo de 5 a 10. La temporada va del 1 de octubre al 30 de mayo y las fechas de verano se agotan primero: elige tu programa y asegura la tuya hoy.',
+      links: [
+        { label: 'Ver todos los programas', href: '/programas' },
+        { label: 'Reservar', href: '/reservar' },
+      ],
+    },
+  },
+
   // Fuentes:
   // https://es.wikipedia.org/wiki/Feria_Fluvial_de_Valdivia
   // https://www.cocha.com/blog/que-hacer/que-hacer-en-valdivia

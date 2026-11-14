@@ -12,6 +12,122 @@ import type { Post } from './posts'
 
 const AUTHOR = { name: 'Fundo Los Huapes', role: 'Equipo del fundo' } as const
 
+// Fuentes: reutiliza las fuentes de los posts hijo de este archivo
+const panoramasPilarPost: Post = {
+  slug: 'que-hacer-en-panguipulli-siete-lagos-panoramas',
+  category: 'Panguipulli',
+  title: 'Qué hacer en Panguipulli y los Siete Lagos: 6 panoramas',
+  metaTitle: 'Qué hacer en Panguipulli y los Siete Lagos: 6 panoramas',
+  metaDescription:
+    'Seis panoramas en Panguipulli y los Siete Lagos: Huilo Huilo, playas, ferias costumbristas, Semana de las Rosas, termas y balsa en el Río San Pedro.',
+  excerpt:
+    'Trail en Huilo Huilo, playas de arena volcánica, ferias costumbristas, la Semana de las Rosas y termas: seis panoramas que terminan río abajo, en el Río San Pedro.',
+  date: '2026-11-14',
+  dateDisplay: '14 de noviembre de 2026',
+  author: AUTHOR,
+  heroImage: {
+    src: '/images/entorno-aereo.jpg',
+    alt: 'Vista aérea del Fundo Los Huapes junto al Río San Pedro, aguas abajo del sistema de los Siete Lagos',
+  },
+  lead: 'Qué hacer en Panguipulli: la comuna del Destino Sietelagos concentra lagos con playas de arena volcánica, termas al pie del volcán Villarrica, la Reserva Biológica Huilo Huilo con su salto de 37 metros, ferias costumbristas de cocina campesina y la Semana de las Rosas, su fiesta grande de febrero. Todo en un radio corto, con los lagos Panguipulli y Calafquén como ejes del verano. Esta guía reúne seis panoramas verificados, ordenados por temporada —de noviembre a marzo—, con el enlace a la guía completa de cada uno. Y cierra siguiendo el agua: el lago Panguipulli desagua por el río Enco hacia el lago Riñihue, y del Riñihue nace el Río San Pedro, donde el Fundo Los Huapes combina cabalgatas por bosque nativo con bajadas en balsa guiadas, de octubre a mayo y en grupos de 5 a 10 personas.',
+  blocks: [
+    { type: 'h2', text: '1. Correr —o caminar— la Reserva Biológica Huilo Huilo' },
+    {
+      type: 'p',
+      text: 'En Neltume, a unos 55 km de Panguipulli, la Reserva Biológica Huilo Huilo concentra selva valdiviana, pasarelas y el Salto Huilo Huilo, una caída de 37 metros del río Fuy, dentro de una Reserva de la Biosfera declarada por UNESCO en 2007. El gran hito de noviembre es el Columbia Trail Challenge: su novena edición se corre el sábado 21 de noviembre de 2026, con distancias de 2 a 60 km, desde el circuito familiar hasta la ultra. Y aunque no corras, el sendero al salto toma entre 1 y 1,5 horas y vale el viaje por sí solo.',
+    },
+    {
+      type: 'links',
+      links: [
+        {
+          label: 'Leer la guía del trail de Huilo Huilo',
+          href: '/blog/trail-huilo-huilo-noviembre-panguipulli',
+        },
+      ],
+    },
+    { type: 'h2', text: '2. Estrenar la temporada de playas en los lagos' },
+    {
+      type: 'p',
+      text: 'El verano lacustre parte el viernes 18 de diciembre de 2026, cuando se habilitan siete zonas de playa en la comuna: la Playa Grande de Panguipulli, a pasos del centro y con la isla Curilen al frente, y las playas de Coñaripe y Calafquén, de arena oscura de origen volcánico. La quincena entre el 18 de diciembre y Año Nuevo es la ventana que los locales se guardan: los mismos lagos, la mitad de la gente. Al día siguiente de la apertura, el 19, se corre la segunda edición del Lagunas Andinas Trail.',
+    },
+    {
+      type: 'links',
+      links: [
+        {
+          label: 'Leer la guía de la temporada de playas',
+          href: '/blog/temporada-playas-panguipulli-diciembre',
+        },
+      ],
+    },
+    { type: 'h2', text: '3. Comer en las ferias costumbristas' },
+    {
+      type: 'p',
+      text: 'Entre enero y febrero, localidades como Neltume, Coñaripe, Liquiñe, Choshuenco y Calafquén montan ferias de cocina tradicional, producción campesina y artesanía: empanadas, tortillas de rescoldo, cocina mapuche, mermeladas y licores caseros, hechos por las mismas familias del territorio. No son escenografía para turistas: cada almuerzo queda en manos locales. Las fechas se anuncian pocas semanas antes en los canales de la Municipalidad de Panguipulli y del Destino Sietelagos.',
+    },
+    {
+      type: 'links',
+      links: [
+        {
+          label: 'Leer la guía de las ferias costumbristas',
+          href: '/blog/ferias-costumbristas-panguipulli-siete-lagos',
+        },
+      ],
+    },
+    { type: 'h2', text: '4. Vivir la Semana de las Rosas, la fiesta grande' },
+    {
+      type: 'p',
+      text: 'Panguipulli cultiva rosales en sus calles desde hace décadas, y en febrero —cuando la ciudad está literalmente en flor— celebra su fiesta tradicional: música en vivo, gastronomía y artesanía frente al lago. En los últimos veranos se suma el Boulevard Paseo Las Rosas, que convierte la calle Martínez de Rozas en un paseo de emprendedores locales entre las 19:00 y la medianoche. Las fechas de cada edición las confirma la Municipalidad en sus canales oficiales.',
+    },
+    {
+      type: 'links',
+      links: [
+        {
+          label: 'Leer la guía de la Semana de las Rosas',
+          href: '/blog/semana-de-las-rosas-panguipulli-febrero',
+        },
+      ],
+    },
+    { type: 'h2', text: '5. Flotar en las termas de Coñaripe' },
+    {
+      type: 'p',
+      text: 'El gran panorama de agua caliente de la comuna está en el estero Cajón Negro, camino al volcán Villarrica: las pozas que operaron más de dos décadas como Termas Geométricas funcionan desde el 1 de octubre de 2026 como Termas Martini, con pasarelas y quinchos en medio de la selva valdiviana. El valle de Liquiñe suma un segundo polo termal, más pequeño y familiar. Marzo es el mes secreto para ir: días todavía templados y una fracción de los visitantes de enero y febrero.',
+    },
+    {
+      type: 'links',
+      links: [
+        {
+          label: 'Leer la guía de las termas de Coñaripe',
+          href: '/blog/termas-conaripe-marzo-siete-lagos',
+        },
+      ],
+    },
+    {
+      type: 'image',
+      image: {
+        src: '/images/balsa-grupo.jpg',
+        alt: 'Grupo navegando en balsa por el Río San Pedro, en el Fundo Los Huapes',
+      },
+    },
+    { type: 'h2', text: '6. Seguir la cuenca hasta el Fundo Los Huapes' },
+    {
+      type: 'p',
+      text: 'Toda el agua de los Siete Lagos termina juntándose: el lago Panguipulli desagua por el río Enco hacia el lago Riñihue, y del Riñihue nace el Río San Pedro, que pasa frente al Fundo Los Huapes camino a Valdivia. Ahí el viaje cambia de escala: cabalgatas por bosque nativo y potreros, bajadas en balsa guiadas sin experiencia previa y cocina de campo a fuego de leña, en grupos de 5 a 10 personas, del 1 de octubre al 30 de mayo. Los programas van desde la Cabalgata y Picoteo de media jornada ($80.000 por persona) hasta la Travesía San Pedro de 2 días y 1 noche ($280.000), pasando por los días completos de caballo y río por $180.000.',
+    },
+    {
+      type: 'links',
+      links: [{ label: 'Ver los programas del Fundo Los Huapes', href: '/programas' }],
+    },
+  ],
+  cta: {
+    title: 'Termina el viaje río abajo',
+    text: 'Lagos, termas y ferias en los Siete Lagos; caballos, balsa y asado al palo en el Río San Pedro. La misma cuenca, grupos de 5 a 10 personas, de octubre a mayo.',
+    links: [
+      { label: 'Ver todos los programas', href: '/programas' },
+      { label: 'Reservar', href: '/reservar' },
+    ],
+  },
+}
+
 // Fuentes: https://chile.travel/en/events/columbia-trail-challenge-huilo-huilo-2026/
 //          https://welcu.com/nimbus/huilohuilo2026
 //          https://www.diariofutrono.cl/noticia/turismo/2026/10/panguipulli-sietelagos-una-escapada-de-primavera-entre-lagos-bosques-y-termas
@@ -346,6 +462,7 @@ const termasMarzoPost: Post = {
 }
 
 export const panguipulliPosts: Post[] = [
+  panoramasPilarPost,
   huiloHuiloTrailPost,
   playasDiciembrePost,
   feriasCostumbristasPost,

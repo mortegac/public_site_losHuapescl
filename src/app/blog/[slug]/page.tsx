@@ -178,6 +178,23 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 )
               }
 
+              if (block.type === 'links') {
+                return (
+                  <ul key={index} className="mt-6 space-y-2">
+                    {block.links.map((link) => (
+                      <li key={link.href}>
+                        <Link
+                          href={link.href}
+                          className="font-body text-base text-forest underline decoration-ember/40 underline-offset-4 transition-colors hover:text-ember"
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )
+              }
+
               return (
                 <p key={index} className="mt-6 font-body text-base leading-relaxed text-dark/80">
                   {block.text}
