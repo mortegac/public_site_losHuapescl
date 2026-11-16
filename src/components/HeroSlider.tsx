@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useSyncExternalStore } from 'react'
 
 export interface HeroSlide {
   src: string
@@ -21,18 +21,32 @@ const FADE_MS = 2_000
  * antes de mostrarse en vez de descargar las 8 de golpe. Con
  * prefers-reduced-motion no hay rotación: queda la primera imagen fija.
  */
+const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)'
+
+function subscribeReducedMotion(callback: () => void): () => void {
+  const mq = window.matchMedia(REDUCED_MOTION_QUERY)
+  mq.addEventListener('change', callback)
+  return () => mq.removeEventListener('change', callback)
+}
+
 export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
   const [active, setActive] = useState(0)
-  const [rotating, setRotating] = useState(false)
+  // true en SSR/hidratación → solo la primera imagen; en cliente refleja
+  // la preferencia real del usuario sin setState síncrono en el effect.
+  const prefersReducedMotion = useSyncExternalStore(
+    subscribeReducedMotion,
+    () => window.matchMedia(REDUCED_MOTION_QUERY).matches,
+    () => true
+  )
+  const rotating = !prefersReducedMotion
 
   useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-    setRotating(true)
+    if (!rotating) return
     const id = setInterval(() => {
       setActive((current) => (current + 1) % slides.length)
     }, INTERVAL_MS)
     return () => clearInterval(id)
-  }, [slides.length])
+  }, [rotating, slides.length])
 
   return (
     <>
