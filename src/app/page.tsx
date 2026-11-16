@@ -17,6 +17,7 @@ import {
 } from 'lucide-react'
 import JsonLd from '@/components/JsonLd'
 import { HeroAnimated } from '@/components/HeroAnimated'
+import { HeroSlider } from '@/components/HeroSlider'
 import { RevealOnScroll } from '@/components/RevealOnScroll'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
@@ -279,16 +280,43 @@ export default function HomePage() {
         className="relative min-h-[100svh] flex items-end pb-16 sm:pb-24 px-4 sm:px-8 lg:px-12 overflow-hidden"
         aria-label="Bienvenida al Fundo Los Huapes"
       >
-        {/* Hero background */}
+        {/* Hero background — slider con crossfade cada 10 s */}
         <div className="absolute inset-0" aria-hidden="true">
-          <Image
-            src="/images/hero-rio.jpg"
-            alt=""
-            fill
-            priority
-            fetchPriority="high"
-            className="object-cover"
-            sizes="100vw"
+          <HeroSlider
+            slides={[
+              {
+                src: '/images/hero-caballos-atardecer.jpg',
+                alt: 'Caballos pastando al atardecer en los potreros del Fundo Los Huapes',
+              },
+              {
+                src: '/images/hero-rafting.jpg',
+                alt: 'Balsa cruzando un rápido del Río San Pedro entre salpicaduras',
+              },
+              {
+                src: '/images/hero-rio-turquesa.jpg',
+                alt: 'Aguas turquesa del Río San Pedro bordeadas de bosque nativo',
+              },
+              {
+                src: '/images/hero-manada.jpg',
+                alt: 'Manada de caballos con potrillos en las praderas del fundo',
+              },
+              {
+                src: '/images/hero-vacas.jpg',
+                alt: 'Vacas cruzando entre los árboles al atardecer en el fundo',
+              },
+              {
+                src: '/images/hero-caballos-bosque.jpg',
+                alt: 'Caballos entre los árboles del bosque nativo del fundo',
+              },
+              {
+                src: '/images/hero-pradera-flores.jpg',
+                alt: 'Pradera florecida con margaritas y dientes de león en el fundo',
+              },
+              {
+                src: '/images/hero-rio.jpg',
+                alt: 'El Río San Pedro desde el Fundo Los Huapes',
+              },
+            ]}
           />
           <div className="absolute inset-0 bg-forest/65" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_50%_at_20%_80%,rgba(192,92,40,0.12),transparent)]" />
