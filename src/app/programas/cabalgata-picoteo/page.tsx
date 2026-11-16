@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Sunrise, MoonStar } from 'lucide-react'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import JsonLd from '@/components/JsonLd'
@@ -205,69 +206,122 @@ export default function CabalgataPickoteoPage() {
         </div>
       </section>
 
-      {/* ── Itinerario ── */}
+      {/* ── Itinerario (layout brochure: foto + timelines + incluye) ── */}
       <section className="py-16 bg-cream lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h2 className="font-display text-3xl font-bold text-forest mb-10 lg:text-4xl">
-              ¿Cuánto dura y cuál es el itinerario?
-            </h2>
-
-            <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-              {/* Turno Mañana */}
-              <div>
-                <h3 className="font-ui text-xs tracking-widest uppercase text-ember mb-6">
-                  Turno Mañana
-                </h3>
-                <ol className="relative border-l-2 border-forest/20 space-y-6 pl-6">
-                  {[
-                    { time: '10:00', activity: 'Llegada y bienvenida' },
-                    { time: '10:30', activity: 'Inicio de la cabalgata' },
-                    { time: '12:00', activity: 'Picoteo en el estero' },
-                    { time: '12:45', activity: 'Segunda etapa' },
-                    { time: '14:30', activity: 'Término de la cabalgata' },
-                    { time: '15:00', activity: 'Asado acampado (opcional)' },
-                  ].map((item) => (
-                    <li key={item.time} className="relative">
-                      <span className="absolute -left-[1.625rem] top-1 h-3 w-3 rounded-full bg-ember border-2 border-cream" />
-                      <time className="font-ui text-xs font-semibold text-ember tracking-wide block mb-0.5">
-                        {item.time}
-                      </time>
-                      <p className="font-body text-dark/80 text-sm">{item.activity}</p>
-                    </li>
-                  ))}
-                </ol>
-              </div>
-
-              {/* Turno Tarde */}
-              <div>
-                <h3 className="font-ui text-xs tracking-widest uppercase text-ember mb-6">
-                  Turno Tarde
-                </h3>
-                <ol className="relative border-l-2 border-forest/20 space-y-6 pl-6">
-                  {[
-                    { time: '15:00', activity: 'Llegada y bienvenida' },
-                    { time: '15:30', activity: 'Inicio de la cabalgata' },
-                    { time: '17:00', activity: 'Picoteo en el estero' },
-                    { time: '17:45', activity: 'Segunda etapa' },
-                    { time: '19:30', activity: 'Término de la cabalgata' },
-                    { time: '20:00', activity: 'Asado acampado (opcional)' },
-                  ].map((item) => (
-                    <li key={item.time} className="relative">
-                      <span className="absolute -left-[1.625rem] top-1 h-3 w-3 rounded-full bg-ember border-2 border-cream" />
-                      <time className="font-ui text-xs font-semibold text-ember tracking-wide block mb-0.5">
-                        {item.time}
-                      </time>
-                      <p className="font-body text-dark/80 text-sm">{item.activity}</p>
-                    </li>
-                  ))}
-                </ol>
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[2fr_3fr] lg:gap-14 items-stretch">
+            {/* Foto alta con número de programa */}
+            <div className="relative min-h-[320px] overflow-hidden lg:min-h-0">
+              <Image
+                src="/images/programa-cabalgata.jpg"
+                alt="Jinetes a caballo entre el bosque nativo del Fundo Los Huapes"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
+              <div className="absolute inset-0 bg-forest/15" aria-hidden="true" />
+              <div className="absolute bottom-6 left-6" aria-hidden="true">
+                <p className="font-display text-[4.5rem] font-bold text-white leading-none drop-shadow-md">
+                  01
+                </p>
+                <p className="font-ui text-xs tracking-[0.3em] uppercase text-cream/90 mt-1">
+                  Programa
+                </p>
               </div>
             </div>
 
-            <p className="mt-8 font-ui text-xs text-muted italic">
-              Menores de edad, siempre acompañados por sus padres.
-            </p>
+            {/* Contenido: título, badges, timelines e incluye */}
+            <div>
+              <h2 className="font-display text-3xl font-bold text-forest mb-6 lg:text-4xl">
+                ¿Cuánto dura y cuál es el itinerario?
+              </h2>
+
+              <div className="flex flex-wrap gap-2 mb-8">
+                <Badge variant="program">Media jornada</Badge>
+                <Badge variant="program">Mañana o tarde</Badge>
+                <Badge variant="program">Asado opcional</Badge>
+              </div>
+
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-[1fr_1fr_1.15fr]">
+                {/* Turno Mañana */}
+                <div>
+                  <span className="inline-flex items-center gap-2 bg-forest text-cream font-ui text-xs tracking-widest uppercase px-4 py-2 mb-6">
+                    <Sunrise size={14} strokeWidth={1.5} aria-hidden="true" />
+                    Mañana
+                  </span>
+                  <ol className="relative border-l-2 border-gold/40 space-y-5 pl-6">
+                    {[
+                      { time: '10:00', activity: 'Llegada y bienvenida' },
+                      { time: '10:30', activity: 'Inicio de la cabalgata' },
+                      { time: '12:00', activity: 'Picoteo en el estero' },
+                      { time: '12:45', activity: 'Segunda etapa' },
+                      { time: '14:30', activity: 'Término de la cabalgata' },
+                      { time: '15:00', activity: 'Asado acampado (opcional)' },
+                    ].map((item) => (
+                      <li key={item.time} className="relative">
+                        <span className="absolute -left-[1.625rem] top-1 h-3 w-3 rounded-full bg-ember border-2 border-cream" />
+                        <time className="font-ui text-xs font-semibold text-ember tracking-wide block mb-0.5">
+                          {item.time}
+                        </time>
+                        <p className="font-body text-dark/80 text-sm">{item.activity}</p>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+
+                {/* Turno Tarde */}
+                <div>
+                  <span className="inline-flex items-center gap-2 bg-forest text-cream font-ui text-xs tracking-widest uppercase px-4 py-2 mb-6">
+                    <MoonStar size={14} strokeWidth={1.5} aria-hidden="true" />
+                    Tarde
+                  </span>
+                  <ol className="relative border-l-2 border-gold/40 space-y-5 pl-6">
+                    {[
+                      { time: '15:00', activity: 'Llegada y bienvenida' },
+                      { time: '15:30', activity: 'Inicio de la cabalgata' },
+                      { time: '17:00', activity: 'Picoteo en el estero' },
+                      { time: '17:45', activity: 'Segunda etapa' },
+                      { time: '19:30', activity: 'Término de la cabalgata' },
+                      { time: '20:00', activity: 'Asado acampado (opcional)' },
+                    ].map((item) => (
+                      <li key={item.time} className="relative">
+                        <span className="absolute -left-[1.625rem] top-1 h-3 w-3 rounded-full bg-ember border-2 border-cream" />
+                        <time className="font-ui text-xs font-semibold text-ember tracking-wide block mb-0.5">
+                          {item.time}
+                        </time>
+                        <p className="font-body text-dark/80 text-sm">{item.activity}</p>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+
+                {/* Card Incluye */}
+                <div className="bg-forest text-cream p-6 flex flex-col sm:col-span-2 xl:col-span-1">
+                  <h3 className="font-ui text-xs tracking-[0.25em] uppercase text-gold mb-5">
+                    Incluye
+                  </h3>
+                  <ul className="space-y-3 flex-1">
+                    {[
+                      'Cabalgata guiada en dos etapas',
+                      'Picoteo de campo en el estero',
+                      'Cervezas, jugos naturales, bebidas y agua mineral',
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-3 font-body text-sm text-cream/90">
+                        <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-6 bg-ember px-4 py-3 font-ui text-xs font-semibold text-cream text-center leading-snug">
+                    Asado acampado: +$40.000 por persona
+                  </p>
+                </div>
+              </div>
+
+              <p className="mt-8 font-ui text-xs text-muted italic">
+                Menores de edad, siempre acompañados por sus padres.
+              </p>
+            </div>
           </div>
         </div>
       </section>
