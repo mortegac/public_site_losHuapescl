@@ -196,7 +196,13 @@ const galleryItems: GalleryItem[] = [
     gridClass: '',
   },
   {
-    alt: 'Copihues, la flor nacional de Chile, en el bosque nativo del fundo',
+    alt: 'Liebre sentada en los potreros abiertos del Fundo Los Huapes',
+    caption: 'Liebres',
+    image: '/images/entorno-liebres.jpg',
+    gridClass: '',
+  },
+  {
+    alt: 'Copihues rojos colgando entre el bosque nativo del fundo',
     caption: 'Copihues',
     image: '/images/entorno-copihues.jpg',
     gridClass: '',
@@ -208,16 +214,10 @@ const galleryItems: GalleryItem[] = [
     gridClass: '',
   },
   {
-    alt: 'Liebre sentada en los potreros abiertos del Fundo Los Huapes',
-    caption: 'Liebres',
-    image: '/images/entorno-liebres.jpg',
-    gridClass: '',
-  },
-  {
-    alt: 'Flora nativa en floración en los campos de la Región de Los Ríos',
-    caption: 'Flora nativa',
-    image: '/images/entorno-flores.jpg',
-    gridClass: '',
+    alt: 'Ovejas pastando al atardecer en los potreros del Fundo Los Huapes',
+    caption: 'Ovejas en los potreros',
+    image: '/images/entorno-ovejas.jpg',
+    gridClass: 'md:col-span-2',
   },
 ]
 
@@ -539,8 +539,8 @@ export default function HomePage() {
           {/* Asymmetric mosaic gallery — 6 photos */}
           <RevealOnScroll delay={0.1}>
             <div
-              className="grid grid-cols-2 md:grid-cols-3 gap-1.5"
-              style={{ gridTemplateRows: 'repeat(3, 240px)' }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-1.5"
+              style={{ gridAutoRows: '240px' }}
               role="list"
               aria-label="Galería del entorno del Fundo Los Huapes"
             >
