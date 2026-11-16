@@ -202,15 +202,15 @@ const galleryItems: GalleryItem[] = [
     gridClass: '',
   },
   {
-    alt: 'Perros Gran Pirineo en el bosque nativo con rayos de sol filtrados entre los árboles',
+    alt: 'Perros Gran Pirineo descansando en el pasto del Fundo Los Huapes',
     caption: 'Gran Pirineo',
     image: '/images/entorno-pirineo.jpg',
     gridClass: '',
   },
   {
-    alt: 'Ovejas con crías en los potreros del Fundo Los Huapes con bosque nativo al fondo',
-    caption: 'Ovejas',
-    image: '/images/entorno-ovejas.jpg',
+    alt: 'Liebre sentada en los potreros abiertos del Fundo Los Huapes',
+    caption: 'Liebres',
+    image: '/images/entorno-liebres.jpg',
     gridClass: '',
   },
   {
@@ -343,8 +343,8 @@ export default function HomePage() {
             <RevealOnScroll>
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
-                  src="/images/experiencia-caballos.jpg"
-                  alt="Caballos en los potreros del Fundo Los Huapes"
+                  src="/images/entorno-bosque.jpg"
+                  alt="Sendero entre el bosque nativo valdiviano del Fundo Los Huapes"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
