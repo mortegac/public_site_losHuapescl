@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const ERROR_MESSAGES: Record<string, string> = {
   datos: 'Faltan campos obligatorios o el formato es inválido. Vuelve atrás y revisa el formulario.',
   limite: 'Recibimos demasiadas solicitudes seguidas. Espera unos minutos e intenta de nuevo.',
-  envio: 'No pudimos enviar tu solicitud. Intenta de nuevo o escríbenos directo a hola@loshuapes.cl.',
+  envio: 'No pudimos enviar tu solicitud. Intenta de nuevo o escríbenos directo a reservas@loshuapes.cl.',
 }
 
 function SuccessMessage() {

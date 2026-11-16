@@ -33,7 +33,7 @@ const secciones: SeccionLegal[] = [
   {
     titulo: '1. Responsable del tratamiento',
     parrafos: [
-      'El sitio web loshuapes.cl es operado por Fundo Los Huapes, operador de turismo rural ubicado en la ribera del Río San Pedro, Región de Los Ríos, Chile. Para cualquier consulta relacionada con esta política puedes escribir a hola@loshuapes.cl.',
+      'El sitio web loshuapes.cl es operado por Fundo Los Huapes, operador de turismo rural ubicado en la ribera del Río San Pedro, Región de Los Ríos, Chile. Para cualquier consulta relacionada con esta política puedes escribir a reservas@loshuapes.cl.',
     ],
   },
   {
@@ -64,7 +64,7 @@ const secciones: SeccionLegal[] = [
   {
     titulo: '6. Tus derechos',
     parrafos: [
-      'De acuerdo con la Ley 19.628, tienes derecho a solicitar el acceso, la rectificación, la cancelación o el bloqueo de tus datos personales. Para ejercer cualquiera de estos derechos, escríbenos a hola@loshuapes.cl indicando tu solicitud.',
+      'De acuerdo con la Ley 19.628, tienes derecho a solicitar el acceso, la rectificación, la cancelación o el bloqueo de tus datos personales. Para ejercer cualquiera de estos derechos, escríbenos a reservas@loshuapes.cl indicando tu solicitud.',
     ],
   },
   {
@@ -142,10 +142,10 @@ export default function PrivacidadPage() {
               <p className="font-body text-sm text-muted leading-relaxed">
                 ¿Tienes dudas sobre esta política? Escríbenos a{' '}
                 <a
-                  href="mailto:hola@loshuapes.cl"
+                  href="mailto:reservas@loshuapes.cl"
                   className="text-ember underline underline-offset-4 hover:text-forest transition-colors"
                 >
-                  hola@loshuapes.cl
+                  reservas@loshuapes.cl
                 </a>
                 . Consulta también nuestros{' '}
                 <Link

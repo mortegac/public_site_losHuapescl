@@ -7,7 +7,7 @@
 const BASE_URL = 'https://www.loshuapes.cl'
 const BUSINESS_ID = `${BASE_URL}/#business`
 const CONTACT_PHONE = '+56912345678' // TODO: confirmar número real
-const CONTACT_EMAIL = 'hola@loshuapes.cl'
+const CONTACT_EMAIL = 'reservas@loshuapes.cl'
 
 // ---------------------------------------------------------------------------
 // Season dates (octubre–mayo), derived from the current year at build time

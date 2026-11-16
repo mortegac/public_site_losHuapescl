@@ -142,10 +142,10 @@ export default function TerminosPage() {
               <p className="font-body text-sm text-muted leading-relaxed">
                 ¿Tienes dudas sobre estos términos? Escríbenos a{' '}
                 <a
-                  href="mailto:hola@loshuapes.cl"
+                  href="mailto:reservas@loshuapes.cl"
                   className="text-ember underline underline-offset-4 hover:text-forest transition-colors"
                 >
-                  hola@loshuapes.cl
+                  reservas@loshuapes.cl
                 </a>
                 . Revisa también nuestra{' '}
                 <Link

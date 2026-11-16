@@ -123,7 +123,7 @@ export async function POST(req: NextRequest) {
 
   const { error } = await resend.emails.send({
     from: 'reservas@loshuapes.cl',
-    to: 'hola@loshuapes.cl',
+    to: 'reservas@loshuapes.cl',
     replyTo: body.email,
     subject: `Solicitud de reserva — ${body.nombre}`,
     html,

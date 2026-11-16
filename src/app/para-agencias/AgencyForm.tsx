@@ -109,13 +109,13 @@ export default function AgencyForm() {
         setStatus('error')
         setErrorMessage(
           result.error ??
-            'No pudimos enviar tu consulta. Intenta nuevamente o escríbenos a hola@loshuapes.cl.'
+            'No pudimos enviar tu consulta. Intenta nuevamente o escríbenos a reservas@loshuapes.cl.'
         )
       }
     } catch {
       setStatus('error')
       setErrorMessage(
-        'No pudimos enviar tu consulta. Revisa tu conexión e intenta nuevamente, o escríbenos a hola@loshuapes.cl.'
+        'No pudimos enviar tu consulta. Revisa tu conexión e intenta nuevamente, o escríbenos a reservas@loshuapes.cl.'
       )
     }
   }

@@ -193,10 +193,10 @@ export default function MapaDelSitioPage() {
               <p className="font-body text-sm text-muted leading-relaxed">
                 ¿No encuentras lo que buscas? Escríbenos a{' '}
                 <a
-                  href="mailto:hola@loshuapes.cl"
+                  href="mailto:reservas@loshuapes.cl"
                   className="text-ember underline underline-offset-4 hover:text-forest transition-colors"
                 >
-                  hola@loshuapes.cl
+                  reservas@loshuapes.cl
                 </a>{' '}
                 o revisa las{' '}
                 <Link

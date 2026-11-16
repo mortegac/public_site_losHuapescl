@@ -239,10 +239,10 @@ export default function ReservarPage() {
               Escribir por WhatsApp
             </a>
             <a
-              href="mailto:hola@loshuapes.cl"
+              href="mailto:reservas@loshuapes.cl"
               className="inline-flex items-center justify-center font-ui font-medium tracking-wide rounded transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember focus-visible:ring-offset-2 bg-transparent text-cream border-2 border-cream/40 hover:border-cream hover:bg-cream/10 px-8 py-4 text-lg"
             >
-              hola@loshuapes.cl
+              reservas@loshuapes.cl
             </a>
           </div>
           <p className="mt-8 font-ui text-xs text-cream/50">
