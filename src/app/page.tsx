@@ -85,8 +85,8 @@ const programs: Program[] = [
       'Cabalgata en dos etapas con picoteo en el estero; asado acampado opcional.',
     highlights: ['Mañana o tarde', 'Asado opcional', 'Desde 5 años'],
     price: '$80.000',
-    image: '/images/cabalgata-bosque.jpg',
-    imageAlt: 'Caballos en el bosque nativo del Fundo Los Huapes',
+    image: '/images/programa-cabalgata.jpg',
+    imageAlt: 'Jinetes a caballo entre el bosque nativo del Fundo Los Huapes',
     activities: [
       { icon: <Compass size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Cabalgata' },
       { icon: <Utensils size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Picoteo' },
@@ -102,8 +102,8 @@ const programs: Program[] = [
       'Cabalgata por la mañana y bajada en balsa por la tarde hasta Antilhue.',
     highlights: ['Cabalgata mañana', 'Balsa 15 km', 'Desde 10 años'],
     price: '$180.000',
-    image: '/images/cabalgata-verano.jpg',
-    imageAlt: 'Caballos en potreros verdes con flores silvestres del Fundo Los Huapes',
+    image: '/images/programa-potrero-rio.jpg',
+    imageAlt: 'Caballos pastando bajo los árboles en los potreros del Fundo Los Huapes',
     activities: [
       { icon: <Compass size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Cabalgata' },
       { icon: <Waves size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Balsa 15 km' },
@@ -119,8 +119,8 @@ const programs: Program[] = [
       'Bajada en balsa por la mañana, picoteo en el río y cabalgata por la tarde.',
     highlights: ['Balsa 20 km', 'Cabalgata tarde', 'Desde 5 años'],
     price: '$180.000',
-    image: '/images/balsa-personas.jpg',
-    imageAlt: 'Guía y turista en balsa por el Río San Pedro, Los Ríos',
+    image: '/images/programa-rio-potrero.jpg',
+    imageAlt: 'Balsa navegando el Río San Pedro con tripulantes pescando',
     activities: [
       { icon: <Waves size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Balsa 20 km' },
       { icon: <Utensils size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Picoteo' },
@@ -136,8 +136,8 @@ const programs: Program[] = [
       'Primer día completo en el río con pesca. Segundo día de cabalgata y labores de campo.',
     highlights: ['Noche en el campo', 'Pesca con mosca', 'Todo incluido'],
     price: '$280.000',
-    image: '/images/balsa-grupo.jpg',
-    imageAlt: 'Grupo de pescadores junto al fogón a orillas del Río San Pedro',
+    image: '/images/programa-travesia.jpg',
+    imageAlt: 'Grupo celebrando junto a las balsas a orillas del Río San Pedro',
     activities: [
       { icon: <Moon size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Noche campo' },
       { icon: <Fish size={13} strokeWidth={1.5} aria-hidden="true" />, label: 'Pesca mosca' },
@@ -441,7 +441,7 @@ export default function HomePage() {
                     <div className="absolute inset-0 bg-forest/30" aria-hidden="true" />
                     {/* Ghost number overlay */}
                     <span
-                      className="absolute bottom-2 left-4 font-display text-[4rem] font-bold text-cream/[0.18] leading-none select-none"
+                      className="absolute bottom-2 left-4 font-display text-[4rem] font-bold text-white leading-none select-none drop-shadow-md"
                       aria-hidden="true"
                     >
                       {program.num}
