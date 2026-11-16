@@ -421,12 +421,12 @@ export default function HomePage() {
           </RevealOnScroll>
 
           {/* 1 col → 2 col → 4 col grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-cream/10 border border-cream/10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
             {programs.map((program, index) => (
               <RevealOnScroll key={program.slug} delay={index * 0.08}>
                 <Link
                   href={`/programas/${program.slug}`}
-                  className="group relative flex flex-col bg-forest hover:bg-[#2D5A3D] transition-colors duration-300 h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember focus-visible:ring-inset"
+                  className="group relative flex flex-col bg-white hover:bg-cream transition-colors duration-300 h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember focus-visible:ring-inset"
                   aria-label={`Ver programa ${program.title} — ${program.price} por persona`}
                 >
                   {/* Card image */}
@@ -455,7 +455,7 @@ export default function HomePage() {
                   </div>
 
                   {/* Activity icons */}
-                  <div className="flex gap-3 px-6 pt-4 pb-2 border-b border-cream/[0.08]">
+                  <div className="flex gap-3 px-6 pt-4 pb-2 border-b border-forest/10">
                     {program.activities.map((activity) => (
                       <span
                         key={activity.label}
@@ -470,12 +470,12 @@ export default function HomePage() {
                   {/* Text content */}
                   <div className="flex flex-col flex-1 p-6">
                     {/* Title */}
-                    <h3 className="font-display text-[1.25rem] text-cream mb-3 leading-[1.2]">
+                    <h3 className="font-display text-[1.25rem] text-forest mb-3 leading-[1.2]">
                       {program.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="font-body text-sm text-cream/60 leading-relaxed mb-4 flex-1">
+                    <p className="font-body text-sm text-dark/70 leading-relaxed mb-4 flex-1">
                       {program.description}
                     </p>
 
@@ -484,7 +484,7 @@ export default function HomePage() {
                       {program.highlights.map((highlight) => (
                         <li
                           key={highlight}
-                          className="flex items-center gap-2 font-ui text-xs text-cream/50 border-b border-cream/[0.06] pb-1.5"
+                          className="flex items-center gap-2 font-ui text-xs text-muted border-b border-forest/10 pb-1.5"
                         >
                           <span className="text-ember font-medium shrink-0" aria-hidden="true">—</span>
                           {highlight}
@@ -494,9 +494,9 @@ export default function HomePage() {
 
                     {/* Price + arrow */}
                     <div className="flex items-end justify-between">
-                      <p className="font-display text-[1.5rem] font-bold text-cream">
+                      <p className="font-display text-[1.5rem] font-bold text-forest">
                         {program.price}{' '}
-                        <span className="font-body text-sm font-normal text-cream/50">
+                        <span className="font-body text-sm font-normal text-muted">
                           / persona
                         </span>
                       </p>
