@@ -109,6 +109,9 @@ const galleryItems = [
   { alt: 'Sendero de cabalgata entre el bosque nativo valdiviano', image: '/images/cabalgata-sendero-bosque.jpg' },
   { alt: 'Jinetes cabalgando por el sendero del bosque con luz entre los árboles', image: '/images/cabalgata-jinetes-bosque.jpg' },
   { alt: 'Ovejas pastando al atardecer en los potreros del fundo', image: '/images/cabalgata-ovejas.jpg' },
+  { alt: 'Perro Gran Pirineo refrescándose en el estero del fundo', image: '/images/cabalgata-pirineo-estero.jpg' },
+  { alt: 'Atardecer con nubes encendidas sobre los árboles del fundo', image: '/images/cabalgata-atardecer-cielo.jpg' },
+  { alt: 'Orilla del Río San Pedro entre árboles y pasto alto', image: '/images/cabalgata-orilla-rio.jpg' },
 ]
 
 export default function CabalgataPickoteoPage() {
