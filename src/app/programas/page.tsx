@@ -48,8 +48,8 @@ const programs: ProgramCard[] = [
     duration: 'Media jornada',
     minAge: 'Desde 5 años',
     badges: ['Media jornada', 'Mañana o tarde'],
-    image: '/images/cabalgata-verano.jpg',
-    imageAlt: 'Caballos pastando en potreros con flores silvestres y árboles nativos',
+    image: '/images/programa-cabalgata.jpg',
+    imageAlt: 'Jinetes a caballo entre el bosque nativo del Fundo Los Huapes',
   },
   {
     number: '02',
@@ -62,8 +62,8 @@ const programs: ProgramCard[] = [
     duration: 'Día completo',
     minAge: 'Desde 10 años',
     badges: ['Día completo', 'Balsa 15 km'],
-    image: '/images/cabalgata-manada.jpg',
-    imageAlt: 'Manada de caballos criollos en potrero con árboles nativos',
+    image: '/images/programa-potrero-rio.jpg',
+    imageAlt: 'Ovejas junto al portón del potrero con bosque nativo al fondo',
   },
   {
     number: '03',
@@ -76,8 +76,8 @@ const programs: ProgramCard[] = [
     duration: 'Día completo',
     minAge: 'Desde 5 años',
     badges: ['Día completo', 'Balsa 20 km', 'Familias'],
-    image: '/images/hero-rio.jpg',
-    imageAlt: 'Río San Pedro con paredes de roca volcánica y cielo azul',
+    image: '/images/programa-rio-potrero.jpg',
+    imageAlt: 'Navegando el Río San Pedro en balsa bajo el cielo azul',
   },
   {
     number: '04',
@@ -90,8 +90,8 @@ const programs: ProgramCard[] = [
     duration: '2 días · 1 noche',
     minAge: 'Desde 10 años',
     badges: ['2 días · 1 noche', 'Todo incluido'],
-    image: '/images/entorno-aereo.jpg',
-    imageAlt: 'Vista aérea del Río San Pedro serpenteando por el valle verde',
+    image: '/images/programa-travesia.jpg',
+    imageAlt: 'Balsa catamarán a orillas del Río San Pedro',
   },
 ]
 

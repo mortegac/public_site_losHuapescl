@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Sun, Sunrise } from 'lucide-react'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import JsonLd from '@/components/JsonLd'
@@ -200,85 +201,111 @@ export default function TravesiaSanPedroPage() {
         </div>
       </section>
 
-      {/* ── Itinerario 2 días ── */}
+      {/* ── Itinerario (layout brochure: foto + timelines) ── */}
       <section className="py-16 bg-cream lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h2 className="font-display text-3xl font-bold text-forest mb-10 lg:text-4xl">
-              ¿Cómo es el itinerario de los 2 días?
-            </h2>
-
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-              {/* Día 1 */}
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="flex-shrink-0 h-8 w-8 rounded-full bg-ember flex items-center justify-center font-ui text-cream font-bold text-sm">
-                    1
-                  </span>
-                  <h3 className="font-display text-xl font-bold text-forest">Día 1 — El Río</h3>
-                </div>
-                <ol className="relative border-l-2 border-forest/20 space-y-6 pl-6">
-                  {[
-                    {
-                      time: '09:30',
-                      activity:
-                        'Bajada en balsa por la Cuenca del Río San Pedro, inicio en desagüe de Riñihue pasando por Puente Malihue (también opción: Lago Riñihue). Snack y almuerzo durante la ruta. Pesca incluida. Duración aprox. 8 horas.',
-                    },
-                    {
-                      time: '20:00',
-                      activity: 'Asado acampado y noche en el campo',
-                    },
-                  ].map((item) => (
-                    <li key={item.time} className="relative">
-                      <span className="absolute -left-[1.625rem] top-1 h-3 w-3 rounded-full bg-ember border-2 border-cream" />
-                      <time className="font-ui text-xs font-semibold text-ember tracking-wide block mb-0.5">
-                        {item.time}
-                      </time>
-                      <p className="font-body text-dark/80 text-sm leading-relaxed">{item.activity}</p>
-                    </li>
-                  ))}
-                </ol>
-              </div>
-
-              {/* Día 2 */}
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="flex-shrink-0 h-8 w-8 rounded-full bg-forest flex items-center justify-center font-ui text-cream font-bold text-sm">
-                    2
-                  </span>
-                  <h3 className="font-display text-xl font-bold text-forest">Día 2 — El Campo</h3>
-                </div>
-                <ol className="relative border-l-2 border-forest/20 space-y-6 pl-6">
-                  {[
-                    {
-                      time: 'Temprano',
-                      activity: 'Desayuno campestre (horario acordado con el grupo)',
-                    },
-                    {
-                      time: '10:00',
-                      activity:
-                        'Inicio cabalgata, picoteo en el estero y actividades de campo (rodear caballos)',
-                    },
-                    {
-                      time: '14:30',
-                      activity: 'Asado campestre (opcional)',
-                    },
-                  ].map((item) => (
-                    <li key={item.time} className="relative">
-                      <span className="absolute -left-[1.625rem] top-1 h-3 w-3 rounded-full bg-forest border-2 border-cream" />
-                      <time className="font-ui text-xs font-semibold text-forest tracking-wide block mb-0.5">
-                        {item.time}
-                      </time>
-                      <p className="font-body text-dark/80 text-sm leading-relaxed">{item.activity}</p>
-                    </li>
-                  ))}
-                </ol>
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[2fr_3fr] lg:gap-14 items-stretch">
+            {/* Foto alta con número de programa */}
+            <div className="relative min-h-[320px] overflow-hidden lg:min-h-0">
+              <Image
+                src="/images/programa-travesia.jpg"
+                alt="Balsa catamarán a orillas del Río San Pedro"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
+              <div className="absolute inset-0 bg-forest/15" aria-hidden="true" />
+              <div className="absolute bottom-6 left-6" aria-hidden="true">
+                <p className="font-display text-[4.5rem] font-bold text-white leading-none drop-shadow-md">
+                  04
+                </p>
+                <p className="font-ui text-xs tracking-[0.3em] uppercase text-cream/90 mt-1">
+                  Programa
+                </p>
               </div>
             </div>
 
-            <p className="mt-8 font-ui text-xs text-muted italic">
-              Horarios referenciales.
-            </p>
+            {/* Contenido: título, badges y timelines */}
+            <div>
+              <h2 className="font-display text-3xl font-bold text-forest mb-6 lg:text-4xl">
+                ¿Cómo es el itinerario de los 2 días?
+              </h2>
+
+              <div className="flex flex-wrap gap-2 mb-8">
+                <Badge variant="highlight">2 días · 1 noche</Badge>
+                <Badge variant="program">Todo incluido</Badge>
+                <Badge variant="program">Pesca con mosca opcional</Badge>
+                <Badge variant="program">Noche en el campo</Badge>
+              </div>
+
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+                {/* Día 1 */}
+                <div>
+                  <span className="inline-flex items-center gap-2 bg-forest text-cream font-ui text-xs tracking-widest uppercase px-4 py-2 mb-6">
+                    <Sun size={14} strokeWidth={1.5} aria-hidden="true" />
+                    Día 1 · El Río
+                  </span>
+                  <ol className="relative border-l-2 border-gold/40 space-y-5 pl-6">
+                    {[
+                      {
+                        time: '09:30',
+                        activity:
+                          'Bajada en balsa por la Cuenca del Río San Pedro, inicio en desagüe de Riñihue pasando por Puente Malihue (también opción: Lago Riñihue). Snack y almuerzo durante la ruta. Pesca incluida. Duración aprox. 8 horas.',
+                      },
+                      {
+                        time: '20:00',
+                        activity: 'Asado acampado y noche en el campo',
+                      },
+                    ].map((item) => (
+                      <li key={item.time} className="relative">
+                        <span className="absolute -left-[1.625rem] top-1 h-3 w-3 rounded-full bg-ember border-2 border-cream" />
+                        <time className="font-ui text-xs font-semibold text-ember tracking-wide block mb-0.5">
+                          {item.time}
+                        </time>
+                        <p className="font-body text-dark/80 text-sm leading-relaxed">{item.activity}</p>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+
+                {/* Día 2 */}
+                <div>
+                  <span className="inline-flex items-center gap-2 bg-forest text-cream font-ui text-xs tracking-widest uppercase px-4 py-2 mb-6">
+                    <Sunrise size={14} strokeWidth={1.5} aria-hidden="true" />
+                    Día 2 · El Campo
+                  </span>
+                  <ol className="relative border-l-2 border-gold/40 space-y-5 pl-6">
+                    {[
+                      {
+                        time: 'Temprano',
+                        activity: 'Desayuno campestre (horario acordado con el grupo)',
+                      },
+                      {
+                        time: '10:00',
+                        activity:
+                          'Inicio cabalgata, picoteo en el estero y actividades de campo (rodear caballos)',
+                      },
+                      {
+                        time: '14:30',
+                        activity: 'Asado campestre (opcional)',
+                      },
+                    ].map((item) => (
+                      <li key={item.time} className="relative">
+                        <span className="absolute -left-[1.625rem] top-1 h-3 w-3 rounded-full bg-ember border-2 border-cream" />
+                        <time className="font-ui text-xs font-semibold text-ember tracking-wide block mb-0.5">
+                          {item.time}
+                        </time>
+                        <p className="font-body text-dark/80 text-sm leading-relaxed">{item.activity}</p>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              </div>
+
+              <p className="mt-8 font-ui text-xs text-muted italic">
+                Horarios referenciales.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -287,11 +314,12 @@ export default function TravesiaSanPedroPage() {
       <section className="py-16 bg-forest/5 border-y border-forest/10 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-3 max-w-4xl">
-            <div>
-              <h2 className="font-display text-2xl font-bold text-forest mb-6">
-                ¿Qué incluye el precio?
+            {/* Incluye (card brochure) */}
+            <div className="bg-forest text-cream p-6 flex flex-col">
+              <h2 className="font-ui text-xs tracking-[0.25em] uppercase text-gold mb-5">
+                Incluye
               </h2>
-              <ul className="space-y-3">
+              <ul className="space-y-3 flex-1">
                 {[
                   'Bajada en balsa (20 km)',
                   'Cabalgata guiada con picoteo',
@@ -300,12 +328,15 @@ export default function TravesiaSanPedroPage() {
                   'Desayuno campestre',
                   'Almuerzo en el río (snack + almuerzo completo)',
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 font-body text-dark/80 text-sm">
-                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-ember flex-shrink-0" />
+                  <li key={item} className="flex items-start gap-3 font-body text-sm text-cream/90">
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold flex-shrink-0" />
                     {item}
                   </li>
                 ))}
               </ul>
+              <p className="mt-6 border-t border-gold/40 pt-4 font-ui text-xs font-semibold tracking-[0.2em] uppercase text-gold text-center leading-snug">
+                Todo incluido · Asado acampado en el precio
+              </p>
             </div>
 
             <div>

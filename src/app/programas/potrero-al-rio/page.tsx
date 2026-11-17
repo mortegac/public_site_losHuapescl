@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Sunrise, Waves } from 'lucide-react'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import JsonLd from '@/components/JsonLd'
@@ -190,38 +191,98 @@ export default function PotrreroAlRioPage() {
         </div>
       </section>
 
-      {/* ── Itinerario ── */}
+      {/* ── Itinerario (layout brochure: foto + timelines) ── */}
       <section className="py-16 bg-cream lg:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
-            <h2 className="font-display text-3xl font-bold text-forest mb-10 lg:text-4xl">
-              ¿Cómo es el itinerario del día?
-            </h2>
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[2fr_3fr] lg:gap-14 items-stretch">
+            {/* Foto alta con número de programa */}
+            <div className="relative min-h-[320px] overflow-hidden lg:min-h-0">
+              <Image
+                src="/images/programa-potrero-rio.jpg"
+                alt="Ovejas junto al portón del potrero con bosque nativo al fondo"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
+              <div className="absolute inset-0 bg-forest/15" aria-hidden="true" />
+              <div className="absolute bottom-6 left-6" aria-hidden="true">
+                <p className="font-display text-[4.5rem] font-bold text-white leading-none drop-shadow-md">
+                  02
+                </p>
+                <p className="font-ui text-xs tracking-[0.3em] uppercase text-cream/90 mt-1">
+                  Programa
+                </p>
+              </div>
+            </div>
 
-            <ol className="relative border-l-2 border-forest/20 space-y-8 pl-6">
-              {[
-                { time: '10:00', activity: 'Llegada y bienvenida al campo' },
-                { time: '10:30', activity: 'Primera etapa de la cabalgata' },
-                { time: '12:00', activity: 'Descanso y picoteo en el estero' },
-                { time: '12:45', activity: 'Segunda etapa; término a las 14:30' },
-                { time: '14:15', activity: 'Almuerzo campestre' },
-                { time: '15:00', activity: 'Zarpe en balsa desde la isla del campo' },
-                { time: 'En el río', activity: '15 km hasta Balsa San Javier, Antilhue (3 a 4 h)' },
-                { time: 'Al llegar', activity: 'Traslado de regreso al campo' },
-              ].map((item) => (
-                <li key={item.time} className="relative">
-                  <span className="absolute -left-[1.625rem] top-1 h-3 w-3 rounded-full bg-ember border-2 border-cream" />
-                  <time className="font-ui text-xs font-semibold text-ember tracking-wide block mb-0.5">
-                    {item.time}
-                  </time>
-                  <p className="font-body text-dark/80">{item.activity}</p>
-                </li>
-              ))}
-            </ol>
+            {/* Contenido: título, badges y timelines */}
+            <div>
+              <h2 className="font-display text-3xl font-bold text-forest mb-6 lg:text-4xl">
+                ¿Cómo es el itinerario del día?
+              </h2>
 
-            <p className="mt-8 font-ui text-xs text-muted italic">
-              Horarios referenciales; el zarpe y el término pueden variar según el río y el grupo.
-            </p>
+              <div className="flex flex-wrap gap-2 mb-8">
+                <Badge variant="program">Día completo</Badge>
+                <Badge variant="program">Cabalgata mañana</Badge>
+                <Badge variant="program">Balsa 15 km</Badge>
+                <Badge variant="program">Desde 10 años</Badge>
+              </div>
+
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+                {/* Mañana: cabalgata */}
+                <div>
+                  <span className="inline-flex items-center gap-2 bg-forest text-cream font-ui text-xs tracking-widest uppercase px-4 py-2 mb-6">
+                    <Sunrise size={14} strokeWidth={1.5} aria-hidden="true" />
+                    Mañana · Cabalgata
+                  </span>
+                  <ol className="relative border-l-2 border-gold/40 space-y-5 pl-6">
+                    {[
+                      { time: '10:00', activity: 'Llegada y bienvenida al campo' },
+                      { time: '10:30', activity: 'Primera etapa de la cabalgata' },
+                      { time: '12:00', activity: 'Descanso y picoteo en el estero' },
+                      { time: '12:45', activity: 'Segunda etapa; término a las 14:30' },
+                      { time: '14:15', activity: 'Almuerzo campestre' },
+                    ].map((item) => (
+                      <li key={item.time} className="relative">
+                        <span className="absolute -left-[1.625rem] top-1 h-3 w-3 rounded-full bg-ember border-2 border-cream" />
+                        <time className="font-ui text-xs font-semibold text-ember tracking-wide block mb-0.5">
+                          {item.time}
+                        </time>
+                        <p className="font-body text-dark/80 text-sm">{item.activity}</p>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+
+                {/* Tarde: balsa */}
+                <div>
+                  <span className="inline-flex items-center gap-2 bg-forest text-cream font-ui text-xs tracking-widest uppercase px-4 py-2 mb-6">
+                    <Waves size={14} strokeWidth={1.5} aria-hidden="true" />
+                    Tarde · Balsa
+                  </span>
+                  <ol className="relative border-l-2 border-gold/40 space-y-5 pl-6">
+                    {[
+                      { time: '15:00', activity: 'Zarpe en balsa desde la isla del campo' },
+                      { time: 'En el río', activity: '15 km hasta Balsa San Javier, Antilhue (3 a 4 h)' },
+                      { time: 'Al llegar', activity: 'Traslado de regreso al campo' },
+                    ].map((item) => (
+                      <li key={item.time} className="relative">
+                        <span className="absolute -left-[1.625rem] top-1 h-3 w-3 rounded-full bg-ember border-2 border-cream" />
+                        <time className="font-ui text-xs font-semibold text-ember tracking-wide block mb-0.5">
+                          {item.time}
+                        </time>
+                        <p className="font-body text-dark/80 text-sm">{item.activity}</p>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+
+              </div>
+
+              <p className="mt-8 font-ui text-xs text-muted italic">
+                Horarios referenciales; el zarpe y el término pueden variar según el río y el grupo.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -230,11 +291,12 @@ export default function PotrreroAlRioPage() {
       <section className="py-16 bg-forest/5 border-y border-forest/10 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 max-w-3xl">
-            <div>
-              <h2 className="font-display text-2xl font-bold text-forest mb-6">
-                ¿Qué incluye el precio?
+            {/* Incluye (card brochure) */}
+            <div className="bg-forest text-cream p-6 flex flex-col">
+              <h2 className="font-ui text-xs tracking-[0.25em] uppercase text-gold mb-5">
+                Incluye
               </h2>
-              <ul className="space-y-3">
+              <ul className="space-y-3 flex-1">
                 {[
                   'Cabalgata guiada de mañana',
                   'Picoteo y bebestibles en el estero',
@@ -242,8 +304,8 @@ export default function PotrreroAlRioPage() {
                   'Traslado de regreso al campo',
                   'Almuerzo campestre',
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 font-body text-dark/80">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-ember flex-shrink-0" />
+                  <li key={item} className="flex items-start gap-3 font-body text-sm text-cream/90">
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold flex-shrink-0" />
                     {item}
                   </li>
                 ))}
