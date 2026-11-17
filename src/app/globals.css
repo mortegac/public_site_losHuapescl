@@ -11,8 +11,8 @@
 
   /* Typography — references next/font CSS variables set in layout.tsx */
   --font-display: var(--font-playfair), Georgia, serif;
-  --font-body: var(--font-source-serif), Georgia, serif;
-  --font-ui: var(--font-dm-sans), system-ui, sans-serif;
+  --font-body: var(--font-open-sans), system-ui, sans-serif;
+  --font-ui: var(--font-open-sans), system-ui, sans-serif;
 }
 
 /* ─────────── Base styles ─────────── */

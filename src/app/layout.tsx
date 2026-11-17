@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
-import { Playfair_Display, Source_Serif_4, DM_Sans } from 'next/font/google'
+import { Playfair_Display, Open_Sans } from 'next/font/google'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import './globals.css'
@@ -12,17 +12,12 @@ const playfairDisplay = Playfair_Display({
   display: 'swap',
 })
 
-const sourceSerif4 = Source_Serif_4({
-  variable: '--font-source-serif',
+// Open Sans: Regular, SemiBold, Bold y ExtraBold/Black, con itálicas
+const openSans = Open_Sans({
+  variable: '--font-open-sans',
   subsets: ['latin'],
-  weight: ['300', '400', '600'],
-  display: 'swap',
-})
-
-const dmSans = DM_Sans({
-  variable: '--font-dm-sans',
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
+  weight: ['400', '600', '700', '800'],
+  style: ['normal', 'italic'],
   display: 'swap',
 })
 
@@ -104,7 +99,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html
       lang="es-CL"
-      className={`${playfairDisplay.variable} ${sourceSerif4.variable} ${dmSans.variable} h-full antialiased`}
+      className={`${playfairDisplay.variable} ${openSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         {/* Google Tag Manager — snippet oficial, global en todas las páginas.
