@@ -105,6 +105,10 @@ const galleryItems = [
   { alt: 'Caballos pastando entre flores silvestres y árboles nativos en verano', image: '/images/cabalgata-verano.jpg' },
   { alt: 'Manada de caballos criollos en potrero con grandes árboles nativos', image: '/images/cabalgata-manada.jpg' },
   { alt: 'Picoteo tradicional chileno con queso, pan amasado y pebre en el estero', image: '/images/gastronomia-spread.jpg' },
+  { alt: 'Puente de tablones de madera en el sendero del bosque nativo', image: '/images/cabalgata-sendero-puente.jpg' },
+  { alt: 'Sendero de cabalgata entre el bosque nativo valdiviano', image: '/images/cabalgata-sendero-bosque.jpg' },
+  { alt: 'Jinetes cabalgando por el sendero del bosque con luz entre los árboles', image: '/images/cabalgata-jinetes-bosque.jpg' },
+  { alt: 'Ovejas pastando al atardecer en los potreros del fundo', image: '/images/cabalgata-ovejas.jpg' },
 ]
 
 export default function CabalgataPickoteoPage() {
@@ -242,7 +246,7 @@ export default function CabalgataPickoteoPage() {
                 <Badge variant="program">Asado opcional</Badge>
               </div>
 
-              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-[1fr_1fr_1.15fr]">
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
                 {/* Turno Mañana */}
                 <div>
                   <span className="inline-flex items-center gap-2 bg-forest text-cream font-ui text-xs tracking-widest uppercase px-4 py-2 mb-6">
@@ -295,27 +299,6 @@ export default function CabalgataPickoteoPage() {
                   </ol>
                 </div>
 
-                {/* Card Incluye */}
-                <div className="bg-forest text-cream p-6 flex flex-col sm:col-span-2 xl:col-span-1">
-                  <h3 className="font-ui text-xs tracking-[0.25em] uppercase text-gold mb-5">
-                    Incluye
-                  </h3>
-                  <ul className="space-y-3 flex-1">
-                    {[
-                      'Cabalgata guiada en dos etapas',
-                      'Picoteo de campo en el estero',
-                      'Cervezas, jugos naturales, bebidas y agua mineral',
-                    ].map((item) => (
-                      <li key={item} className="flex items-start gap-3 font-body text-sm text-cream/90">
-                        <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="mt-6 bg-ember px-4 py-3 font-ui text-xs font-semibold text-cream text-center leading-snug">
-                    Asado acampado: +$40.000 por persona
-                  </p>
-                </div>
               </div>
 
               <p className="mt-8 font-ui text-xs text-muted italic">
@@ -330,23 +313,26 @@ export default function CabalgataPickoteoPage() {
       <section className="py-16 bg-forest/5 border-y border-forest/10 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 max-w-3xl">
-            {/* Incluye */}
-            <div>
-              <h2 className="font-display text-2xl font-bold text-forest mb-6">
-                ¿Qué incluye el precio?
+            {/* Incluye (card brochure) */}
+            <div className="bg-forest text-cream p-6 flex flex-col">
+              <h2 className="font-ui text-xs tracking-[0.25em] uppercase text-gold mb-5">
+                Incluye
               </h2>
-              <ul className="space-y-3">
+              <ul className="space-y-3 flex-1">
                 {[
                   'Cabalgata guiada en dos etapas',
                   'Picoteo de campo en el estero Huillinco',
                   'Cervezas, jugos naturales, bebidas y agua mineral',
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 font-body text-dark/80">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-ember flex-shrink-0" />
+                  <li key={item} className="flex items-start gap-3 font-body text-sm text-cream/90">
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold flex-shrink-0" />
                     {item}
                   </li>
                 ))}
               </ul>
+              <p className="mt-6 bg-ember px-4 py-3 font-ui text-xs font-semibold text-cream text-center leading-snug">
+                Asado acampado: +$40.000 por persona
+              </p>
             </div>
 
             {/* No incluye */}
