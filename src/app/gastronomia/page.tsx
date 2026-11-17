@@ -223,12 +223,12 @@ export default function GastronomiaPage() {
               { src: '/images/gastronomia-ensaladas.jpg', alt: 'Tablas de ensalada fresca en mesa rústica de campo', cls: 'md:col-span-2' },
               { src: '/images/balsa-cocina-rio.jpg', alt: 'Cocinando junto al río durante el recorrido en balsa', cls: '' },
             ] as const).map((img, i) => (
-              <div key={i} className={`relative aspect-[4/3] overflow-hidden rounded-lg ${img.cls}`}>
+              <div key={i} className={`group relative aspect-[4/3] overflow-hidden rounded-lg ${img.cls}`}>
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                   sizes="(max-width: 768px) 50vw, 33vw"
                 />
               </div>

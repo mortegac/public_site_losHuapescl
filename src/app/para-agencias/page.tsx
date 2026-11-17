@@ -250,12 +250,12 @@ export default function ParaAgenciasPage() {
             { src: '/images/cabalgata-verano.jpg', alt: 'Caballos pastando en potreros con flores silvestres' },
             { src: '/images/gastronomia-fogon.jpg', alt: 'Olla de hierro sobre fogón de leña junto al río' },
           ] as const).map((img, i) => (
-            <div key={i} className="relative overflow-hidden">
+            <div key={i} className="group relative overflow-hidden">
               <Image
                 src={img.src}
                 alt={img.alt}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                 sizes="33vw"
               />
               <div className="absolute inset-0 bg-forest/20" />

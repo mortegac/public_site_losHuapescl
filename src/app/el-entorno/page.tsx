@@ -233,12 +233,12 @@ export default function ElEntornoPage() {
               { src: '/images/entorno-rio-verde.jpg', alt: 'Agua turquesa del Río San Pedro reflejando el bosque nativo', cls: 'md:col-span-2' },
               { src: '/images/entorno-potrero.jpg', alt: 'Potreros verdes del Fundo Los Huapes con montañas al fondo', cls: '' },
             ] as const).map((img, i) => (
-              <div key={i} className={`relative aspect-[4/3] overflow-hidden rounded-lg ${img.cls}`}>
+              <div key={i} className={`group relative aspect-[4/3] overflow-hidden rounded-lg ${img.cls}`}>
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                   sizes="(max-width: 768px) 50vw, 33vw"
                 />
               </div>

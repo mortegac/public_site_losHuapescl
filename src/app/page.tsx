@@ -369,12 +369,12 @@ export default function HomePage() {
 
             {/* Experiencia image */}
             <RevealOnScroll>
-              <div className="relative aspect-[4/5] overflow-hidden">
+              <div className="group relative aspect-[4/5] overflow-hidden">
                 <Image
                   src="/images/entorno-bosque.jpg"
                   alt="Sendero entre el bosque nativo valdiviano del Fundo Los Huapes"
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 {/* Ember accent square */}
@@ -649,12 +649,12 @@ export default function HomePage() {
 
             {/* Gastronomía image */}
             <RevealOnScroll delay={0.15}>
-              <div className="relative overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-[480px]">
+              <div className="group relative overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-[480px]">
                 <Image
                   src="/images/gastronomia-asado.jpg"
                   alt="Asado al palo en el Fundo Los Huapes"
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>

@@ -137,19 +137,26 @@ export default function TravesiaSanPedroPage() {
       <JsonLd data={breadcrumb} />
 
       {/* ── Hero ── */}
-      <section className="relative bg-dark text-cream overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
-        <div
-          className="absolute inset-0 bg-gradient-to-br from-forest via-dark to-ember/20 pointer-events-none"
-          aria-hidden="true"
-        />
+      <section className="relative bg-forest text-cream overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
+        <div className="absolute inset-0" aria-hidden="true">
+          <Image
+            src="/images/programa-travesia.jpg"
+            alt="Balsa catamarán a orillas del Río San Pedro"
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-forest/80" />
+        </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="font-ui text-xs tracking-widest uppercase text-ember mb-4">
-              Programa 04
-            </p>
-
-            <div className="flex flex-wrap gap-2 mb-6">
+            {/* Badges */}
+            <div className="flex flex-wrap items-center gap-2 mb-6">
+              <span className="inline-flex items-center rounded-full bg-white text-muted font-ui text-xs tracking-widest uppercase px-4 py-1.5">
+                Programa 04
+              </span>
               <Badge variant="highlight">2 días · 1 noche</Badge>
               <Badge variant="program">Río + cabalgata</Badge>
               <Badge variant="program">Noche en el campo</Badge>
@@ -206,12 +213,12 @@ export default function TravesiaSanPedroPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[2fr_3fr] lg:gap-14 items-stretch">
             {/* Foto alta con número de programa */}
-            <div className="relative min-h-[320px] overflow-hidden lg:min-h-0">
+            <div className="group relative min-h-[320px] overflow-hidden lg:min-h-0">
               <Image
                 src="/images/programa-travesia.jpg"
                 alt="Balsa catamarán a orillas del Río San Pedro"
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
               <div className="absolute inset-0 bg-forest/15" aria-hidden="true" />
@@ -406,14 +413,14 @@ export default function TravesiaSanPedroPage() {
             {galleryItems.map((item, index) => (
               <div
                 key={index}
-                className="rounded-2xl overflow-hidden aspect-[4/3] relative"
+                className="group rounded-2xl overflow-hidden aspect-[4/3] relative"
               >
                 <Image
                   src={item.image}
                   alt={item.alt}
                   fill
                   priority={index === 0}
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>

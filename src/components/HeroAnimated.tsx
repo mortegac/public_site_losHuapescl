@@ -38,7 +38,7 @@ export function HeroAnimated() {
     >
       {/* Eyebrow */}
       <motion.span
-        className="block font-ui text-xs font-semibold tracking-[0.22em] uppercase text-ember mb-5"
+        className="inline-flex items-center font-ui text-xs font-semibold tracking-widest uppercase bg-ember text-white rounded-full px-4 py-1.5 mb-5"
         initial={mounted ? { opacity: 0 } : false}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.7 }}
@@ -58,7 +58,7 @@ export function HeroAnimated() {
 
       {/* Subtitle */}
       <motion.p
-        className="font-body text-[1.15rem] font-light text-cream/82 max-w-xl mb-10 leading-[1.65]"
+        className="font-body text-[1.15rem] font-light text-white max-w-xl mb-10 leading-[1.65] drop-shadow-sm"
         initial={mounted ? { opacity: 0, y: 12 } : false}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.7 }}
@@ -75,13 +75,13 @@ export function HeroAnimated() {
       >
         <Link
           href="/programas"
-          className="inline-flex items-center font-ui text-sm font-semibold tracking-[0.08em] uppercase bg-ember text-cream px-8 py-4 transition-all duration-300 hover:bg-[#A04520] hover:-translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember focus-visible:ring-offset-2"
+          className="inline-flex items-center font-ui text-sm font-semibold tracking-[0.08em] uppercase bg-ember text-white px-8 py-4 transition-all duration-300 hover:bg-[#A04520] hover:-translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember focus-visible:ring-offset-2"
         >
           Ver programas
         </Link>
         <Link
           href="/para-agencias"
-          className="inline-flex items-center font-ui text-sm font-semibold tracking-[0.08em] uppercase border border-cream/50 text-cream px-8 py-4 transition-all duration-300 hover:border-cream hover:bg-cream/8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream focus-visible:ring-offset-2"
+          className="inline-flex items-center font-ui text-sm font-semibold tracking-[0.08em] uppercase border border-white/70 text-white px-8 py-4 transition-all duration-300 hover:border-cream hover:bg-cream/8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cream focus-visible:ring-offset-2"
         >
           Para agencias de turismo
         </Link>

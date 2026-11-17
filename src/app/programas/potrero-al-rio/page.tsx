@@ -132,18 +132,25 @@ export default function PotrreroAlRioPage() {
 
       {/* ── Hero ── */}
       <section className="relative bg-forest text-cream overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24">
-        <div
-          className="absolute left-0 bottom-0 h-full w-1/2 bg-gradient-to-r from-ember/15 to-transparent pointer-events-none"
-          aria-hidden="true"
-        />
+        <div className="absolute inset-0" aria-hidden="true">
+          <Image
+            src="/images/programa-potrero-rio.jpg"
+            alt="Ovejas junto al portón del potrero con bosque nativo al fondo"
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-forest/80" />
+        </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="font-ui text-xs tracking-widest uppercase text-ember mb-4">
-              Programa 02
-            </p>
-
-            <div className="flex flex-wrap gap-2 mb-6">
+            {/* Badges */}
+            <div className="flex flex-wrap items-center gap-2 mb-6">
+              <span className="inline-flex items-center rounded-full bg-white text-muted font-ui text-xs tracking-widest uppercase px-4 py-1.5">
+                Programa 02
+              </span>
               <Badge variant="program">Día completo</Badge>
               <Badge variant="program">Cabalgata mañana</Badge>
               <Badge variant="program">Desde 10 años</Badge>
@@ -196,12 +203,12 @@ export default function PotrreroAlRioPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[2fr_3fr] lg:gap-14 items-stretch">
             {/* Foto alta con número de programa */}
-            <div className="relative min-h-[320px] overflow-hidden lg:min-h-0">
+            <div className="group relative min-h-[320px] overflow-hidden lg:min-h-0">
               <Image
                 src="/images/programa-potrero-rio.jpg"
                 alt="Ovejas junto al portón del potrero con bosque nativo al fondo"
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                 sizes="(max-width: 1024px) 100vw, 40vw"
               />
               <div className="absolute inset-0 bg-forest/15" aria-hidden="true" />
@@ -355,14 +362,14 @@ export default function PotrreroAlRioPage() {
             {galleryItems.map((item, index) => (
               <div
                 key={index}
-                className="rounded-2xl overflow-hidden aspect-[4/3] relative"
+                className="group rounded-2xl overflow-hidden aspect-[4/3] relative"
               >
                 <Image
                   src={item.image}
                   alt={item.alt}
                   fill
                   priority={index === 0}
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>

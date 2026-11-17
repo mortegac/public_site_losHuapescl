@@ -174,13 +174,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
 
             {/* ── Imagen principal ── */}
-            <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-lg">
+            <div className="group relative mt-8 aspect-[16/9] overflow-hidden rounded-lg">
               <Image
                 src={post.heroImage.src}
                 alt={post.heroImage.alt}
                 fill
                 priority
-                className="object-cover"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                 sizes="(max-width: 768px) 100vw, 720px"
               />
             </div>
@@ -204,12 +204,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               if (block.type === 'image') {
                 return (
                   <figure key={index} className="mt-10">
-                    <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
+                    <div className="group relative aspect-[16/9] overflow-hidden rounded-lg">
                       <Image
                         src={block.image.src}
                         alt={block.image.alt}
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                         sizes="(max-width: 768px) 100vw, 720px"
                       />
                     </div>
@@ -264,12 +264,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   ))}
                 </div>
               </div>
-              <div className="relative aspect-[4/3] md:aspect-auto md:h-full md:min-h-[340px] md:w-[300px]">
+              <div className="group relative overflow-hidden aspect-[4/3] md:aspect-auto md:h-full md:min-h-[340px] md:w-[300px]">
                 <Image
                   src={ctaPhoto.src}
                   alt={ctaPhoto.alt}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                   sizes="(max-width: 768px) 100vw, 320px"
                 />
               </div>
