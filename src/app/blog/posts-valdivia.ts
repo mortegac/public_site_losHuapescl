@@ -22,9 +22,10 @@ export const valdiviaPosts: Post[] = [
     date: '2026-11-14',
     dateDisplay: '14 de noviembre de 2026',
     author: AUTHOR,
+    // Foto: Charlie danvers — CC BY-SA 4.0 — commons.wikimedia.org/wiki/File:Vista_costanera_valdivia.jpg
     heroImage: {
-      src: '/images/entorno-rio.jpg',
-      alt: 'El Río San Pedro visto desde el Fundo Los Huapes, a 50 minutos de Valdivia',
+      src: '/images/blog/que-hacer-en-valdivia-panoramas.jpg',
+      alt: 'Costanera de Valdivia con embarcaciones turísticas en el río, vista desde la Isla Teja',
     },
     lead: '¿Qué hacer en Valdivia? Los imperdibles son seis: recorrer la Feria Fluvial con sus lobos marinos, caminar el Jardín Botánico de la UACh en Isla Teja, vivir la Bierfest Kunstmann a fines de enero, ver el corso fluvial de la Noche Valdiviana en febrero, navegar hasta los fuertes españoles de Niebla, Corral e Isla Mancera y, a 50 minutos de la ciudad, pasar un día de campo con cabalgatas y balsa por el Río San Pedro en el Fundo Los Huapes. Valdivia es la ciudad fluvial del sur de Chile: mercado junto al agua, tradición cervecera alemana, historia colonial y naturaleza en todas direcciones. Esta guía resume los seis panoramas, el mejor mes para cada uno y el enlace a la guía completa de cada actividad, pensada para familias y grupos de amigos que arman un viaje por la Región de Los Ríos entre octubre y mayo.',
     blocks: [
@@ -138,9 +139,10 @@ export const valdiviaPosts: Post[] = [
     date: '2026-11-13',
     dateDisplay: '13 de noviembre de 2026',
     author: AUTHOR,
+    // Foto: Carlos Figueroa Rojas — CC BY-SA 4.0 — commons.wikimedia.org/wiki/File:Feria_Fluvial,_Valdivia,_20190216_-_04.jpg
     heroImage: {
-      src: '/images/gastronomia-spread.jpg',
-      alt: 'Mesa de campo con productos locales servidos en el Fundo Los Huapes',
+      src: '/images/blog/feria-fluvial-valdivia-que-hacer-noviembre.jpg',
+      alt: 'La Feria Fluvial de Valdivia vista desde el río, con sus puestos en la costanera y una embarcación turística',
     },
     lead: 'La Feria Fluvial de Valdivia es el mercado tradicional de la costanera Arturo Prat, en pleno centro de la ciudad, donde cada mañana llegan pescados, mariscos, frutas, verduras y quesos desde las comunidades ribereñas y costeras de la Región de Los Ríos. Su sello más famoso son los lobos marinos que descansan a pasos de los puestos esperando los restos de la pesca, una escena que convirtió a este mercado en símbolo de la identidad fluvial valdiviana. En noviembre, con la primavera instalada y antes del peak del verano, se recorre con calma, y la mejor variedad está temprano en la mañana. La feria queda además a unos 45 km —cerca de 50 minutos en auto— del Fundo Los Huapes, así que el mismo viaje permite combinar la ciudad con un día de campo: cabalgata por bosque nativo, picoteo junto al estero y, si quieres, una bajada en balsa por el Río San Pedro.',
     blocks: [
@@ -215,9 +217,10 @@ export const valdiviaPosts: Post[] = [
     date: '2026-11-13',
     dateDisplay: '13 de noviembre de 2026',
     author: AUTHOR,
+    // Foto: Albh — CC BY-SA 3.0 — commons.wikimedia.org/wiki/File:Botanic_garden_UACh.JPG
     heroImage: {
-      src: '/images/entorno-copihues.jpg',
-      alt: 'Copihues rojos floreciendo en el bosque nativo del Fundo Los Huapes',
+      src: '/images/blog/jardin-botanico-uach-valdivia-diciembre.jpg',
+      alt: 'Rododendros y azaleas en flor en el Jardín Botánico de la Universidad Austral de Chile, en Isla Teja, Valdivia',
     },
     lead: 'El Jardín Botánico de la Universidad Austral de Chile ocupa una península del Campus Isla Teja, en Valdivia, rodeado por los ríos de la ciudad. Reúne alrededor de mil especies de plantas distribuidas en áreas demostrativas, con un foco especial en la flora nativa del sur de Chile, y la entrada es liberada, con aporte voluntario. En diciembre, cuando la primavera austral está en su punto más alto, es uno de los paseos más recomendables de la ciudad: senderos entre árboles nativos, colecciones botánicas y orilla de río, todo a minutos del centro. Es también la antesala perfecta para lo que viene después: a unos 45 km —cerca de 50 minutos en auto— está el Fundo Los Huapes, donde esa misma flora valdiviana no está etiquetada en un jardín, sino creciendo salvaje en el bosque que se cruza a caballo camino al Río San Pedro.',
     blocks: [
@@ -288,9 +291,10 @@ export const valdiviaPosts: Post[] = [
     date: '2026-11-13',
     dateDisplay: '13 de noviembre de 2026',
     author: AUTHOR,
+    // Foto: Carlos Figueroa Rojas — CC BY-SA 4.0 — commons.wikimedia.org/wiki/File:La_Cervecería,_Valdivia,_20190216_-_03.jpg
     heroImage: {
-      src: '/images/gastronomia-fogon.jpg',
-      alt: 'Olla de hierro sobre fogón de leña junto al río en el Fundo Los Huapes',
+      src: '/images/blog/bierfest-kunstmann-valdivia-enero.jpg',
+      alt: 'Entrada de la Cervecería Kunstmann en Valdivia, con su letrero de madera y su barril gigante',
     },
     lead: 'La Bierfest Kunstmann es considerada la fiesta cervecera más grande del sur de Chile y se celebra habitualmente a fines de enero en el Parque Saval de Valdivia. La edición 2026 se realizó entre el jueves 29 de enero y el domingo 1 de febrero, con unos 25.000 litros de cerveza —más de 830 barriles—, un desfile inaugural por la ciudad, carpa gastronómica, música en vivo y una cerveza exclusiva del evento inspirada en el Oktoberfest de Múnich; los ingresos se destinaron a la Primera Compañía de Bomberos de Valdivia. Si planeas tu verano 2027 en Los Ríos, conviene reservar esa ventana de fines de enero. Y como el Fundo Los Huapes está a unos 45 km de Valdivia —unos 50 minutos en auto—, puedes armar el combo completo: fiesta cervecera en la ciudad y, al día siguiente, cabalgata, balsa por el Río San Pedro y asado al palo en el campo.',
     blocks: [
@@ -361,9 +365,10 @@ export const valdiviaPosts: Post[] = [
     date: '2026-11-13',
     dateDisplay: '13 de noviembre de 2026',
     author: AUTHOR,
+    // Foto: Marco Antonio Correa Flores — CC BY-SA 3.0 — commons.wikimedia.org/wiki/File:Carnaval_Fluvial_en_Valdivia.jpg
     heroImage: {
-      src: '/images/entorno-atardecer.jpg',
-      alt: 'Atardecer sobre los potreros y el río en el Fundo Los Huapes',
+      src: '/images/blog/noche-valdiviana-que-hacer-febrero.jpg',
+      alt: 'Embarcación alegórica iluminada desfilando de noche por el río durante el corso fluvial de Valdivia',
     },
     lead: 'La Noche Valdiviana es la fiesta mayor de Valdivia y una de las celebraciones más tradicionales del sur de Chile: un corso fluvial de embarcaciones alegóricas que desfilan iluminadas por el río, seguido de un show de fuegos artificiales frente a la costanera. Se celebra habitualmente un sábado de febrero como cierre de la Semana Valdiviana; la edición 2026 —la número 108— se realizó el sábado 28 de febrero, con actividades desde la tarde, 32 embarcaciones en competencia y pirotecnia de bajo impacto sonoro. Decenas de miles de personas copan la costanera, así que conviene llegar temprano y reservar alojamiento con meses de anticipación. Si armas ese viaje, guarda un día extra: a unos 45 km de la ciudad —50 minutos en auto— el Fundo Los Huapes ofrece el contrapunto perfecto al carnaval, con cabalgatas por bosque nativo y bajadas en balsa por el Río San Pedro en grupos pequeños.',
     blocks: [
@@ -434,9 +439,10 @@ export const valdiviaPosts: Post[] = [
     date: '2026-11-13',
     dateDisplay: '13 de noviembre de 2026',
     author: AUTHOR,
+    // Foto: Daniela Silva — CC BY-SA 3.0 — commons.wikimedia.org/wiki/File:Castillo_de_Niebla,_Valdivia.JPG
     heroImage: {
-      src: '/images/hero-rio.jpg',
-      alt: 'El Río San Pedro corriendo entre riberas de bosque nativo',
+      src: '/images/blog/navegacion-niebla-corral-mancera-marzo.jpg',
+      alt: 'Batería de cañones del Castillo de Niebla frente al mar, en la desembocadura del río Valdivia',
     },
     lead: 'En la desembocadura del río Valdivia, la corona española construyó en el siglo XVII uno de los sistemas defensivos más grandes de América: una red de fuertes y baterías de cañones en torno a la bahía de Corral, con el Castillo de Niebla —levantado entre 1645 y 1670—, el fuerte San Sebastián de la Cruz en Corral y el castillo de la Isla Mancera entre sus piezas principales. Hoy se visitan navegando: desde el Muelle Schuster, en plena costanera de Valdivia, zarpan embarcaciones turísticas que recorren el río hasta Corral y Mancera en paseos de medio día a día completo. En marzo, cuando las multitudes del verano ya se fueron, es uno de los mejores panoramas de la región. Y se complementa con otro río: a 45 km de Valdivia, el Fundo Los Huapes baja el Río San Pedro en balsa, combinado con cabalgatas por bosque nativo, hasta el 30 de mayo.',
     blocks: [

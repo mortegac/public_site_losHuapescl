@@ -25,9 +25,10 @@ const panoramasPilarPost: Post = {
   date: '2026-11-14',
   dateDisplay: '14 de noviembre de 2026',
   author: AUTHOR,
+  // Foto: ---Matías--- (Flickr) — CC BY 2.0 — commons.wikimedia.org/wiki/File:Panguipulli_-_Flickr_-_---Matías---.jpg
   heroImage: {
-    src: '/images/entorno-aereo.jpg',
-    alt: 'Vista aérea del Fundo Los Huapes junto al Río San Pedro, aguas abajo del sistema de los Siete Lagos',
+    src: '/images/blog/que-hacer-en-panguipulli-siete-lagos-panoramas.jpg',
+    alt: 'Niños en la orilla del lago Panguipulli con el volcán Villarrica nevado al fondo',
   },
   lead: 'Qué hacer en Panguipulli: la comuna del Destino Sietelagos concentra lagos con playas de arena volcánica, termas al pie del volcán Villarrica, la Reserva Biológica Huilo Huilo con su salto de 37 metros, ferias costumbristas de cocina campesina y la Semana de las Rosas, su fiesta grande de febrero. Todo en un radio corto, con los lagos Panguipulli y Calafquén como ejes del verano. Esta guía reúne seis panoramas verificados, ordenados por temporada —de noviembre a marzo—, con el enlace a la guía completa de cada uno. Y cierra siguiendo el agua: el lago Panguipulli desagua por el río Enco hacia el lago Riñihue, y del Riñihue nace el Río San Pedro, donde el Fundo Los Huapes combina cabalgatas por bosque nativo con bajadas en balsa guiadas, de octubre a mayo y en grupos de 5 a 10 personas.',
   blocks: [
@@ -144,9 +145,10 @@ const huiloHuiloTrailPost: Post = {
   date: '2026-11-13',
   dateDisplay: '13 de noviembre de 2026',
   author: AUTHOR,
+  // Foto: Tommy Boy — CC BY-SA 4.0 — commons.wikimedia.org/wiki/File:Salto_Huilo_Huilo_en_verano.jpg
   heroImage: {
-    src: '/images/entorno-bosque.jpg',
-    alt: 'Bosque nativo del Fundo Los Huapes, el mismo tipo de selva valdiviana que rodea los senderos de la cuenca',
+    src: '/images/blog/trail-huilo-huilo-noviembre-panguipulli.jpg',
+    alt: 'Salto Huilo Huilo cayendo entre la selva valdiviana de la Reserva Biológica, en Neltume',
   },
   lead: 'El Columbia Trail Challenge Huilo Huilo es la carrera de trail running más conocida del Destino Sietelagos: su novena edición se corre el sábado 21 de noviembre de 2026 en la Reserva Biológica Huilo Huilo, en Neltume, comuna de Panguipulli, con distancias de 2, 6, 10, 20, 45 y 60 km entre bosque valdiviano, ríos y cascadas. El fin de semana del 19 al 21 de noviembre la reserva —famosa por el Salto Huilo Huilo, una caída de 37 metros del río Fuy— recibe a corredores y familias que aprovechan de recorrer senderos, pasarelas y miradores. Y el panorama puede seguir aguas abajo: el lago Panguipulli desagua hacia el lago Riñihue, y del Riñihue nace el Río San Pedro, donde el Fundo Los Huapes combina cabalgatas por bosque nativo con bajadas en balsa guiadas, de octubre a mayo y en grupos de 5 a 10 personas.',
   blocks: [
@@ -210,9 +212,10 @@ const playasDiciembrePost: Post = {
   date: '2026-11-13',
   dateDisplay: '13 de noviembre de 2026',
   author: AUTHOR,
+  // Foto: Falk2 — CC BY-SA 4.0 — commons.wikimedia.org/wiki/File:J27_907_Playa_Coñaripe,_Volcán_Villarrica.jpg
   heroImage: {
-    src: '/images/entorno-rio-verde.jpg',
-    alt: 'Aguas verdes del Río San Pedro entre riberas de bosque, aguas abajo del sistema Siete Lagos',
+    src: '/images/blog/temporada-playas-panguipulli-diciembre.jpg',
+    alt: 'Bañistas en la playa de arena volcánica de Coñaripe, lago Calafquén, con el volcán Villarrica al fondo',
   },
   lead: 'La temporada de playas de Panguipulli comienza el viernes 18 de diciembre de 2026, con siete zonas habilitadas en distintos puntos de la comuna, según el calendario difundido por el destino. Es la señal de partida del verano en los Siete Lagos: orillas de arena volcánica en el lago Calafquén, la Playa Grande de Panguipulli sobre el lago homónimo, y aguas templadas para nadar, remar en kayak o salir en stand up paddle. Al día siguiente, el sábado 19, se corre la segunda edición del Lagunas Andinas Trail, para quienes prefieren estrenar el verano trotando entre bosques. Y la misma agua que entibia esas playas sigue viaje: del lago Riñihue —donde desagua todo el sistema— nace el Río San Pedro, el río del Fundo Los Huapes, que en diciembre ya está en plena temporada de cabalgatas y bajadas en balsa, en grupos de 5 a 10 personas.',
   blocks: [
@@ -276,9 +279,10 @@ const feriasCostumbristasPost: Post = {
   date: '2026-11-13',
   dateDisplay: '13 de noviembre de 2026',
   author: AUTHOR,
+  // Foto: LBM1948 — CC BY-SA 4.0 — commons.wikimedia.org/wiki/File:Patagonia_chilena,_cordero_al_palo_1.jpg
   heroImage: {
-    src: '/images/gastronomia-spread.jpg',
-    alt: 'Mesa de comida de campo del Fundo Los Huapes, con preparaciones tradicionales del sur de Chile',
+    src: '/images/blog/ferias-costumbristas-panguipulli-siete-lagos.jpg',
+    alt: 'Cordero al palo asándose a fuego de leña al aire libre, tradición gastronómica del sur de Chile',
   },
   lead: 'Las ferias costumbristas son el corazón gastronómico del verano en Panguipulli: entre enero y febrero, localidades como Neltume, Coñaripe, Liquiñe, Choshuenco y Calafquén montan ferias de cocina tradicional, producción campesina y artesanía local. En el verano 2026 funcionaron, entre otras, la feria Sabores del Parque en Neltume, la Feria Artesanal del Parque Kumün, la feria gastronómica AMA y la Feria de Artesanos en Coñaripe, con fechas que cubrieron desde el 1 de enero hasta fines de febrero; para la temporada 2027 el municipio difunde el calendario en sus canales oficiales. Es la forma más directa de probar el territorio: empanadas, tortillas de rescoldo, cocina mapuche y cerveza local. Y la ruta de sabores tiene un cierre natural aguas abajo, en la misma cuenca: el asado acampado del Fundo Los Huapes, cordero y estomaguillo al palo junto al Río San Pedro, disponible de octubre a mayo.',
   blocks: [
@@ -338,9 +342,10 @@ const semanaRosasPost: Post = {
   date: '2026-11-13',
   dateDisplay: '13 de noviembre de 2026',
   author: AUTHOR,
+  // Foto: Adolto Toloza (Panoramio) — CC BY-SA 3.0 — commons.wikimedia.org/wiki/File:Iglesia_Capuchina_de_Panguipulli._-_panoramio.jpg
   heroImage: {
-    src: '/images/entorno-flores.jpg',
-    alt: 'Flores en plena temporada en los jardines del Fundo Los Huapes',
+    src: '/images/blog/semana-de-las-rosas-panguipulli-febrero.jpg',
+    alt: 'Iglesia Capuchina de Panguipulli, el templo de madera emblemático de la ciudad de las rosas',
   },
   lead: 'La Semana de las Rosas es la fiesta tradicional de Panguipulli, la ciudad del sur de Chile famosa por los miles de rosales que adornan sus calles. Se celebra habitualmente en febrero, en plena temporada alta, y concentra lo mejor del verano lacustre: música en vivo, gastronomía, artesanía y actividades frente al lago Panguipulli. En los últimos veranos la fiesta ha convivido con el Boulevard Paseo Las Rosas, que transforma la calle Martínez de Rozas en un paseo de emprendedores locales entre las 19:00 y la medianoche, con ediciones en enero y febrero. Las fechas exactas de cada temporada las confirma la Municipalidad de Panguipulli en sus canales oficiales. Si vienes a la fiesta, el panorama se completa aguas abajo: del lago Riñihue —donde desagua el sistema de los Siete Lagos— nace el Río San Pedro, donde el Fundo Los Huapes opera cabalgatas y bajadas en balsa de octubre a mayo.',
   blocks: [
@@ -409,9 +414,10 @@ const termasMarzoPost: Post = {
   date: '2026-11-13',
   dateDisplay: '13 de noviembre de 2026',
   author: AUTHOR,
+  // Foto: Falk2 — CC BY-SA 4.0 — commons.wikimedia.org/wiki/File:J27_938_Termas_geométricas.jpg
   heroImage: {
-    src: '/images/entorno-atardecer.jpg',
-    alt: 'Atardecer sobre los potreros del Fundo Los Huapes, aguas abajo de los Siete Lagos',
+    src: '/images/blog/termas-conaripe-marzo-siete-lagos.jpg',
+    alt: 'Bañistas en las pozas termales del estero Cajón Negro en Coñaripe, entre pasarelas y selva valdiviana',
   },
   lead: 'Marzo es el mes secreto de los Siete Lagos: el gentío de vacaciones se retira, los precios bajan y las termas de Coñaripe —el gran panorama de agua caliente de la comuna de Panguipulli— se disfrutan con calma. El recinto más famoso es el del estero Cajón Negro, camino al volcán Villarrica: las pozas que durante más de dos décadas operaron como Termas Geométricas funcionan desde el 1 de octubre de 2026 bajo el nombre Termas Martini, administradas por la familia dueña del terreno, y siguen abiertas todo el año según sus nuevos administradores. El valle de Liquiñe, en la misma comuna, suma otro polo termal. Y la temporada del Fundo Los Huapes, río abajo en la misma cuenca, se extiende hasta el 30 de mayo: en marzo el Río San Pedro todavía regala tardes largas para cabalgar y navegar en balsa, en grupos de 5 a 10 personas.',
   blocks: [
