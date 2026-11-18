@@ -180,7 +180,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 alt={post.heroImage.alt}
                 fill
                 priority
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
+                className="object-cover object-bottom transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                 sizes="(max-width: 768px) 100vw, 720px"
               />
             </div>

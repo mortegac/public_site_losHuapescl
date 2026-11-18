@@ -150,7 +150,7 @@ export default function CabalgataPickoteoPage() {
             alt=""
             fill
             priority
-            className="object-cover"
+            className="object-cover object-bottom"
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-forest/80" />

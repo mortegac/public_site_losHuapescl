@@ -65,7 +65,7 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
             fill
             priority={index === 0}
             fetchPriority={index === 0 ? 'high' : undefined}
-            className="object-cover transition-opacity ease-in-out"
+            className="object-cover object-bottom transition-opacity ease-in-out"
             style={{ opacity: index === active ? 1 : 0, transitionDuration: `${FADE_MS}ms` }}
             sizes="100vw"
           />

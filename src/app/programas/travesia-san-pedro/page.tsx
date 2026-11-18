@@ -144,7 +144,7 @@ export default function TravesiaSanPedroPage() {
             alt="Balsa catamarán a orillas del Río San Pedro"
             fill
             priority
-            className="object-cover"
+            className="object-cover object-bottom"
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-forest/80" />
