@@ -81,7 +81,7 @@ const faqs = [
   {
     question: '¿El río es peligroso para los niños?',
     answer:
-      'No. Las balsas son guiadas y el equipo de seguridad está incluido. El Programa 03 (Del Río al Potrero) está disponible desde los 5 años.',
+      'No. Las balsas son guiadas y el equipo de seguridad está incluido. El Programa 03 (Del Río al Potrero) está disponible desde los 8 años.',
   },
 ]
 
@@ -279,7 +279,7 @@ export default function ElEntornoPage() {
                 { dt: 'Región', dd: 'Los Ríos, Chile' },
                 { dt: 'Río principal', dd: 'Río San Pedro (desagüe del Lago Riñihue)' },
                 { dt: 'Vegetación', dd: 'Bosque valdiviano nativo' },
-                { dt: 'Distancia a Valdivia', dd: '~45 km (~50 minutos en auto)' },
+                { dt: 'Distancia a Valdivia', dd: '45 km (50 minutos en auto)' },
               ].map((item) => (
                 <div
                   key={item.dt}
@@ -569,7 +569,7 @@ export default function ElEntornoPage() {
                 </div>
                 <div>
                   <dt className="font-ui text-xs text-cream/50 uppercase tracking-wide">Desde Valdivia</dt>
-                  <dd className="mt-1 font-body text-base text-cream">~45 km · ~50 min en auto</dd>
+                  <dd className="mt-1 font-body text-base text-cream">45 km · 50 min en auto</dd>
                 </div>
               </dl>
               <p className="font-ui text-xs text-cream/40 border-t border-cream/10 pt-5">

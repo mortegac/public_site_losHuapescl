@@ -63,7 +63,7 @@ const faqs = [
   {
     question: '¿La Travesía San Pedro es apta para turistas extranjeros?',
     answer:
-      'Sí. Es el programa más demandado por turistas nacionales e internacionales, pescadores con mosca y quienes buscan desconectarse completamente. Son dos días y una noche en el Río San Pedro y el campo, en la Región de Los Ríos, con grupos de 5 a 10 personas y edad mínima de 10 años. La temporada va del 1 de octubre al 30 de mayo, y la reserva se coordina por el formulario con respuesta en menos de 24 horas.',
+      'Sí. Es el programa más demandado por turistas nacionales e internacionales, pescadores con mosca y quienes buscan desconectarse completamente. Son dos días y una noche en el Río San Pedro y el campo, en la Región de Los Ríos, con grupos de 5 a 10 personas y edad mínima de 8 años. La temporada va del 1 de octubre al 30 de mayo, y la reserva se coordina por el formulario con respuesta en menos de 24 horas.',
   },
   {
     question: '¿Cuánto cuesta y qué incluye el precio?',
@@ -93,7 +93,7 @@ const otherPrograms = [
     number: '03',
     href: '/programas/rio-al-potrero',
     name: 'Del Río al Potrero',
-    desc: 'Balsa 20 km en la mañana y cabalgata en la tarde. Apto desde 5 años.',
+    desc: 'Balsa 20 km en la mañana y cabalgata en la tarde. Apto desde 8 años.',
     price: '$180.000',
     duration: 'Día completo',
   },
@@ -117,7 +117,7 @@ export default function TravesiaSanPedroPage() {
     image: `${BASE_URL}/og-travesia-san-pedro.jpg`,
     price: '280000',
     duration: 'P2D',
-    minAge: 10,
+    minAge: 8,
     groupMin: 5,
     groupMax: 10,
   })
@@ -202,7 +202,7 @@ export default function TravesiaSanPedroPage() {
             campestre, cabalgata con picoteo en el estero y actividades de campo como rodear
             caballos. El valor es de $280.000 por persona, todo incluido: balsa, cabalgata, picoteo,
             asado acampado, alojamiento, desayuno y almuerzo. Los grupos son de 5 a 10 personas,
-            desde los 10 años, y operan junto a Fly Fishing Riñihue y De la Hoguera. La temporada va
+            desde los 8 años, y operan junto a Fly Fishing Riñihue y De la Hoguera. La temporada va
             del 1 de octubre al 30 de mayo.
           </p>
         </div>
@@ -381,7 +381,7 @@ export default function TravesiaSanPedroPage() {
 
           <div className="mt-10 max-w-4xl grid grid-cols-2 gap-4 sm:grid-cols-4">
             {[
-              { label: 'Edad mínima', value: '10 años' },
+              { label: 'Edad mínima', value: '8 años' },
               { label: 'Duración', value: '2 días · 1 noche' },
               { label: 'Grupo', value: '5 – 10 personas' },
               { label: 'Temporada', value: '1 oct – 30 may' },

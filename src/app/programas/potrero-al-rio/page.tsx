@@ -62,7 +62,7 @@ const faqs = [
   {
     question: '¿Puedo hacer solo la cabalgata y no la balsa?',
     answer:
-      'Sí. El Programa 01, Cabalgata y Picoteo, cubre solo la cabalgata guiada en dos etapas con picoteo en el estero, en media jornada de mañana o tarde. Es una buena alternativa si el grupo incluye niños menores de 10 años —la edad mínima de este programa— o si se prefiere una actividad más corta. También existe la opción inversa: el Programa 03, Del Río al Potrero, hace la balsa en la mañana y la cabalgata en la tarde.',
+      'Sí. El Programa 01, Cabalgata y Picoteo, cubre solo la cabalgata guiada en dos etapas con picoteo en el estero, en media jornada de mañana o tarde. Es una buena alternativa si se prefiere una actividad más corta. También existe la opción inversa: el Programa 03, Del Río al Potrero, hace la balsa en la mañana y la cabalgata en la tarde.',
   },
 ]
 
@@ -79,7 +79,7 @@ const otherPrograms = [
     number: '03',
     href: '/programas/rio-al-potrero',
     name: 'Del Río al Potrero',
-    desc: 'Balsa 20 km en la mañana y cabalgata en la tarde. Apto desde 5 años.',
+    desc: 'Balsa 20 km en la mañana y cabalgata en la tarde. Apto desde 8 años.',
     price: '$180.000',
     duration: 'Día completo',
   },
@@ -98,7 +98,7 @@ const galleryItems = [
   { alt: 'Balsa varada en la orilla del río con paredes de cañón verde', image: '/images/balsa-raft.jpg' },
   { alt: 'Río San Pedro con acantilados rocosos y cielo azul', image: '/images/hero-rio.jpg' },
   { alt: 'Caballos pastando entre flores silvestres en verano', image: '/images/cabalgata-verano.jpg' },
-  { alt: 'Cocinando junto al río durante el recorrido en balsa', image: '/images/balsa-cocina-rio.jpg' },
+  { alt: 'Cordero y estomaguillo al palo sobre brasas en el campo', image: '/images/asado-cordero-palo.jpg' },
   { alt: 'Olla de hierro sobre fogón de leña junto al río', image: '/images/gastronomia-fogon.jpg' },
 ]
 
@@ -111,7 +111,7 @@ export default function PotrreroAlRioPage() {
     image: `${BASE_URL}/og-potrero-al-rio.jpg`,
     price: '180000',
     duration: 'P1D',
-    minAge: 10,
+    minAge: 8,
     groupMin: 5,
     groupMax: 10,
   })
@@ -153,7 +153,7 @@ export default function PotrreroAlRioPage() {
               </span>
               <Badge variant="program">Día completo</Badge>
               <Badge variant="program">Cabalgata mañana</Badge>
-              <Badge variant="program">Desde 10 años</Badge>
+              <Badge variant="program">Desde 8 años</Badge>
             </div>
 
             <h1 className="font-display text-5xl font-bold leading-tight mb-6 lg:text-7xl">
@@ -192,7 +192,7 @@ export default function PotrreroAlRioPage() {
             cocidas y postre—, el grupo zarpa en balsa desde la isla del campo y navega 15 km por el
             Río San Pedro hasta Balsa San Javier, en Antilhue, con el traslado de regreso incluido.
             La bajada es guiada por el equipo de Fly Fishing Riñihue y dura entre 3 y 4 horas. El
-            valor es de $180.000 por persona, para grupos de 5 a 10 personas desde los 10 años. La
+            valor es de $180.000 por persona, para grupos de 5 a 10 personas desde los 8 años. La
             temporada va del 1 de octubre al 30 de mayo en la Región de Los Ríos.
           </p>
         </div>
@@ -232,7 +232,7 @@ export default function PotrreroAlRioPage() {
                 <Badge variant="program">Día completo</Badge>
                 <Badge variant="program">Cabalgata mañana</Badge>
                 <Badge variant="program">Balsa 15 km</Badge>
-                <Badge variant="program">Desde 10 años</Badge>
+                <Badge variant="program">Desde 8 años</Badge>
               </div>
 
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
@@ -338,7 +338,7 @@ export default function PotrreroAlRioPage() {
 
           <div className="mt-10 max-w-3xl grid grid-cols-2 gap-4 sm:grid-cols-4">
             {[
-              { label: 'Edad mínima', value: '10 años' },
+              { label: 'Edad mínima', value: '8 años' },
               { label: 'Operador río', value: 'Fly Fishing Riñihue' },
               { label: 'Grupo', value: '5 – 10 personas' },
               { label: 'Temporada', value: '1 oct – 30 may' },

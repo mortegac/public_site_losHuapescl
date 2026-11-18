@@ -95,7 +95,7 @@ const basePosts: Post[] = [
       { type: 'h2', text: '¿Con qué programa conviene hacer la bajada?' },
       {
         type: 'p',
-        text: 'Ambos programas cuestan $180.000 por persona, incluyen almuerzo campestre y combinan el río con una cabalgata por bosque nativo y potreros. La diferencia está en el orden y en las edades: Del Potrero al Río admite participantes desde los 10 años, mientras que Del Río al Potrero está pensado para familias y recibe niños desde los 5 años, siempre acompañados por sus padres. En este último, además, se puede agregar el asado acampado al final de la jornada por $40.000 adicionales por persona.',
+        text: 'Ambos programas cuestan $180.000 por persona, incluyen almuerzo campestre y combinan el río con una cabalgata por bosque nativo y potreros. La diferencia está en el orden de las actividades: ambos reciben participantes desde los 8 años, siempre acompañados por sus padres en el caso de los menores. En este último, además, se puede agregar el asado acampado al final de la jornada por $40.000 adicionales por persona.',
       },
       {
         type: 'p',
@@ -117,7 +117,7 @@ const basePosts: Post[] = [
     title: 'Cabalgatas por bosque nativo en Los Ríos: qué esperar',
     metaTitle: 'Cabalgatas por bosque nativo en Los Ríos: qué esperar',
     metaDescription:
-      'Recorrido guiado de 4 horas en dos etapas, con picoteo en el estero Huillinco. Turnos mañana y tarde, desde 5 años. Fundo Los Huapes, Región de Los Ríos.',
+      'Recorrido guiado de 4 horas en dos etapas, con picoteo en el estero Huillinco. Turnos mañana y tarde, desde 8 años. Fundo Los Huapes, Región de Los Ríos.',
     excerpt:
       'Un recorrido guiado de 4 horas en dos etapas por bosque nativo y potreros, con picoteo de campo en el estero Huillinco a mitad de camino.',
     date: '2026-11-12',
@@ -127,7 +127,7 @@ const basePosts: Post[] = [
       src: '/images/cabalgata-bosque.jpg',
       alt: 'Caballos descansando bajo la sombra de árboles nativos en el Fundo Los Huapes',
     },
-    lead: 'Una cabalgata por bosque nativo en el Fundo Los Huapes, en la Región de Los Ríos, es un recorrido guiado de unas 4 horas que cruza en dos etapas los potreros y el bosque del campo, a orillas del Río San Pedro. A mitad de camino, el grupo hace un alto en el estero Huillinco para compartir un picoteo de campo: arrollado huaso, queso fresco con aceite de oliva y ají verde, pernil, tortillas y pan amasado, acompañados de cervezas, jugos naturales, bebidas y agua mineral. No se necesita experiencia previa: los caballos del fundo están adaptados a todos los niveles y el guía acompaña a cada jinete durante todo el recorrido. Hay dos turnos —mañana y tarde—, los niños pueden participar desde los 5 años acompañados por sus padres, y el programa opera de octubre a mayo en grupos de 5 a 10 personas.',
+    lead: 'Una cabalgata por bosque nativo en el Fundo Los Huapes, en la Región de Los Ríos, es un recorrido guiado de unas 4 horas que cruza en dos etapas los potreros y el bosque del campo, a orillas del Río San Pedro. A mitad de camino, el grupo hace un alto en el estero Huillinco para compartir un picoteo de campo: arrollado huaso, queso fresco con aceite de oliva y ají verde, pernil, tortillas y pan amasado, acompañados de cervezas, jugos naturales, bebidas y agua mineral. No se necesita experiencia previa: los caballos del fundo están adaptados a todos los niveles y el guía acompaña a cada jinete durante todo el recorrido. Hay dos turnos —mañana y tarde—, los niños pueden participar desde los 8 años acompañados por sus padres, y el programa opera de octubre a mayo en grupos de 5 a 10 personas.',
     blocks: [
       { type: 'h2', text: '¿Cómo es el recorrido?' },
       {
@@ -153,7 +153,7 @@ const basePosts: Post[] = [
       { type: 'h2', text: '¿Necesito saber montar a caballo?' },
       {
         type: 'p',
-        text: 'No. Los caballos del fundo están adaptados a todos los niveles y el guía acompaña a cada jinete durante todo el recorrido. Los niños pueden participar desde los 10 años en el turno mañana y desde los 5 años en el turno tarde, siempre acompañados por sus padres.',
+        text: 'No. Los caballos del fundo están adaptados a todos los niveles y el guía acompaña a cada jinete durante todo el recorrido. Los niños pueden participar desde los 8 años en ambos turnos, siempre acompañados por sus padres.',
       },
       { type: 'h2', text: '¿Cuánto cuesta y cuándo se puede ir?' },
       {

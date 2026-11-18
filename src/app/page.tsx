@@ -84,7 +84,7 @@ const programs: Program[] = [
     title: 'Cabalgata y Picoteo',
     description:
       'Cabalgata en dos etapas con picoteo en el estero; asado acampado opcional.',
-    highlights: ['Mañana o tarde', 'Asado opcional', 'Desde 5 años'],
+    highlights: ['Mañana o tarde', 'Asado opcional', 'Desde 8 años'],
     price: '$80.000',
     image: '/images/programa-cabalgata.jpg',
     imageAlt: 'Jinetes a caballo entre el bosque nativo del Fundo Los Huapes',
@@ -101,7 +101,7 @@ const programs: Program[] = [
     title: 'Del Potrero al Río',
     description:
       'Cabalgata por la mañana y bajada en balsa por la tarde hasta Antilhue.',
-    highlights: ['Cabalgata mañana', 'Balsa 15 km', 'Desde 10 años'],
+    highlights: ['Cabalgata mañana', 'Balsa 15 km', 'Desde 8 años'],
     price: '$180.000',
     image: '/images/programa-potrero-rio.jpg',
     imageAlt: 'Caballos pastando bajo los árboles en los potreros del Fundo Los Huapes',
@@ -118,7 +118,7 @@ const programs: Program[] = [
     title: 'Del Río al Potrero',
     description:
       'Bajada en balsa por la mañana, picoteo en el río y cabalgata por la tarde.',
-    highlights: ['Balsa 20 km', 'Cabalgata tarde', 'Desde 5 años'],
+    highlights: ['Balsa 20 km', 'Cabalgata tarde', 'Desde 8 años'],
     price: '$180.000',
     image: '/images/programa-rio-potrero.jpg',
     imageAlt: 'Balsa navegando el Río San Pedro con tripulantes pescando',
@@ -651,8 +651,8 @@ export default function HomePage() {
             <RevealOnScroll delay={0.15}>
               <div className="group relative overflow-hidden aspect-[4/3] lg:aspect-auto lg:h-[480px]">
                 <Image
-                  src="/images/gastronomia-asado.jpg"
-                  alt="Asado al palo en el Fundo Los Huapes"
+                  src="/images/asado-cordero-palo.jpg"
+                  alt="Cordero y estomaguillo al palo sobre brasas en el Fundo Los Huapes"
                   fill
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -803,7 +803,7 @@ export default function HomePage() {
               </Link>
               {/* TODO: confirmar número real */}
               <a
-                href="https://wa.me/56912345678"
+                href="https://wa.me/56997305358"
                 className="inline-flex items-center gap-3 font-ui text-sm font-semibold tracking-wide bg-[#25D366] text-cream px-10 py-4 transition-all duration-200 hover:bg-[#1db954] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-forest"
                 rel="noopener noreferrer"
                 target="_blank"

@@ -14,7 +14,7 @@ export function generateMetadata(): Metadata {
   return {
     title: 'Cabalgata y Picoteo en el Río San Pedro | Media Jornada',
     description:
-      'Cabalgata guiada por bosque nativo junto al Río San Pedro, Los Ríos, con picoteo en el estero Huillinco. Media jornada, desde 5 años. $80.000 por persona.',
+      'Cabalgata guiada por bosque nativo junto al Río San Pedro, Los Ríos, con picoteo en el estero Huillinco. Media jornada, desde 8 años. $80.000 por persona.',
     keywords: [
       'cabalgata bosque nativo Los Ríos',
       'cabalgata Río San Pedro Chile',
@@ -52,7 +52,7 @@ const faqs = [
   {
     question: '¿Desde qué edad pueden participar los niños?',
     answer:
-      'Desde los 10 años en el turno mañana y desde los 5 años en el turno tarde, siempre acompañados por sus padres. Por eso, para familias con niños pequeños el turno tarde es la opción indicada: parte a las 15:30, incluye el picoteo en el estero a las 17:00 y termina a las 19:30. Los grupos son de 5 a 10 personas, por lo que conviene indicar las edades de los participantes al momento de reservar.',
+      'Desde los 8 años en ambos turnos, siempre acompañados por sus padres. Para familias con niños, el turno tarde suele ser una buena opción: parte a las 15:30, incluye el picoteo en el estero a las 17:00 y termina a las 19:30. Los grupos son de 5 a 10 personas, por lo que conviene indicar las edades de los participantes al momento de reservar.',
   },
   {
     question: '¿Qué incluye el picoteo?',
@@ -84,7 +84,7 @@ const otherPrograms = [
     number: '03',
     href: '/programas/rio-al-potrero',
     name: 'Del Río al Potrero',
-    desc: 'Balsa 20 km en la mañana y cabalgata en la tarde. Apto desde 5 años.',
+    desc: 'Balsa 20 km en la mañana y cabalgata en la tarde. Apto desde 8 años.',
     price: '$180.000',
     duration: 'Día completo',
   },
@@ -123,7 +123,7 @@ export default function CabalgataPickoteoPage() {
     image: `${BASE_URL}/og-cabalgata-picoteo.jpg`,
     price: '80000',
     duration: 'PT4H',
-    minAge: 5,
+    minAge: 8,
     groupMin: 5,
     groupMax: 10,
   })
@@ -205,8 +205,8 @@ export default function CabalgataPickoteoPage() {
             dura aproximadamente 4 horas y se ofrece en turno mañana o tarde. El valor es de $80.000
             por persona e incluye la cabalgata guiada, el picoteo y los bebestibles; el asado
             acampado se puede agregar por $40.000 adicionales por persona. Los grupos son de 5 a 10
-            personas, con edad mínima de 10 años en la mañana y 5 años en la tarde, siempre
-            acompañados por sus padres. El fundo está en la orilla del Río San Pedro, Región de Los
+            personas, con edad mínima de 8 años en ambos turnos, siempre acompañados por sus
+            padres. El fundo está en la orilla del Río San Pedro, Región de Los
             Ríos, Chile, y la temporada va del 1 de octubre al 30 de mayo.
           </p>
         </div>
@@ -358,8 +358,7 @@ export default function CabalgataPickoteoPage() {
           {/* Conditions */}
           <div className="mt-10 max-w-3xl grid grid-cols-2 gap-4 sm:grid-cols-4">
             {[
-              { label: 'Edad mínima mañana', value: '10 años' },
-              { label: 'Edad mínima tarde', value: '5 años' },
+              { label: 'Edad mínima', value: '8 años' },
               { label: 'Grupo', value: '5 – 10 personas' },
               { label: 'Temporada', value: '1 oct – 30 may' },
             ].map((c) => (

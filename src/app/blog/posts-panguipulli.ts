@@ -247,7 +247,7 @@ const playasDiciembrePost: Post = {
     },
     {
       type: 'p',
-      text: 'El programa Del Río al Potrero es ideal para familias que estrenan el verano: 20 km de balsa en la mañana —niños desde 5 años, acompañados por sus padres—, almuerzo campestre y cabalgata por la tarde, por $180.000 por persona. Si prefieres el orden inverso, Del Potrero al Río parte a caballo y cierra con 15 km de río. Y al final de cualquiera de los dos se puede sumar el asado acampado —cordero y estomaguillo al palo— por $40.000 adicionales.',
+      text: 'El programa Del Río al Potrero es ideal para familias que estrenan el verano: 20 km de balsa en la mañana —niños desde 8 años, acompañados por sus padres—, almuerzo campestre y cabalgata por la tarde, por $180.000 por persona. Si prefieres el orden inverso, Del Potrero al Río parte a caballo y cierra con 15 km de río. Y al final de cualquiera de los dos se puede sumar el asado acampado —cordero y estomaguillo al palo— por $40.000 adicionales.',
     },
     {
       type: 'p',
@@ -256,7 +256,7 @@ const playasDiciembrePost: Post = {
   ],
   cta: {
     title: 'Estrena el verano en el agua',
-    text: 'Playas en los Siete Lagos y, aguas abajo, un día completo de balsa y caballos en el Río San Pedro. Niños desde 5 años en Del Río al Potrero.',
+    text: 'Playas en los Siete Lagos y, aguas abajo, un día completo de balsa y caballos en el Río San Pedro. Niños desde 8 años en Del Río al Potrero.',
     links: [
       { label: 'Ver Del Río al Potrero', href: '/programas/rio-al-potrero' },
       { label: 'Reservar', href: '/reservar' },

@@ -227,7 +227,7 @@ export const futronoPosts: Post[] = [
       { type: 'h2', text: 'Del lago al río: suma una jornada en el Fundo Los Huapes' },
       {
         type: 'p',
-        text: 'Si el lago es el plan de playa, el Río San Pedro es el plan de aventura. El Fundo Los Huapes está en la ribera del San Pedro —el desagüe del lago Riñihue—, a unos 45 km de Valdivia, en la ruta natural de quien combina Futrono con la ciudad. El programa Del Río al Potrero ($180.000 por persona) está pensado justo para familias: 20 km de balsa guiada en la mañana, almuerzo campestre y cabalgata por bosque nativo en la tarde, con niños desde los 5 años acompañados por sus padres.',
+        text: 'Si el lago es el plan de playa, el Río San Pedro es el plan de aventura. El Fundo Los Huapes está en la ribera del San Pedro —el desagüe del lago Riñihue—, a unos 45 km de Valdivia, en la ruta natural de quien combina Futrono con la ciudad. El programa Del Río al Potrero ($180.000 por persona) está pensado justo para familias: 20 km de balsa guiada en la mañana, almuerzo campestre y cabalgata por bosque nativo en la tarde, con niños desde los 8 años acompañados por sus padres.',
       },
       {
         type: 'p',
@@ -236,7 +236,7 @@ export const futronoPosts: Post[] = [
     ],
     cta: {
       title: 'Lago de día, río de aventura',
-      text: 'Playa en el Ranco y balsa más caballos en el San Pedro: el combo de diciembre en Los Ríos. Grupos de 5 a 10 personas, ideal para familias con niños desde 5 años.',
+      text: 'Playa en el Ranco y balsa más caballos en el San Pedro: el combo de diciembre en Los Ríos. Grupos de 5 a 10 personas, ideal para familias con niños desde 8 años.',
       links: [
         { label: 'Ver Del Río al Potrero', href: '/programas/rio-al-potrero' },
         { label: 'Reservar', href: '/reservar' },

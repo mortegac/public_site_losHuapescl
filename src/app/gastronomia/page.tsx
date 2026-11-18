@@ -132,7 +132,7 @@ const asadoMenu = [
   },
   {
     section: 'Plato de Fondo al Palo',
-    items: ['Estomaguillo de vacuno y cordero (~500 g por persona)'],
+    items: ['Estomaguillo de vacuno y cordero (500 g por persona)'],
   },
   {
     section: 'Acompañamientos',

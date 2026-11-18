@@ -6,7 +6,7 @@
 
 const BASE_URL = 'https://www.loshuapes.cl'
 const BUSINESS_ID = `${BASE_URL}/#business`
-const CONTACT_PHONE = '+56912345678' // TODO: confirmar número real
+const CONTACT_PHONE = '+56997305358'
 const CONTACT_EMAIL = 'reservas@loshuapes.cl'
 
 // ---------------------------------------------------------------------------

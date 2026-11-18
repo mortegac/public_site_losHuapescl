@@ -75,7 +75,7 @@ const grupos: GrupoFaq[] = [
       {
         question: '¿Desde qué edad pueden participar los niños?',
         answer:
-          'Desde los 10 años en el turno mañana y desde los 5 años en el turno tarde. Siempre acompañados por sus padres.',
+          'Desde los 8 años en ambos turnos. Siempre acompañados por sus padres.',
       },
       {
         question: '¿Puedo hacer solo la cabalgata y no la balsa?',
@@ -107,7 +107,7 @@ const grupos: GrupoFaq[] = [
       {
         question: '¿El río es peligroso para los niños?',
         answer:
-          'No. Las balsas son guiadas y el equipo de seguridad está incluido. El Programa 03 (Del Río al Potrero) está disponible desde los 5 años.',
+          'No. Las balsas son guiadas y el equipo de seguridad está incluido. El Programa 03 (Del Río al Potrero) está disponible desde los 8 años.',
       },
       {
         question: '¿Qué tan difícil es la jornada de 8 horas en el río?',

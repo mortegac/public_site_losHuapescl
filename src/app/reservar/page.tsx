@@ -52,7 +52,7 @@ const programas: ProgramaReserva[] = [
       'Cabalgata guiada por bosque nativo y potreros con picoteo de campo en el estero Huillinco.',
     precio: '$80.000',
     duracion: 'Media jornada',
-    edadMinima: 'Desde 5 años',
+    edadMinima: 'Desde 8 años',
     href: '/programas/cabalgata-picoteo#reserva',
     image: '/images/programa-cabalgata.jpg',
     imageAlt: 'Jinetes a caballo entre el bosque nativo del Fundo Los Huapes',
@@ -64,7 +64,7 @@ const programas: ProgramaReserva[] = [
       'Mañana a caballo por el campo y tarde navegando el Río San Pedro 15 km en balsa. Almuerzo incluido.',
     precio: '$180.000',
     duracion: 'Día completo',
-    edadMinima: 'Desde 10 años',
+    edadMinima: 'Desde 8 años',
     href: '/programas/potrero-al-rio#reserva',
     image: '/images/programa-potrero-rio.jpg',
     imageAlt: 'Ovejas junto al portón del potrero con bosque nativo al fondo',
@@ -76,7 +76,7 @@ const programas: ProgramaReserva[] = [
       'Balsa 20 km por el tramo largo del San Pedro en la mañana y cabalgata en el campo en la tarde.',
     precio: '$180.000',
     duracion: 'Día completo',
-    edadMinima: 'Desde 5 años',
+    edadMinima: 'Desde 8 años',
     href: '/programas/rio-al-potrero#reserva',
     image: '/images/programa-rio-potrero.jpg',
     imageAlt: 'Navegando el Río San Pedro en balsa bajo el cielo azul',
@@ -88,7 +88,7 @@ const programas: ProgramaReserva[] = [
       '2 días con balsa, pesca con mosca, asado acampado, noche en el campo y cabalgata al día siguiente.',
     precio: '$280.000',
     duracion: '2 días · 1 noche',
-    edadMinima: 'Desde 10 años',
+    edadMinima: 'Desde 8 años',
     href: '/programas/travesia-san-pedro#reserva',
     image: '/images/programa-travesia.jpg',
     imageAlt: 'Balsa catamarán a orillas del Río San Pedro',
@@ -231,7 +231,7 @@ export default function ReservarPage() {
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             {/* TODO: confirmar número real */}
             <a
-              href="https://wa.me/56912345678"
+              href="https://wa.me/56997305358"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center font-ui font-medium tracking-wide rounded transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ember focus-visible:ring-offset-2 bg-ember text-cream border-2 border-ember hover:bg-transparent hover:text-cream px-8 py-4 text-lg"

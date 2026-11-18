@@ -14,7 +14,7 @@ export function generateMetadata(): Metadata {
   return {
     title: 'Del Río San Pedro al Potrero — Balsa y Cabalgata Familiar',
     description:
-      'Balsa 20 km por el Río San Pedro en la mañana y cabalgata por el fundo en la tarde. Día completo en Los Ríos, desde 5 años. $180.000 por persona.',
+      'Balsa 20 km por el Río San Pedro en la mañana y cabalgata por el fundo en la tarde. Día completo en Los Ríos, desde 8 años. $180.000 por persona.',
     keywords: [
       'bajada en balsa Río San Pedro 20 km',
       'cabalgata río San Pedro familias',
@@ -24,7 +24,7 @@ export function generateMetadata(): Metadata {
     openGraph: {
       title: 'Del Río San Pedro al Potrero — Balsa y Cabalgata | Fundo Los Huapes',
       description:
-        'Balsa 20 km mañana + cabalgata tarde. Desde 5 años. Asado acampado opcional. $180.000 / persona.',
+        'Balsa 20 km mañana + cabalgata tarde. Desde 8 años. Asado acampado opcional. $180.000 / persona.',
       url: PROGRAM_URL,
       images: [
         {
@@ -52,7 +52,7 @@ const faqs = [
   {
     question: '¿Este programa es apto para niños pequeños?',
     answer:
-      'Sí, desde los 5 años acompañados por sus padres, lo que lo convierte en el programa de día completo más accesible para familias. La cabalgata es la de turno tarde, pensada para grupos mixtos en nivel de experiencia, y la balsa es guiada por el equipo de Fly Fishing Riñihue. Al reservar, el formulario permite indicar las edades aproximadas de los participantes para preparar la jornada según el grupo.',
+      'Sí, desde los 8 años acompañados por sus padres, igual que en todos los programas del fundo. La cabalgata es la de turno tarde, pensada para grupos mixtos en nivel de experiencia, y la balsa es guiada por el equipo de Fly Fishing Riñihue. Al reservar, el formulario permite indicar las edades aproximadas de los participantes para preparar la jornada según el grupo.',
   },
   {
     question: '¿El Programa 03 incluye almuerzo?',
@@ -106,12 +106,12 @@ export default function RioAlPotreroPage() {
   const tripJsonLd = getTouristTripJsonLd({
     name: 'Del Río al Potrero',
     description:
-      'Balsa 20 km por el tramo largo del Río San Pedro en la mañana y cabalgata guiada por el campo en la tarde. Almuerzo campestre incluido. Apto desde 5 años.',
+      'Balsa 20 km por el tramo largo del Río San Pedro en la mañana y cabalgata guiada por el campo en la tarde. Almuerzo campestre incluido. Apto desde 8 años.',
     url: PROGRAM_URL,
     image: `${BASE_URL}/og-rio-al-potrero.jpg`,
     price: '180000',
     duration: 'P1D',
-    minAge: 5,
+    minAge: 8,
     groupMin: 5,
     groupMax: 10,
   })
@@ -153,7 +153,7 @@ export default function RioAlPotreroPage() {
               </span>
               <Badge variant="program">Día completo</Badge>
               <Badge variant="program">Balsa 20 km</Badge>
-              <Badge variant="highlight">Desde 5 años</Badge>
+              <Badge variant="highlight">Desde 8 años</Badge>
             </div>
 
             <h1 className="font-display text-5xl font-bold leading-tight mb-6 lg:text-7xl">
@@ -186,7 +186,7 @@ export default function RioAlPotreroPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="max-w-3xl font-body text-base text-dark/80 leading-relaxed lg:text-lg">
             Del Río al Potrero es el programa familiar de día completo del Fundo Los Huapes, apto
-            desde los 5 años. La mañana parte a las 9:30 con el zarpe en balsa desde Puente
+            desde los 8 años. La mañana parte a las 9:30 con el zarpe en balsa desde Puente
             Ciruelos: 20 km por el tramo largo del Río San Pedro, con snack a mitad de recorrido y
             entre 3 y 4 horas de navegación guiada por el equipo de Fly Fishing Riñihue. Al llegar a
             la isla del campo, cerca de las 13:30, el grupo almuerza antes de iniciar la cabalgata
@@ -232,7 +232,7 @@ export default function RioAlPotreroPage() {
               <div className="flex flex-wrap gap-2 mb-8">
                 <Badge variant="program">Día completo</Badge>
                 <Badge variant="program">Balsa 20 km</Badge>
-                <Badge variant="highlight">Desde 5 años</Badge>
+                <Badge variant="highlight">Desde 8 años</Badge>
               </div>
 
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
@@ -339,7 +339,7 @@ export default function RioAlPotreroPage() {
 
           <div className="mt-10 max-w-3xl grid grid-cols-2 gap-4 sm:grid-cols-4">
             {[
-              { label: 'Edad mínima', value: '5 años' },
+              { label: 'Edad mínima', value: '8 años' },
               { label: 'Operador río', value: 'Fly Fishing Riñihue' },
               { label: 'Grupo', value: '5 – 10 personas' },
               { label: 'Temporada', value: '1 oct – 30 may' },

@@ -41,7 +41,7 @@ const footerColumns: FooterColumn[] = [
     title: 'Contacto',
     links: [
       // TODO: confirmar número real
-      { label: 'WhatsApp', href: 'https://wa.me/56912345678' },
+      { label: 'WhatsApp', href: 'https://wa.me/56997305358' },
       { label: 'reservas@loshuapes.cl', href: 'mailto:reservas@loshuapes.cl' },
     ],
   },

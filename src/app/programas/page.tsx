@@ -46,7 +46,7 @@ const programs: ProgramCard[] = [
       'Cabalgata guiada por bosque nativo y potreros con picoteo de campo en el estero Huillinco.',
     price: '$80.000',
     duration: 'Media jornada',
-    minAge: 'Desde 5 años',
+    minAge: 'Desde 8 años',
     badges: ['Media jornada', 'Mañana o tarde'],
     image: '/images/programa-cabalgata.jpg',
     imageAlt: 'Jinetes a caballo entre el bosque nativo del Fundo Los Huapes',
@@ -60,7 +60,7 @@ const programs: ProgramCard[] = [
       'Mañana a caballo por el campo y tarde navegando el Río San Pedro 15 km en balsa. Almuerzo incluido.',
     price: '$180.000',
     duration: 'Día completo',
-    minAge: 'Desde 10 años',
+    minAge: 'Desde 8 años',
     badges: ['Día completo', 'Balsa 15 km'],
     image: '/images/programa-potrero-rio.jpg',
     imageAlt: 'Ovejas junto al portón del potrero con bosque nativo al fondo',
@@ -74,7 +74,7 @@ const programs: ProgramCard[] = [
       'Balsa 20 km por el tramo largo del San Pedro en la mañana y cabalgata en el campo en la tarde.',
     price: '$180.000',
     duration: 'Día completo',
-    minAge: 'Desde 5 años',
+    minAge: 'Desde 8 años',
     badges: ['Día completo', 'Balsa 20 km', 'Familias'],
     image: '/images/programa-rio-potrero.jpg',
     imageAlt: 'Navegando el Río San Pedro en balsa bajo el cielo azul',
@@ -88,7 +88,7 @@ const programs: ProgramCard[] = [
       '2 días con balsa, pesca con mosca, asado acampado, noche en el campo y cabalgata al día siguiente.',
     price: '$280.000',
     duration: '2 días · 1 noche',
-    minAge: 'Desde 10 años',
+    minAge: 'Desde 8 años',
     badges: ['2 días · 1 noche', 'Todo incluido'],
     image: '/images/programa-travesia.jpg',
     imageAlt: 'Balsa catamarán a orillas del Río San Pedro',
@@ -155,7 +155,7 @@ export default function ProgramasPage() {
             un día completo puede partir por el campo o por el río, según prefiera
             cabalgar en la mañana o navegar primero; y si busca la experiencia completa,
             la Travesía San Pedro suma pesca con mosca, asado acampado y una noche en el
-            campo. Las edades mínimas van desde los 5 años en los programas familiares.
+            campo. La edad mínima es de 8 años en todos los programas.
           </p>
         </div>
       </section>
