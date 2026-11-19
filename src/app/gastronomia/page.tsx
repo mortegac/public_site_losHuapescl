@@ -221,7 +221,7 @@ export default function GastronomiaPage() {
               { src: '/images/gastronomia-fogon.jpg', alt: 'Olla de hierro sobre fogón junto al río', cls: '' },
               { src: '/images/gastronomia-tripode.jpg', alt: 'Trípode con olla sobre fuego en el bosque nativo', cls: '' },
               { src: '/images/gastronomia-ensaladas.jpg', alt: 'Tablas de ensalada fresca en mesa rústica de campo', cls: 'md:col-span-2' },
-              { src: '/images/balsa-cocina-rio.jpg', alt: 'Cocinando junto al río durante el recorrido en balsa', cls: '' },
+              { src: '/images/asado-cordero-palo.jpg', alt: 'Cordero y estomaguillo al palo sobre brasas en el campo', cls: '' },
             ] as const).map((img, i) => (
               <div key={i} className={`group relative aspect-[4/3] overflow-hidden rounded-lg ${img.cls}`}>
                 <Image
